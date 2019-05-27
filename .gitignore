@@ -1,5 +1,0 @@
-app/config/parameters.php
-cache/smarty/compile/*
-cache/smarty/cache/*
-var/cache/prod/*
-
