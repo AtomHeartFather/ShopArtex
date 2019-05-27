@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-05-15 15:42:41
+/* Smarty version 3.1.33, created on 2019-05-21 17:37:51
   from '/home/a/artex73/artex/public_html/admin896np0lun/themes/new-theme/template/components/layout/nav_bar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5cdc0941457a09_26418160',
+  'unifunc' => 'content_5ce40d3fc24d67_41027092',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5cdc0941457a09_26418160 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ce40d3fc24d67_41027092 (Smarty_Internal_Template $_smarty_tpl) {
 ?><nav class="nav-bar d-none d-md-block">
   <span class="menu-collapse">
     <i class="material-icons">chevron_left</i>

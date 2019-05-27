@@ -6,6 +6,22 @@
     <language>en</language>
      <atom:link href="https://www.prestashop.com/en/blog/feed.xml" rel="self" type="application/rss+xml" />
       <item>
+    <title>What is CPA and how can it improve my eCommerce’s online ads strategy</title>
+    <link>https://www.prestashop.com/en/blog/cpa-ecommerces-online-ads-strategy</link>
+    <description>For your campaigns to be effective, and to make sure your hard work promoting your products pays off, it is essential to define the structure your campaigns are going to take.</description>
+     <pubDate>Mon, 20 May 2019 11:07:51 +0200</pubDate>
+ <dc:creator>SpaceBoost EN</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/en/blog/cpa-ecommerces-online-ads-strategy</guid>
+  </item>
+  <item>
+    <title>7 Necessary Steps To Launch Your eCommerce Shop</title>
+    <link>https://www.prestashop.com/en/blog/7-necessary-steps-to-launch-your-ecommerce-shop</link>
+    <description>There are so many details to think about when setting up an eCommerce shop, and dropping the ball in one small area can mean a far slower pace towards the global triumph you are aiming for!</description>
+     <pubDate>Thu, 16 May 2019 17:33:36 +0200</pubDate>
+ <dc:creator>Teapot</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/en/blog/7-necessary-steps-to-launch-your-ecommerce-shop</guid>
+  </item>
+  <item>
     <title>Recovery of abandoned carts: The 4 best practices in 2019</title>
     <link>https://www.prestashop.com/en/blog/recovery-of-abandoned-carts-tips-advices</link>
     <description>More than 68% of visitors leave their carts before finalizing a purchase. They visited your website, placed an item in the cart, and then left your site without buying!</description>
@@ -68,22 +84,6 @@
      <pubDate>Thu, 18 Apr 2019 17:17:30 +0200</pubDate>
  <dc:creator>Méguy Solvet</dc:creator>
  <guid isPermaLink="false">https://www.prestashop.com/en/blog/new-features-prestashop-2019</guid>
-  </item>
-  <item>
-    <title>5 signs you need a PIM system for your PrestaShop</title>
-    <link>https://www.prestashop.com/en/blog/pim-system-for-your-prestashop</link>
-    <description>Do you need to integrate your PrestaShop webshop with a Product Information Management system? That depends on a couple of things. Is your product range quite small?</description>
-     <pubDate>Mon, 08 Apr 2019 11:49:52 +0200</pubDate>
- <dc:creator>H1 Webdevelopment EN</dc:creator>
- <guid isPermaLink="false">https://www.prestashop.com/en/blog/pim-system-for-your-prestashop</guid>
-  </item>
-  <item>
-    <title>PrestaShop increases the stability of version 1.7</title>
-    <link>https://www.prestashop.com/en/blog/stability-version-1-7</link>
-    <description>The latest version of PrestaShop was launched in December 2018.</description>
-     <pubDate>Fri, 05 Apr 2019 12:15:03 +0200</pubDate>
- <dc:creator>MLNielsen</dc:creator>
- <guid isPermaLink="false">https://www.prestashop.com/en/blog/stability-version-1-7</guid>
   </item>
   </channel>
 </rss>

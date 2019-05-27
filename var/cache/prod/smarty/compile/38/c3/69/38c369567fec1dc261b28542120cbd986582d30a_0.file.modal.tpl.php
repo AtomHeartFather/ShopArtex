@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-05-15 15:42:41
+/* Smarty version 3.1.33, created on 2019-05-21 17:37:51
   from '/home/a/artex73/artex/public_html/modules/ps_mbo/views/templates/admin/modal.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5cdc094147f191_46316591',
+  'unifunc' => 'content_5ce40d3fc4fa33_09490388',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5cdc094147f191_46316591 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ce40d3fc4fa33_09490388 (Smarty_Internal_Template $_smarty_tpl) {
 ?> 
 <div class="modal fade" id="modules_list_container">
 	<div class="modal-dialog">
