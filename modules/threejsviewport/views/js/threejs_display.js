@@ -37,7 +37,7 @@ function init() {
 
     //controls.target.set( -3000, 5000, 9000 );
     controls.update();
-    
+ 
     //сцену создает
     scene = new THREE.Scene();
     
@@ -63,14 +63,19 @@ function init() {
     meshFloor.receiveShadow = true; //рисовать ли тени на плоскости
     
     //добавить плоскость тени в сцену
-    scene.add(meshFloor);
-
+    //scene.add(meshFloor);
+    
+    var modelpath = "modules/threejsviewport/views/models_3d/4.gltf";
+    var mdl ;
+    
+    function mymodelloader(modelpath) {    
     // загрузчик модели
     var loader4 = new THREE.GLTFLoader();
     // грузануть glTF
     loader4.load(
             // путь
-            'modules/threejsviewport/views/models_3d/4.gltf',
+            //'modules/threejsviewport/views/models_3d/4.gltf',
+            modelpath,
             // вызываеться, когда модель загружена
                     function (gltf) {
                         const myModel = gltf.scene;
@@ -84,48 +89,34 @@ function init() {
                         bbox.setFromObject(mroot);
                         bbox.getSize(size);
                         mroot.position.y -= (size.y * 0.5);
-                        scene.add(mroot);
+                        alert (mroot);
+                        mdl = mroot;
+                        
                     },
-                            // выполняеться пока все еще не загрузилось
+                    // выполняеться пока все еще не загрузилось
                             function (xhr) {console.log((xhr.loaded / xhr.total * 100) + '% loaded');},
                             // когда есть ошибки
                             function (error) {console.log('An error happened');
                             }
                 );
-
-    // загрузчик модели
-    var loader5 = new THREE.GLTFLoader();
-    // грузануть glTF
-    loader5.load(
-            // путь
-            'modules/threejsviewport/views/models_3d/5.gltf',
-            // вызываеться, когда модель загружена
-                    function (gltf) {
-                        const myModel = gltf.scene;
-                        // ресайз объекта до максимального размера в еденицу и постановка его в центр координат
-                        var mroot = gltf.scene;
-                        var bbox = new THREE.Box3().setFromObject(mroot);
-                        var size = bbox.getSize(new THREE.Vector3());
-                        //Rescale the object to normalized space
-                        var maxAxis = Math.max(size.x, size.y, size.z);
-                        mroot.scale.multiplyScalar(1.0 / maxAxis);
-                        bbox.setFromObject(mroot);
-                        bbox.getSize(size);
-                        mroot.position.y -= (size.y * 0.5);
-                        scene.add(mroot);
-                    },
-                            // выполняеться пока все еще не загрузилось
-                            function (xhr) {console.log((xhr.loaded / xhr.total * 100) + '% loaded');},
-                            // когда есть ошибки
-                            function (error) {console.log('An error happened');
-                            }
-                );
-
-    document.getElementById("clored").addEventListener("click", function(){
-        alert('Добрый день');
-//        scene.remove(currentSphere);
-//        scene.add(nextSphere);
-    });
+        }        
+        
+ mymodelloader(modelpath);
+  scene.add(mdl);
+//    document.getElementById("clored").addEventListener("click", function(){
+//      //  alert('Добрый день');
+//       // scene.remove(mroot);
+//      //  scene.add(mroot2);
+//      scene.add(meshFloor);
+//     // animate ();
+//    });
+//        document.getElementById("clowhite").addEventListener("click", function(){
+//      //  alert('Добрый день');
+//       // scene.remove(mroot);
+//      //  scene.add(mroot2);
+//      scene.remove(meshFloor);
+//     // animate ();
+//    });
 
                             //блок конечной отрисовки
                             renderer = new THREE.WebGLRenderer({antialias: true, alpha: true});//сглаживание пикселизации, включение прозрачности
