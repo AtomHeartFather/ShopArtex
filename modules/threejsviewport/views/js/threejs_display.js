@@ -33,7 +33,7 @@ function init() {
     controls = new THREE.OrbitControls(camera, document.getElementById('3dClo'));
     controls.minPolarAngle = 1.4; //минимально возможное вращение по вертикали
     controls.maxPolarAngle = 1.4; //максимально возможное кручение по горизонтали
-    controls.enablePan = false; //можно ли перетаскивать камера мышкой
+    controls.enablePan = false; //можно ли перетаскивать камеру мышкой
 
     //controls.target.set( -3000, 5000, 9000 );
     controls.update();
@@ -115,7 +115,7 @@ function init() {
                                     function (error) {
                                         console.log('An error happened');
                                     }
-                            );
+                );
                             /*geometry = new THREE.BoxGeometry( 0.2, 0.2, 0.2 );
                              material = new THREE.MeshNormalMaterial();
                              mesh = new THREE.Mesh( geometry, material );
@@ -147,13 +147,14 @@ function init() {
 //camera.updateProjectionMatrix();
 //renderer.setSize(contenedor.clientWidth, contenedor.clientHeight);
 //}
-                //функция для анимации
-                function animate() {
-                    resizeCanvasToDisplaySize();
-                    requestAnimationFrame(animate);
-                    renderer.render(scene, camera);
-                    document.getElementsByClassName('images-container')[0].style.display = 'none';
-                }
+
+    //функция финального рендера и для анимации
+    function animate() {
+    resizeCanvasToDisplaySize();
+    requestAnimationFrame(animate);
+    renderer.render(scene, camera);
+    document.getElementsByClassName('images-container')[0].style.display = 'none';
+    }
 
 function resizeCanvasToDisplaySize() {
   const canvas = renderer.domElement;
@@ -171,3 +172,7 @@ function resizeCanvasToDisplaySize() {
     // update any render target sizes here
   }
 }
+
+clored.onclick = getreddress() {
+    
+  };

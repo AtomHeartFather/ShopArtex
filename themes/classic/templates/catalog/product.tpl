@@ -106,7 +106,23 @@
                   {block name='product_variants'}
                     {include file='catalog/_partials/product-variants.tpl'}
                   {/block}
-
+                  <div class="clearfix product-variants-item">
+                      <span class="control-label">Тест переключения моделек</span>
+                      <ul id="group_2">
+                          <li class="float-xs-left input-container">
+                              <label>
+                                  <input id="clowhite" class="input-color" type="radio" >
+                                  <span class="color" style="background-color: #ffffff"><span class="sr-only">Белое платье</span></span>
+                              </label>
+                          </li>
+                          <li class="float-xs-left input-container">
+                              <label>
+                                  <input id="clored" class="input-color" type="radio" >
+                                  <span class="color" style="background-color: #FF0000"><span class="sr-only">Красное платье</span></span>
+                              </label>
+                          </li>
+                      </ul>
+                  </div>
                   {block name='product_pack'}
                     {if $packItems}
                       <section class="product-pack">

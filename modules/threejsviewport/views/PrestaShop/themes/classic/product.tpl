@@ -110,7 +110,7 @@
                   {block name='product_variants'}
                     {include file='catalog/_partials/product-variants.tpl'}
                   {/block}
-
+                  
                   {block name='product_pack'}
                     {if $packItems}
                       <section class="product-pack">
