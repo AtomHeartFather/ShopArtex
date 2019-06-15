@@ -89,9 +89,9 @@ function init() {
                         bbox.setFromObject(mroot);
                         bbox.getSize(size);
                         mroot.position.y -= (size.y * 0.5);
-                        alert (mroot);
-                        mdl = mroot;
                         
+                        mdl = mroot;
+
                     },
                     // выполняеться пока все еще не загрузилось
                             function (xhr) {console.log((xhr.loaded / xhr.total * 100) + '% loaded');},
