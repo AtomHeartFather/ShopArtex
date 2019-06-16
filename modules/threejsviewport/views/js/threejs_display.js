@@ -132,13 +132,13 @@ function init(modelpath) {
                             renderer.domElement.style.width = "100%";
                             renderer.domElement.style.height = "100%";
                             //renderer.setSize(window.innerWidth, window.innerHeight); //размер экрана отрисовки
-                                document.getElementById('3dClo').innerHTML = "";                                             
+                            document.getElementById('3dClo').innerHTML = "";                                             
                             document.getElementById('3dClo').appendChild(renderer.domElement); //куда в HTML пихать экран отрисовки
                             //window.addEventListener( 'resize', onWindowResize, false ); //для адаптивности, событие при изменении размера экрана в реальном времени
                         }
 
 
-    //функция финального рендера и для анимации
+//функция финального рендера и для анимации
 function animate() {
     resizeCanvasToDisplaySize();
     requestAnimationFrame(animate);
