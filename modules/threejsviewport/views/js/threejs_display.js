@@ -3,16 +3,31 @@ var camera, scene, renderer;
 var geometry, material, mesh;
 var meshFloor;
 var USE_WIREFRAME = false;
+var modelpath;
+var mdl;
 
 var div = document.createElement('div');
 div.id = '3dClo';
 div.style.height = '100vh';
 div.style.display = 'flex';
 document.getElementById("content").insertBefore(div, document.getElementsByClassName("product-flags")[0]);
-init();
-animate();
 
-function init() {
+var modelpath = "modules/threejsviewport/views/models_3d/4.gltf";
+
+    document.getElementById("clored").addEventListener("click", function(){
+    modelpath = "modules/threejsviewport/views/models_3d/4.gltf";
+    init(modelpath);
+    animate();
+    });
+    document.getElementById("clowhite").addEventListener("click", function(){
+    modelpath = "modules/threejsviewport/views/models_3d/5.gltf";
+    init(modelpath);
+    animate();
+    });
+
+
+
+function init(modelpath) {
     //мягкий окружающий свет
     Light = new THREE.AmbientLight(0x888888); //цвет
     
@@ -65,10 +80,11 @@ function init() {
     //добавить плоскость тени в сцену
     //scene.add(meshFloor);
     
-    var modelpath = "modules/threejsviewport/views/models_3d/4.gltf";
-    var mdl ;
-    
-    function mymodelloader(modelpath) {    
+
+
+//    
+//    function mymodelloader(modelpath) {    
+        
     // загрузчик модели
     var loader4 = new THREE.GLTFLoader();
     // грузануть glTF
@@ -89,9 +105,7 @@ function init() {
                         bbox.setFromObject(mroot);
                         bbox.getSize(size);
                         mroot.position.y -= (size.y * 0.5);
-                        
-                        mdl = mroot;
-
+                        scene.add(mroot);
                     },
                     // выполняеться пока все еще не загрузилось
                             function (xhr) {console.log((xhr.loaded / xhr.total * 100) + '% loaded');},
@@ -99,24 +113,11 @@ function init() {
                             function (error) {console.log('An error happened');
                             }
                 );
-        }        
+//        }        
         
- mymodelloader(modelpath);
-  scene.add(mdl);
-//    document.getElementById("clored").addEventListener("click", function(){
-//      //  alert('Добрый день');
-//       // scene.remove(mroot);
-//      //  scene.add(mroot2);
-//      scene.add(meshFloor);
-//     // animate ();
-//    });
-//        document.getElementById("clowhite").addEventListener("click", function(){
-//      //  alert('Добрый день');
-//       // scene.remove(mroot);
-//      //  scene.add(mroot2);
-//      scene.remove(meshFloor);
-//     // animate ();
-//    });
+// mymodelloader(modelpath);
+  
+
 
                             //блок конечной отрисовки
                             renderer = new THREE.WebGLRenderer({antialias: true, alpha: true});//сглаживание пикселизации, включение прозрачности
@@ -131,7 +132,7 @@ function init() {
                             renderer.domElement.style.width = "100%";
                             renderer.domElement.style.height = "100%";
                             //renderer.setSize(window.innerWidth, window.innerHeight); //размер экрана отрисовки
-                                                                               
+                                document.getElementById('3dClo').innerHTML = "";                                             
                             document.getElementById('3dClo').appendChild(renderer.domElement); //куда в HTML пихать экран отрисовки
                             //window.addEventListener( 'resize', onWindowResize, false ); //для адаптивности, событие при изменении размера экрана в реальном времени
                         }
