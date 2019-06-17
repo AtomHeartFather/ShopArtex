@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-06-18 00:36:23
+/* Smarty version 3.1.33, created on 2019-06-18 01:42:53
   from '/var/www/artex/themes/artex/templates/catalog/_partials/variant-links.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d0807d7ad3169_99026645',
+  'unifunc' => 'content_5d08176da1acd2_07709760',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,15 +20,15 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d0807d7ad3169_99026645 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d08176da1acd2_07709760 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_19637452125d0807d7abbe74_89678195', 'variant_links');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_235773525d08176da0cb02_91199136', 'variant_links');
 ?>
 
 <?php }
 /* {block 'variant_link_item'} */
-class Block_1642042385d0807d7ac0f55_02579066 extends Smarty_Internal_Block
+class Block_356762835d08176da0fa27_79601973 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -48,16 +48,16 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block 'variant_link_item'} */
 /* {block 'variant_links'} */
-class Block_19637452125d0807d7abbe74_89678195 extends Smarty_Internal_Block
+class Block_235773525d08176da0cb02_91199136 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'variant_links' => 
   array (
-    0 => 'Block_19637452125d0807d7abbe74_89678195',
+    0 => 'Block_235773525d08176da0cb02_91199136',
   ),
   'variant_link_item' => 
   array (
-    0 => 'Block_1642042385d0807d7ac0f55_02579066',
+    0 => 'Block_356762835d08176da0fa27_79601973',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -71,7 +71,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['variant']->value) {
 ?>
 
       <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1642042385d0807d7ac0f55_02579066', 'variant_link_item', $this->tplIndex);
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_356762835d08176da0fa27_79601973', 'variant_link_item', $this->tplIndex);
 ?>
 
 
