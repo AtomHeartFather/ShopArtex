@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-06-19 02:25:32
+/* Smarty version 3.1.33, created on 2019-06-20 02:31:30
   from 'module:psfacetedsearchpsfaceteds' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d0972ecf124d9_48936969',
+  'unifunc' => 'content_5d0ac5d27e0105_24504737',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d0972ecf124d9_48936969 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d0ac5d27e0105_24504737 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!-- begin /var/www/artex/modules/ps_facetedsearch/ps_facetedsearch.tpl --><?php if (isset($_smarty_tpl->tpl_vars['rendered_active_filters']->value)) {?>
   <?php echo $_smarty_tpl->tpl_vars['rendered_active_filters']->value;?>
 

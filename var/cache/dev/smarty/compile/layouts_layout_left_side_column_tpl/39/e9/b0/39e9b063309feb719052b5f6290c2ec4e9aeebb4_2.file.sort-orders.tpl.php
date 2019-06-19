@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-06-19 02:25:32
+/* Smarty version 3.1.33, created on 2019-06-20 02:31:30
   from '/var/www/artex/themes/artex/templates/catalog/_partials/sort-orders.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d0972ed002915_40098641',
+  'unifunc' => 'content_5d0ac5d2811a00_02668336',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d0972ed002915_40098641 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d0ac5d2811a00_02668336 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="products-sort-order">
   <span><?php if (isset($_smarty_tpl->tpl_vars['listing']->value['sort_selected'])) {
 echo htmlspecialchars($_smarty_tpl->tpl_vars['listing']->value['sort_selected'], ENT_QUOTES, 'UTF-8');
