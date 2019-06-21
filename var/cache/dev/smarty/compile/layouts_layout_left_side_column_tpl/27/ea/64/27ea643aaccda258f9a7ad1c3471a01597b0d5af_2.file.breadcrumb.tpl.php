@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-06-20 02:31:30
+/* Smarty version 3.1.33, created on 2019-06-21 03:49:04
   from '/var/www/artex/themes/artex/templates/_partials/breadcrumb.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d0ac5d27b6e19_57917532',
+  'unifunc' => 'content_5d0c29807f3217_91880329',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d0ac5d27b6e19_57917532 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d0c29807f3217_91880329 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 ?>
@@ -36,7 +36,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['path']->value) {
 $_smarty_tpl->tpl_vars['__smarty_foreach_breadcrumb']->value['iteration']++;
 ?>
       <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_19125685365d0ac5d27af915_33242794', 'breadcrumb_item');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_19936663255d0c29807ec452_46038854', 'breadcrumb_item');
 ?>
 
     <?php
@@ -47,12 +47,12 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 </nav>
 <?php }
 /* {block 'breadcrumb_item'} */
-class Block_19125685365d0ac5d27af915_33242794 extends Smarty_Internal_Block
+class Block_19936663255d0c29807ec452_46038854 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'breadcrumb_item' => 
   array (
-    0 => 'Block_19125685365d0ac5d27af915_33242794',
+    0 => 'Block_19936663255d0c29807ec452_46038854',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {

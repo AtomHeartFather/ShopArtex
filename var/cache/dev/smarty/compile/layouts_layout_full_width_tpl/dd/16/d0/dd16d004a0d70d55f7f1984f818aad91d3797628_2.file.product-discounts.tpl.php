@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-06-19 02:25:28
+/* Smarty version 3.1.33, created on 2019-06-21 02:48:51
   from '/var/www/artex/themes/artex/templates/catalog/_partials/product-discounts.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d0972e8249fc8_14793762',
+  'unifunc' => 'content_5d0c1b63f31012_41725850',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d0972e8249fc8_14793762 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d0c1b63f31012_41725850 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 ?>
@@ -30,7 +30,7 @@ $_smarty_tpl->inheritance->init($_smarty_tpl, false);
       <h3><?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['l'][0], array( array('s'=>'Volume discounts','d'=>'Shop.Theme.Catalog'),$_smarty_tpl ) );?>
 </h3>
       <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_7476484585d0972e82359f9_02616894', 'product_discount_table');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_20556419885d0c1b63f1a068_94476348', 'product_discount_table');
 ?>
 
     </section>
@@ -38,12 +38,12 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_7476484585d0972e82
 </section>
 <?php }
 /* {block 'product_discount_table'} */
-class Block_7476484585d0972e82359f9_02616894 extends Smarty_Internal_Block
+class Block_20556419885d0c1b63f1a068_94476348 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'product_discount_table' => 
   array (
-    0 => 'Block_7476484585d0972e82359f9_02616894',
+    0 => 'Block_20556419885d0c1b63f1a068_94476348',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
