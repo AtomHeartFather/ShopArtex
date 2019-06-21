@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-06-21 03:47:49
+/* Smarty version 3.1.33, created on 2019-06-21 21:10:52
   from 'module:psbannerpsbanner.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d0c2935426169_87051245',
+  'unifunc' => 'content_5d0d1dac7656d2_94208967',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d0c2935426169_87051245 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d0d1dac7656d2_94208967 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!-- begin /var/www/artex/modules/ps_banner/ps_banner.tpl --><a class="banner" href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['banner_link']->value, ENT_QUOTES, 'UTF-8');?>
 ">
   <?php if (isset($_smarty_tpl->tpl_vars['banner_img']->value)) {?>

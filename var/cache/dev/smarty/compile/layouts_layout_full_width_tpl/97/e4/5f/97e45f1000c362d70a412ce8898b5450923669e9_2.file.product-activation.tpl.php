@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-06-21 02:48:51
+/* Smarty version 3.1.33, created on 2019-06-22 00:29:04
   from '/var/www/artex/themes/artex/templates/catalog/_partials/product-activation.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d0c1b63e36653_61055244',
+  'unifunc' => 'content_5d0d4c201333c4_18801128',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d0c1b63e36653_61055244 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d0d4c201333c4_18801128 (Smarty_Internal_Template $_smarty_tpl) {
 if ($_smarty_tpl->tpl_vars['page']->value['admin_notifications']) {?>
   <div role="alert">
     <?php
