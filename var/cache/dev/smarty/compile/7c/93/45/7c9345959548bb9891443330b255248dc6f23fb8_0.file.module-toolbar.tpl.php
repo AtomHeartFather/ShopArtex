@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-06-21 02:22:05
+/* Smarty version 3.1.33, created on 2019-06-22 12:33:14
   from '/var/www/artex/modules/ps_mbo/views/templates/admin/module-toolbar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d0c151db58630_96522608',
+  'unifunc' => 'content_5d0df5dabf2068_18641353',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d0c151db58630_96522608 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d0df5dabf2068_18641353 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="toolbar-icons">
 	<div class="wrapper">
 		<a class="btn btn-primary  pointer" id="page-header-desc-configuration-add_module" href="#" title="" data-toggle="modal" data-placement="bottom" data-original-title="Installer un module" data-target="#module-modal-import">

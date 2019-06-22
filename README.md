@@ -17,3 +17,9 @@ https://docs.google.com/document/d/18q8aRrUm42jBpnlUo82Smub7ioXKcB-6OU0cKNkElCM/
     'database_name' => 'artex',
     'database_user' => 'artex',
     'database_password' => '123',
+
+# Обновить theme.yml
+If you want reload your configuration :
+1.Modify your theme.yml
+2.Delete the file into ROOT_FOLDER/config/themes/your theme/shop*.json
+3.Refresh your page, prestashop going to regenerate the config json file for your theme

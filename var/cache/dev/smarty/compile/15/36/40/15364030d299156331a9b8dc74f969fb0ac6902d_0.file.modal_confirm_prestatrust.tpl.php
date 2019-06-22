@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-06-21 02:22:05
+/* Smarty version 3.1.33, created on 2019-06-22 12:33:14
   from '/var/www/artex/modules/ps_mbo/views/templates/admin/include/modal_confirm_prestatrust.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d0c151da3e3c1_16414329',
+  'unifunc' => 'content_5d0df5daabfbb5_16343701',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d0c151da3e3c1_16414329 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d0df5daabfbb5_16343701 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div id="modal-prestatrust" class="modal">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
