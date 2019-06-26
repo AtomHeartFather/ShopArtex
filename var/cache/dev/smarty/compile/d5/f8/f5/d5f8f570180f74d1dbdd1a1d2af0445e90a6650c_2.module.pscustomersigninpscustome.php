@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-06-23 00:52:43
+/* Smarty version 3.1.33, created on 2019-06-27 02:52:10
   from 'module:pscustomersigninpscustome' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d0ea32beadbe0_18543364',
+  'unifunc' => 'content_5d14052a58fcd5_14949741',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d0ea32beadbe0_18543364 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d14052a58fcd5_14949741 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!-- begin /var/www/artex/modules/ps_customersignin/ps_customersignin.tpl --><div class="user-info">
   <?php if ($_smarty_tpl->tpl_vars['logged']->value) {?>
     <a class="logout"  href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['logout_url']->value, ENT_QUOTES, 'UTF-8');?>
