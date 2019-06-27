@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-06-26 18:56:54
+/* Smarty version 3.1.33, created on 2019-06-28 01:10:57
   from '/var/www/artex/themes/artex/templates/catalog/_partials/active_filters.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d1395c60615e5_31159622',
+  'unifunc' => 'content_5d153ef1289939_23829471',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d1395c60615e5_31159622 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d153ef1289939_23829471 (Smarty_Internal_Template $_smarty_tpl) {
 ?><section id="js-active-search-filters" class="active_filters">
   <h1 class="h3"><?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['l'][0], array( array('s'=>'Active filters','d'=>'Shop.Theme.Global'),$_smarty_tpl ) );?>
 </h1>

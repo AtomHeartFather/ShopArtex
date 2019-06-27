@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-06-22 21:17:52
+/* Smarty version 3.1.33, created on 2019-06-28 00:58:43
   from '/var/www/artex/admin896np0lun/themes/default/template/controllers/modules_positions/form.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d0e70d04456d8_50911701',
+  'unifunc' => 'content_5d153c132790a1_76853739',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,13 +20,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d0e70d04456d8_50911701 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d153c132790a1_76853739 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 ?>
 
 <div class="leadin"><?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_9260164035d0e70d03f74b2_42441700', "leadin");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_16193858575d153c13224e93_27080544', "leadin");
 ?>
 </div>
 
@@ -182,12 +182,12 @@ _form_submit_btn" class="btn btn-default pull-right"><i class="process-icon-save
 >
 <?php }
 /* {block "leadin"} */
-class Block_9260164035d0e70d03f74b2_42441700 extends Smarty_Internal_Block
+class Block_16193858575d153c13224e93_27080544 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'leadin' => 
   array (
-    0 => 'Block_9260164035d0e70d03f74b2_42441700',
+    0 => 'Block_16193858575d153c13224e93_27080544',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {

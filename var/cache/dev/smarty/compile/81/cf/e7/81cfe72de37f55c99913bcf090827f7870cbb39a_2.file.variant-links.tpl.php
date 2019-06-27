@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-06-26 19:19:42
+/* Smarty version 3.1.33, created on 2019-06-28 01:11:48
   from '/var/www/artex/themes/artex/templates/catalog/_partials/variant-links.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d139b1ebe4393_09816202',
+  'unifunc' => 'content_5d153f24b98ed3_16019689',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,15 +20,15 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d139b1ebe4393_09816202 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d153f24b98ed3_16019689 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_977582785d139b1ebd5a65_53579406', 'variant_links');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_18317012245d153f24b8b9e9_43887291', 'variant_links');
 ?>
 
 <?php }
 /* {block 'variant_link_item'} */
-class Block_18136238125d139b1ebd8c54_43600090 extends Smarty_Internal_Block
+class Block_12517976225d153f24b8e2f1_43038264 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -48,16 +48,16 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block 'variant_link_item'} */
 /* {block 'variant_links'} */
-class Block_977582785d139b1ebd5a65_53579406 extends Smarty_Internal_Block
+class Block_18317012245d153f24b8b9e9_43887291 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'variant_links' => 
   array (
-    0 => 'Block_977582785d139b1ebd5a65_53579406',
+    0 => 'Block_18317012245d153f24b8b9e9_43887291',
   ),
   'variant_link_item' => 
   array (
-    0 => 'Block_18136238125d139b1ebd8c54_43600090',
+    0 => 'Block_12517976225d153f24b8e2f1_43038264',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -71,7 +71,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['variant']->value) {
 ?>
 
       <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_18136238125d139b1ebd8c54_43600090', 'variant_link_item', $this->tplIndex);
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_12517976225d153f24b8e2f1_43038264', 'variant_link_item', $this->tplIndex);
 ?>
 
 
