@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-06-28 01:10:57
+/* Smarty version 3.1.33, created on 2019-06-28 01:50:04
   from '/var/www/artex/themes/artex/templates/catalog/_partials/facets.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d153ef1255191_35858250',
+  'unifunc' => 'content_5d15481c350351_42689640',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d153ef1255191_35858250 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d15481c350351_42689640 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div id="search_filters">
   <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['facets']->value, 'facet');
