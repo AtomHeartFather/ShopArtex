@@ -61,7 +61,7 @@ class Threejsviewport extends Module
      */
     public function install()
     {
-        Configuration::updateValue('THREEJSVIEWPORT_INSTALL', true);
+        Configuration::updateValue('THREEJSVIEWPORT_IS_INSTALL', true);
         Configuration::updateValue('THREEJSVIEWPORT_LIVE_MODE', false);
 
         include(dirname(__FILE__).'/sql/install.php');
@@ -69,18 +69,28 @@ class Threejsviewport extends Module
         return parent::install() &&
             $this->registerHook('header') &&
             $this->registerHook('backOfficeHeader') &&
-            $this->registerHook('displayHeader');
+            $this->registerHook('displayHeader') &&
+            $this->registerHook('actionAdminProductsControllerSaveBefore');
     }
 
     public function uninstall()
     {
-        Configuration::deleteByName('THREEJSVIEWPORT_INSTALL');
+        Configuration::deleteByName('THREEJSVIEWPORT_IS_INSTALL');
         Configuration::deleteByName('THREEJSVIEWPORT_LIVE_MODE');
 
         include(dirname(__FILE__).'/sql/uninstall.php');
 
         return parent::uninstall();
     }
+
+    public function hookActionAdminProductsControllerSaveBefore($params)
+{
+    $productAdapter = $this->get('prestashop.adapter.data_provider.product');
+    $product = $productAdapter->getProduct($_REQUEST['form']['id_product']);
+   $product->is_constructor = "qqq";
+  
+    $product->save();
+}
 
     /**
      * Load the configuration form

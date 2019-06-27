@@ -1,0 +1,10 @@
+a96dce,::1,GET,http://localhost/artex/admin896np0lun/index.php/configure/advanced/performance/?_token=5nCb9wt2oPFel99jn27LMIMJPae37JoChguZ1P2WztU,1561645794,,200
+52b27c,::1,POST,http://localhost/artex/admin896np0lun/index.php/sell/catalog/products/22?_token=5nCb9wt2oPFel99jn27LMIMJPae37JoChguZ1P2WztU,1561645871,,400
+5f24a1,::1,GET,http://localhost/artex/admin896np0lun/index.php/_fragment?_path=_format%3Dhtml%26_locale%3Dru-RU%26_controller%3DPrestaShopBundle%253AAdmin%252FCommon%253ArenderField,1561645876,692a0e,200
+692a0e,::1,GET,http://localhost/artex/admin896np0lun/index.php/sell/catalog/products/22?_token=5nCb9wt2oPFel99jn27LMIMJPae37JoChguZ1P2WztU,1561645881,,200
+a04340,::1,GET,http://localhost/artex/admin896np0lun/index.php/sell/catalog/products/attributes/get-all?_token=5nCb9wt2oPFel99jn27LMIMJPae37JoChguZ1P2WztU,1561645882,,200
+c7c01b,::1,GET,http://localhost/artex/admin896np0lun/index.php/sell/catalog/products/specific-prices/list/22?_token=5nCb9wt2oPFel99jn27LMIMJPae37JoChguZ1P2WztU,1561645883,,200
+597e1d,::1,GET,http://localhost/artex/admin896np0lun/index.php/sell/catalog/products/attributes/form-images/22?_token=5nCb9wt2oPFel99jn27LMIMJPae37JoChguZ1P2WztU,1561645883,,200
+02b3c3,::1,POST,http://localhost/artex/admin896np0lun/index.php/sell/catalog/products/22?_token=5nCb9wt2oPFel99jn27LMIMJPae37JoChguZ1P2WztU,1561645886,,400
+786874,::1,GET,http://localhost/artex/admin896np0lun/index.php/configure/advanced/performance/?_token=5nCb9wt2oPFel99jn27LMIMJPae37JoChguZ1P2WztU,1561646272,,200
+d74f0a,::1,POST,http://localhost/artex/admin896np0lun/index.php/configure/advanced/performance/?_token=5nCb9wt2oPFel99jn27LMIMJPae37JoChguZ1P2WztU,1561646278,,302

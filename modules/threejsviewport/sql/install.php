@@ -23,12 +23,14 @@
 *  @license   http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
 *  International Registered Trademark & Property of PrestaShop SA
 */
-$sql = array();
+    // example to create table
+//$sql[] = 'CREATE TABLE IF NOT EXISTS `' . _DB_PREFIX_ . 'threejsviewport` (
+//    `id_threejsviewport` int(11) NOT NULL AUTO_INCREMENT,
+//    PRIMARY KEY  (`id_threejsviewport`)
+//) ENGINE=' . _MYSQL_ENGINE_ . ' DEFAULT CHARSET=utf8;';
 
-$sql[] = 'CREATE TABLE IF NOT EXISTS `' . _DB_PREFIX_ . 'threejsviewport` (
-    `id_threejsviewport` int(11) NOT NULL AUTO_INCREMENT,
-    PRIMARY KEY  (`id_threejsviewport`)
-) ENGINE=' . _MYSQL_ENGINE_ . ' DEFAULT CHARSET=utf8;';
+$sql = array();
+$sql[] = 'ALTER TABLE ' . _DB_PREFIX_ . 'product ADD `is_constructor` BOOLEAN NOT NULL';
 
 foreach ($sql as $query) {
     if (Db::getInstance()->execute($query) == false) {
