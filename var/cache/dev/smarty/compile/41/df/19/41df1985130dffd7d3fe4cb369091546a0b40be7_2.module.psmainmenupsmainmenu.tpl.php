@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-06-28 01:50:08
+/* Smarty version 3.1.33, created on 2019-06-28 14:27:21
   from 'module:psmainmenupsmainmenu.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d1548204cc024_33351037',
+  'unifunc' => 'content_5d15f99994b1d8_63014883',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,13 +20,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d1548204cc024_33351037 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d15f99994b1d8_63014883 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->smarty->ext->_tplFunction->registerTplFunctions($_smarty_tpl, array (
   'menu' => 
   array (
     'compiled_filepath' => '/var/www/artex/var/cache/dev/smarty/compile/41/df/19/41df1985130dffd7d3fe4cb369091546a0b40be7_2.module.psmainmenupsmainmenu.tpl.php',
     'uid' => '41df1985130dffd7d3fe4cb369091546a0b40be7',
-    'call_name' => 'smarty_template_function_menu_6452698295d1548204a90f5_01356648',
+    'call_name' => 'smarty_template_function_menu_924568695d15f999921fa7_73625741',
   ),
 ));
 ?><!-- begin /var/www/artex/modules/ps_mainmenu/ps_mainmenu.tpl -->
@@ -36,9 +36,9 @@ $_smarty_tpl->smarty->ext->_tplFunction->registerTplFunctions($_smarty_tpl, arra
 
 </div>
 <!-- end /var/www/artex/modules/ps_mainmenu/ps_mainmenu.tpl --><?php }
-/* smarty_template_function_menu_6452698295d1548204a90f5_01356648 */
-if (!function_exists('smarty_template_function_menu_6452698295d1548204a90f5_01356648')) {
-function smarty_template_function_menu_6452698295d1548204a90f5_01356648(Smarty_Internal_Template $_smarty_tpl,$params) {
+/* smarty_template_function_menu_924568695d15f999921fa7_73625741 */
+if (!function_exists('smarty_template_function_menu_924568695d15f999921fa7_73625741')) {
+function smarty_template_function_menu_924568695d15f999921fa7_73625741(Smarty_Internal_Template $_smarty_tpl,$params) {
 $params = array_merge(array('nodes'=>array(),'depth'=>0), $params);
 foreach ($params as $key => $value) {
 $_smarty_tpl->tpl_vars[$key] = new Smarty_Variable($value, $_smarty_tpl->isRenderingCache);
@@ -67,5 +67,5 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?></div><?php }?><
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?></ul><?php }
 }}
-/*/ smarty_template_function_menu_6452698295d1548204a90f5_01356648 */
+/*/ smarty_template_function_menu_924568695d15f999921fa7_73625741 */
 }

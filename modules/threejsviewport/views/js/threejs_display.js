@@ -8,9 +8,14 @@ var mdl;
 
 var div = document.createElement('div');
 div.id = '3dClo';
-div.style.height = '100vh';
+div.style.height = '879px';
+div.style.width = '50vw';
 div.style.display = 'flex';
 document.getElementById("content").insertBefore(div, document.getElementsByClassName("product-flags")[0]);
+
+//document.getElementByClass("lSSlideOuter"),
+//$('.lSSlideOuter').hide();
+$('#lightslider').hide();
 
 var modelpath = "modules/threejsviewport/views/models_3d/4.gltf";
 
@@ -32,7 +37,7 @@ function init(modelpath) {
     Light = new THREE.AmbientLight(0x888888); //цвет
     
     //точечный источник света
-    pointLight = new THREE.PointLight(0xffffff, 1.5, 18); //цвет, интенсивность, 3ий хз
+    pointLight = new THREE.PointLight(0xffffff, 1, 18); //цвет, интенсивность, 3ий хз
     pointLight.position.set(0, 3, 1); //позиция
     pointLight.castShadow = true; //отбрасывает ли тени
     pointLight.shadow.camera.near = 0.1; //ближняя граница просчитывания
@@ -78,7 +83,7 @@ function init(modelpath) {
     meshFloor.receiveShadow = true; //рисовать ли тени на плоскости
     
     //добавить плоскость тени в сцену
-    //scene.add(meshFloor);
+    scene.add(meshFloor);
     
 
 
@@ -143,7 +148,7 @@ function animate() {
     resizeCanvasToDisplaySize();
     requestAnimationFrame(animate);
     renderer.render(scene, camera);
-    document.getElementsByClassName('images-container')[0].style.display = 'none';
+//    document.getElementsByClassName('images-container')[0].style.display = 'none';
 }
 
 function resizeCanvasToDisplaySize() {
@@ -162,6 +167,8 @@ function resizeCanvasToDisplaySize() {
   }
 }
 
+    init(modelpath);
+    animate();
 //clored.onclick = getreddress() {
 //    
 //  };
