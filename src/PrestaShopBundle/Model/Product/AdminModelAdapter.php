@@ -513,6 +513,7 @@ class AdminModelAdapter extends \PrestaShopBundle\Model\AdminModelAdapter
                 'id_manufacturer' => $product->id_manufacturer,
                 'features' => $this->getFormFeatures($product),
                 'images' => $this->productAdapter->getImages($product->id, $this->locales[0]['id_lang']),
+                'is_constructor' => $product->is_constructor,
         );
     }
 

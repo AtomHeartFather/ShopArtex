@@ -10,7 +10,7 @@ class __TwigTemplate_80d233dc062b34f2aa7a1dec3d93c01627433efbf5c67110920db8e7370
         $this->parent = false;
 
         $this->blocks = array(
-            '__internal_1798d39c911e0dea2dc607aa5b83b25e196aa08685e9ec5bf3004a78b190969b' => array($this, 'block___internal_1798d39c911e0dea2dc607aa5b83b25e196aa08685e9ec5bf3004a78b190969b'),
+            '__internal_b570ea529467cfaaa654b5d0f32adc8b459e5dd4baffa833870512af276def8f' => array($this, 'block___internal_b570ea529467cfaaa654b5d0f32adc8b459e5dd4baffa833870512af276def8f'),
         );
     }
 
@@ -214,7 +214,7 @@ class __TwigTemplate_80d233dc062b34f2aa7a1dec3d93c01627433efbf5c67110920db8e7370
                   class=\"feature-collection nostyle\"
                   data-prototype=\"";
         // line 117
-        echo twig_escape_filter($this->env,         $this->renderBlock("__internal_1798d39c911e0dea2dc607aa5b83b25e196aa08685e9ec5bf3004a78b190969b", $context, $blocks));
+        echo twig_escape_filter($this->env,         $this->renderBlock("__internal_b570ea529467cfaaa654b5d0f32adc8b459e5dd4baffa833870512af276def8f", $context, $blocks));
         // line 119
         echo "\"
                 >
@@ -293,40 +293,67 @@ class __TwigTemplate_80d233dc062b34f2aa7a1dec3d93c01627433efbf5c67110920db8e7370
 
               <div class=\"row\">
                 <div class=\"col-md-12\">
-                   ";
+                  
+                    <div class=\"form-group mb-4\">
+                    <h2>
+                      ";
         // line 153
-        echo "                   
-                   ";
-        // line 155
-        echo "                  ";
-        // line 175
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("Enable 3d-constructor", array(), "Admin.Catalog.Feature"), "html", null, true);
         echo "
+                      <span class=\"help-box\" data-toggle=\"popover\"
+                        data-content=\"";
+        // line 155
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("Set product as 3d-constructor", array(), "Admin.Catalog.Help"), "html", null, true);
+        echo "\" ></span>
+                    </h2>
+                    ";
+        // line 157
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(($context["is_constructor"] ?? $this->getContext($context, "is_constructor")), 'errors');
+        echo "
+                    <div class=\"row\">
+                      <div class=\"col-xl-12 col-lg-12\" id=\"product_reference_field\">
+                          ";
+        // line 160
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(($context["is_constructor"] ?? $this->getContext($context, "is_constructor")), 'widget');
+        echo "
+                      </div>
+                    </div>
+                  </div>
+                    
+                   <div class=\"row\">
+                        <div class=\"col-xl-6 col-lg-12\">
+                          ";
+        // line 167
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(($context["is_constructor"] ?? $this->getContext($context, "is_constructor")), 'widget');
+        echo "
+                        </div>
+                   </div>
                   ";
-        // line 176
+        // line 170
         if (($context["is_combination_active"] ?? $this->getContext($context, "is_combination_active"))) {
-            // line 177
+            // line 171
             echo "                    <div class=\"form-group mb-3\" id=\"show_variations_selector\">
                       <h2>
                         ";
-            // line 179
+            // line 173
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("Combinations", array(), "Admin.Catalog.Feature"), "html", null, true);
             echo "
                         <span class=\"help-box\" data-toggle=\"popover\"
                           data-content=\"";
-            // line 181
+            // line 175
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("Combinations are the different variations of a product, with attributes like its size, weight or color taking different values. Does your product require combinations?", array(), "Admin.Catalog.Help"), "html", null, true);
             echo "\" ></span>
                       </h2>
                       <div class=\"radio\">
                         <label>
                           <input type=\"radio\" name=\"show_variations\" value=\"0\" ";
-            // line 185
+            // line 179
             if ( !($context["has_combinations"] ?? $this->getContext($context, "has_combinations"))) {
                 echo "checked=\"checked\"";
             }
             echo ">
                           ";
-            // line 186
+            // line 180
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("Simple product", array(), "Admin.Catalog.Feature"), "html", null, true);
             echo "
                         </label>
@@ -334,20 +361,20 @@ class __TwigTemplate_80d233dc062b34f2aa7a1dec3d93c01627433efbf5c67110920db8e7370
                       <div class=\"radio\">
                         <label>
                           <input type=\"radio\" name=\"show_variations\" value=\"1\" ";
-            // line 191
+            // line 185
             if (($context["has_combinations"] ?? $this->getContext($context, "has_combinations"))) {
                 echo "checked=\"checked\"";
             }
             echo ">
                           ";
-            // line 192
+            // line 186
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("Product with combinations", array(), "Admin.Catalog.Feature"), "html", null, true);
             echo "
                         </label>
                         <div id=\"product_type_combinations_shortcut\">
                           <span class=\"small font-secondary\">
                             ";
-            // line 197
+            // line 191
             echo "                            ";
             echo twig_replace_filter($this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("Advanced settings in [1][2]Combinations[/1]", array(), "Admin.Catalog.Help"), array("[1]" => "<a href=\"#tab-step3\" onclick=\"\$('a[href=\\'#step3\\']').tab('show');\" class=\"btn sensitive px-0\">", "[/1]" => "</a>", "[2]" => "<i class=\"material-icons\">open_in_new</i>"));
             echo "
@@ -357,28 +384,28 @@ class __TwigTemplate_80d233dc062b34f2aa7a1dec3d93c01627433efbf5c67110920db8e7370
                     </div>
                   ";
         }
-        // line 203
+        // line 197
         echo "
                   <div class=\"form-group mb-4\">
                     <h2>
                       ";
-        // line 206
+        // line 200
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("Reference", array(), "Admin.Catalog.Feature"), "html", null, true);
         echo "
                       <span class=\"help-box\" data-toggle=\"popover\"
                         data-content=\"";
-        // line 208
+        // line 202
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("Your reference code for this product. Allowed special characters: .-_#.", array(), "Admin.Catalog.Help"), "html", null, true);
         echo "\" ></span>
                     </h2>
                     ";
-        // line 210
+        // line 204
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(($context["formReference"] ?? $this->getContext($context, "formReference")), 'errors');
         echo "
                     <div class=\"row\">
                       <div class=\"col-xl-12 col-lg-12\" id=\"product_reference_field\">
                           ";
-        // line 213
+        // line 207
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(($context["formReference"] ?? $this->getContext($context, "formReference")), 'widget');
         echo "
                       </div>
@@ -386,36 +413,36 @@ class __TwigTemplate_80d233dc062b34f2aa7a1dec3d93c01627433efbf5c67110920db8e7370
                   </div>
 
                   ";
-        // line 218
+        // line 212
         if ($this->env->getExtension('PrestaShopBundle\Twig\LayoutExtension')->getConfiguration("PS_STOCK_MANAGEMENT")) {
-            // line 219
+            // line 213
             echo "                    <div class=\"form-group mb-4\" id=\"product_qty_0_shortcut_div\">
                       <h2>
                         ";
-            // line 221
+            // line 215
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("Quantity", array(), "Admin.Catalog.Feature"), "html", null, true);
             echo "
                         <span class=\"help-box\" data-toggle=\"popover\"
                           data-content=\"";
-            // line 223
+            // line 217
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("How many products should be available for sale?", array(), "Admin.Catalog.Help"), "html", null, true);
             echo "\" ></span>
                       </h2>
                       ";
-            // line 225
+            // line 219
             echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(($context["formQuantityShortcut"] ?? $this->getContext($context, "formQuantityShortcut")), 'errors');
             echo "
                       <div class=\"row\">
                         <div class=\"col-xl-6 col-lg-12\">
                           ";
-            // line 228
+            // line 222
             echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(($context["formQuantityShortcut"] ?? $this->getContext($context, "formQuantityShortcut")), 'widget');
             echo "
                         </div>
                       </div>
                       <span class=\"small font-secondary\">
                         ";
-            // line 233
+            // line 227
             echo "                        ";
             echo twig_replace_filter($this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("Advanced settings in [1][2]Quantities[/1]", array(), "Admin.Catalog.Help"), array("[1]" => "<a href=\"#tab-step3\" onclick=\"\$('a[href=\\'#step3\\']').tab('show');\" class=\"btn sensitive px-0\">", "[/1]" => "</a>", "[2]" => "<i class=\"material-icons\">open_in_new</i>"));
             echo "
@@ -423,65 +450,65 @@ class __TwigTemplate_80d233dc062b34f2aa7a1dec3d93c01627433efbf5c67110920db8e7370
                     </div>
                   ";
         }
-        // line 237
+        // line 231
         echo "
                   <div class=\"form-group mb-4\">
                     <h2>
                       ";
-        // line 240
+        // line 234
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("Price", array(), "Admin.Global"), "html", null, true);
         echo "
                       <span class=\"help-box\" data-toggle=\"popover\"
                         data-content=\"";
-        // line 242
+        // line 236
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("This is the retail price at which you intend to sell this product to your customers. The tax included price will change according to the tax rule you select.", array(), "Admin.Catalog.Help"), "html", null, true);
         echo "\" ></span>
                     </h2>
                     <div class=\"row\">
                       <div class=\"col-md-6\">
                         <label class=\"form-control-label\">";
-        // line 246
+        // line 240
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("Tax excluded", array(), "Admin.Catalog.Feature"), "html", null, true);
         echo "</label>
                         ";
-        // line 247
+        // line 241
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(($context["formPriceShortcut"] ?? $this->getContext($context, "formPriceShortcut")), 'widget');
         echo "
                         ";
-        // line 248
+        // line 242
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(($context["formPriceShortcut"] ?? $this->getContext($context, "formPriceShortcut")), 'errors');
         echo "
                       </div>
                       <div class=\"col-md-6 col-offset-md-1\">
                         <label class=\"form-control-label\">";
-        // line 251
+        // line 245
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("Tax included", array(), "Admin.Catalog.Feature"), "html", null, true);
         echo "</label>
                         ";
-        // line 252
+        // line 246
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(($context["formPriceShortcutTTC"] ?? $this->getContext($context, "formPriceShortcutTTC")), 'widget');
         echo "
                         ";
-        // line 253
+        // line 247
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(($context["formPriceShortcutTTC"] ?? $this->getContext($context, "formPriceShortcutTTC")), 'errors');
         echo "
                       </div>
                       <div class=\"col-md-12 mt-1\">
                         <label class=\"form-control-label\">";
-        // line 256
+        // line 250
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("Tax rule", array(), "Admin.Catalog.Feature"), "html", null, true);
         echo "</label>
                         ";
-        // line 257
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Extension\HttpKernelRuntime')->renderFragment(Symfony\Bridge\Twig\Extension\HttpKernelExtension::controller("PrestaShopBundle:Admin/Common:renderField", array("formName" => "step2", "formType" => "PrestaShopBundle\\Form\\Admin\\Product\\ProductPrice", "fieldName" => "id_tax_rules_group", "fieldData" => $this->getAttribute($this->getAttribute($this->getAttribute($this->getAttribute(        // line 262
+        // line 251
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Extension\HttpKernelRuntime')->renderFragment(Symfony\Bridge\Twig\Extension\HttpKernelExtension::controller("PrestaShopBundle:Admin/Common:renderField", array("formName" => "step2", "formType" => "PrestaShopBundle\\Form\\Admin\\Product\\ProductPrice", "fieldName" => "id_tax_rules_group", "fieldData" => $this->getAttribute($this->getAttribute($this->getAttribute($this->getAttribute(        // line 256
 ($context["form"] ?? $this->getContext($context, "form")), "step2", array()), "id_tax_rules_group", array()), "vars", array()), "value", array()))));
-        // line 266
+        // line 260
         echo "
                       </div>
                       <div class=\"col-md-12\">
                         <span class=\"small font-secondary\">
                           ";
-        // line 271
+        // line 265
         echo "                          ";
         echo twig_replace_filter($this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("Advanced settings in [1][2]Pricing[/1]", array(), "Admin.Catalog.Help"), array("[1]" => "<a href=\"#tab-step2\" onclick=\"\$('a[href=\\'#step2\\']').tab('show');\" class=\"btn sensitive px-0\">", "[/1]" => "</a>", "[2]" => "<i class=\"material-icons\">open_in_new</i>"));
         echo "
@@ -491,7 +518,7 @@ class __TwigTemplate_80d233dc062b34f2aa7a1dec3d93c01627433efbf5c67110920db8e7370
                     <div class=\"row hide\">
                       <div class=\"col-md-12\">
                         <label>";
-        // line 277
+        // line 271
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("Tax rule", array(), "Admin.Catalog.Feature"), "html", null, true);
         echo "</label>
                       </div>
@@ -504,13 +531,13 @@ class __TwigTemplate_80d233dc062b34f2aa7a1dec3d93c01627433efbf5c67110920db8e7370
 
                   <div class=\"form-group mb-4\" id=\"categories\">
                     ";
-        // line 287
+        // line 281
         echo twig_include($this->env, $context, "@Product/ProductPage/Forms/form_categories.html.twig", array("form" => ($context["formCategories"] ?? $this->getContext($context, "formCategories")), "productId" => ($context["productId"] ?? $this->getContext($context, "productId"))));
         echo "
                   </div>
 
                   ";
-        // line 290
+        // line 284
         echo $this->env->getExtension('PrestaShopBundle\Twig\HookExtension')->renderHook("displayAdminProductsMainStepRightColumnBottom", array("id_product" => ($context["productId"] ?? $this->getContext($context, "productId"))));
         echo "
 
@@ -532,13 +559,13 @@ class __TwigTemplate_80d233dc062b34f2aa7a1dec3d93c01627433efbf5c67110920db8e7370
     }
 
     // line 117
-    public function block___internal_1798d39c911e0dea2dc607aa5b83b25e196aa08685e9ec5bf3004a78b190969b($context, array $blocks = array())
+    public function block___internal_b570ea529467cfaaa654b5d0f32adc8b459e5dd4baffa833870512af276def8f($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "__internal_1798d39c911e0dea2dc607aa5b83b25e196aa08685e9ec5bf3004a78b190969b"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "__internal_b570ea529467cfaaa654b5d0f32adc8b459e5dd4baffa833870512af276def8f"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "__internal_1798d39c911e0dea2dc607aa5b83b25e196aa08685e9ec5bf3004a78b190969b"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "__internal_b570ea529467cfaaa654b5d0f32adc8b459e5dd4baffa833870512af276def8f"));
 
         // line 118
         echo "                    ";
@@ -565,7 +592,7 @@ class __TwigTemplate_80d233dc062b34f2aa7a1dec3d93c01627433efbf5c67110920db8e7370
 
     public function getDebugInfo()
     {
-        return array (  544 => 118,  535 => 117,  514 => 290,  508 => 287,  495 => 277,  485 => 271,  479 => 266,  477 => 262,  476 => 257,  472 => 256,  466 => 253,  462 => 252,  458 => 251,  452 => 248,  448 => 247,  444 => 246,  437 => 242,  432 => 240,  427 => 237,  419 => 233,  412 => 228,  406 => 225,  401 => 223,  396 => 221,  392 => 219,  390 => 218,  382 => 213,  376 => 210,  371 => 208,  366 => 206,  361 => 203,  351 => 197,  344 => 192,  338 => 191,  330 => 186,  324 => 185,  317 => 181,  312 => 179,  308 => 177,  306 => 176,  303 => 175,  301 => 155,  298 => 153,  292 => 146,  285 => 141,  279 => 138,  272 => 134,  263 => 128,  257 => 124,  240 => 122,  223 => 121,  219 => 119,  217 => 117,  211 => 114,  207 => 113,  203 => 112,  197 => 109,  189 => 104,  183 => 101,  175 => 96,  171 => 95,  161 => 88,  157 => 87,  150 => 82,  147 => 81,  140 => 79,  134 => 77,  132 => 76,  118 => 67,  113 => 65,  109 => 64,  105 => 63,  102 => 62,  97 => 61,  91 => 57,  88 => 56,  86 => 55,  80 => 52,  76 => 51,  71 => 49,  67 => 48,  59 => 43,  55 => 42,  51 => 41,  43 => 36,  39 => 35,  34 => 32,  26 => 25,);
+        return array (  571 => 118,  562 => 117,  541 => 284,  535 => 281,  522 => 271,  512 => 265,  506 => 260,  504 => 256,  503 => 251,  499 => 250,  493 => 247,  489 => 246,  485 => 245,  479 => 242,  475 => 241,  471 => 240,  464 => 236,  459 => 234,  454 => 231,  446 => 227,  439 => 222,  433 => 219,  428 => 217,  423 => 215,  419 => 213,  417 => 212,  409 => 207,  403 => 204,  398 => 202,  393 => 200,  388 => 197,  378 => 191,  371 => 186,  365 => 185,  357 => 180,  351 => 179,  344 => 175,  339 => 173,  335 => 171,  333 => 170,  327 => 167,  317 => 160,  311 => 157,  306 => 155,  301 => 153,  292 => 146,  285 => 141,  279 => 138,  272 => 134,  263 => 128,  257 => 124,  240 => 122,  223 => 121,  219 => 119,  217 => 117,  211 => 114,  207 => 113,  203 => 112,  197 => 109,  189 => 104,  183 => 101,  175 => 96,  171 => 95,  161 => 88,  157 => 87,  150 => 82,  147 => 81,  140 => 79,  134 => 77,  132 => 76,  118 => 67,  113 => 65,  109 => 64,  105 => 63,  102 => 62,  97 => 61,  91 => 57,  88 => 56,  86 => 55,  80 => 52,  76 => 51,  71 => 49,  67 => 48,  59 => 43,  55 => 42,  51 => 41,  43 => 36,  39 => 35,  34 => 32,  26 => 25,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -727,32 +754,26 @@ class __TwigTemplate_80d233dc062b34f2aa7a1dec3d93c01627433efbf5c67110920db8e7370
 
               <div class=\"row\">
                 <div class=\"col-md-12\">
-                   {# <div class=\"tab-pane panel panel-default \" id=\"frais_a_prevoir\">
-                     {{ form_widget(is_constructor) }} 
-                      </div>#}
-                   
-                   {#  {{ is_constructor }} #}
-                  {#   <div class=\"form-group mb-3\" id=\"show_variations_selector\">
-                      <h2>
-                        {{ \"3D Constructor\"|trans({}, 'Admin.Catalog.Feature') }}
-                        <span class=\"help-box\" data-toggle=\"popover\"
-                          data-content=\"{{ \"Enabling the 3D constructor feature allows you to load 3D objects. Users will be able to design the product according to the available attributes.\"|trans({}, 'Admin.Catalog.Help') }}\" ></span>
-                      </h2>
-                      <div class=\"radio\">
-                        <label>
-                          <input type=\"radio\" name=\"show_variations\" value=\"0\" {% if not is_constructor %}checked=\"checked\"{% endif %}>
-                          {{ \"Enable\"|trans({}, 'Admin.Catalog.Feature') }}
-                        </label>
+                  
+                    <div class=\"form-group mb-4\">
+                    <h2>
+                      {{ \"Enable 3d-constructor\"|trans({}, 'Admin.Catalog.Feature') }}
+                      <span class=\"help-box\" data-toggle=\"popover\"
+                        data-content=\"{{ \"Set product as 3d-constructor\"|trans({}, 'Admin.Catalog.Help') }}\" ></span>
+                    </h2>
+                    {{ form_errors(is_constructor) }}
+                    <div class=\"row\">
+                      <div class=\"col-xl-12 col-lg-12\" id=\"product_reference_field\">
+                          {{ form_widget(is_constructor) }}
                       </div>
-                      <div class=\"radio\">
-                        <label>
-                          <input type=\"radio\" name=\"show_variations\" value=\"1\" {% if is_constructor %}checked=\"checked\"{% endif %}>
-                          {{ \"Disable\"|trans({}, 'Admin.Catalog.Feature') }}
-                        </label>
-                        
-                      </div>
-                    </div> #}
-
+                    </div>
+                  </div>
+                    
+                   <div class=\"row\">
+                        <div class=\"col-xl-6 col-lg-12\">
+                          {{ form_widget(is_constructor) }}
+                        </div>
+                   </div>
                   {% if is_combination_active %}
                     <div class=\"form-group mb-3\" id=\"show_variations_selector\">
                       <h2>

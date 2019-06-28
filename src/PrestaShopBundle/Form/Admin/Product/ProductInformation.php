@@ -229,10 +229,12 @@ class ProductInformation extends CommonAbstractType
             //RIGHT COL
                 ->add('is_constructor', SwitchType::class, [
                     // Customized choices with ON/OFF instead of Yes/No
+                    'required' => false,
                     'choices' => [
                         'ON' => true,
                         'OFF' => false,
                     ],
+                    'label' => 'Set constructor',
                 ])
             ->add('active', FormType\CheckboxType::class, [
                 'label' => $this->translator->trans('Enabled', [], 'Admin.Global'),

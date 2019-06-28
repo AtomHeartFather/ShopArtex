@@ -1,0 +1,56 @@
+28.06.19.------------------------------
+
+Add new property in admin panel Product
+
+1. Override Product.php
+
+modules/threejsviewport/override/classes/Product.php
+
+Class Product extends ProductCore {
+
+    public $is_constructor;
+
+    public function __construct($id_product = null, $full = false, $id_lang = null, $id_shop = null, Context $context = null) {
+        self::$definition['fields']['is_constructor'] = array('type' => self::HAS_ONE);
+        parent::__construct($id_product, $full, $id_lang, $id_shop, $context);
+    }
+
+}
+
+2. add to src/PrestaShopBundle/Form/Admin/Product/ProductInformation.php buildForm()
+
+                ->add('is_constructor', SwitchType::class, [
+                    // Customized choices with ON/OFF instead of Yes/No
+                    'required' => false,
+                    'choices' => [
+                        'ON' => true,
+                        'OFF' => false,
+                    ],
+                    'label' => 'Set constructor',
+                ])
+
+3. src/PrestaShopBundle/Model/Product/AdminModelAdapter.php 
+mapStep1FromData()
+
+'is_constructor' => $product->is_constructor,
+
+4. modules/threejsviewport/views/PrestaShop/Admin/Product/ProductPage/Panels/essentials.html.twig
+
+                    <div class="form-group mb-4">
+                        <h2>
+                            {{ "Enable 3d-constructor"|trans({}, 'Admin.Catalog.Feature') }}
+                            <span class="help-box" data-toggle="popover"
+                                  data-content="{{ "Set product as 3d-constructor"|trans({}, 'Admin.Catalog.Help') }}" ></span>
+                        </h2>
+                        {{ form_errors(is_constructor) }}
+                        <div class="row">
+                            <div class="col-xl-12 col-lg-12" id="product_reference_field">
+                                {{ form_widget(is_constructor) }}
+                            </div>
+                        </div>
+                    </div>
+
+5. src/PrestaShopBundle/Resources/views/Admin/Product/ProductPage/product.html.twig
+'is_constructor': form.step1.is_constructor, 
+in  {# PANEL ESSENTIALS #}
+
