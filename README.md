@@ -18,6 +18,21 @@ https://docs.google.com/document/d/18q8aRrUm42jBpnlUo82Smub7ioXKcB-6OU0cKNkElCM/
     'database_user' => 'artex',
     'database_password' => '123',
 
+# Настройки базы на хостинге
+    'database_host' => 'localhost',
+    'database_port' => '',
+    'database_name' => 'artex73_prsh1',
+    'database_user' => 'artex73_prsh1',
+    'database_password' => '9GbFnix*',
+    'database_prefix' => 'ps_',    
+
+# Поля в базе нужные при миграции    
+ps_shop_url  artex73.beget.tech 
+ps_configuration:
+PS_SHOP_DOMAIN artex73.beget.tech
+PS_SHOP_DOMAIN_SSL artex73.beget.tech
+PS_SHOP_SHOP_NAME artex
+ 
 # Обновить theme.yml
 If you want reload your configuration :
 1.Modify your theme.yml

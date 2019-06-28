@@ -54,3 +54,7 @@ ca3d4e,::1,GET,http://localhost/artex/admin896np0lun/index.php/sell/catalog/prod
 08fe08,::1,GET,http://localhost/artex/admin896np0lun/index.php/sell/catalog/products/attributes/form-images/21?_token=NKMZF4Ro3siSSOw43A6mF-juKtVvBGFWjRFoRWAExdg,1561713158,,200
 03b198,::1,POST,http://localhost/artex/admin896np0lun/index.php/sell/catalog/products/21?_token=NKMZF4Ro3siSSOw43A6mF-juKtVvBGFWjRFoRWAExdg,1561713166,,200
 bd8f5a,::1,POST,http://localhost/artex/admin896np0lun/index.php/sell/catalog/products/21?_token=NKMZF4Ro3siSSOw43A6mF-juKtVvBGFWjRFoRWAExdg,1561713221,,200
+7235cc,::1,GET,http://localhost/artex/admin896np0lun/index.php/_fragment?_path=_format%3Dhtml%26_locale%3Dru-RU%26_controller%3DPrestaShopBundle%255CController%255CAdmin%255CProductController%253A%253AlistAction,1561726078,275395,200
+275395,::1,GET,http://localhost/artex/admin896np0lun/index.php/sell/catalog/products?_token=NKMZF4Ro3siSSOw43A6mF-juKtVvBGFWjRFoRWAExdg,1561726078,,200
+11bf60,::1,GET,http://localhost/artex/admin896np0lun/index.php/_fragment?_path=_format%3Dhtml%26_locale%3Dru-RU%26_controller%3DPrestaShopBundle%255CController%255CAdmin%255CProductController%253A%253AlistAction,1561726476,944cff,200
+944cff,::1,GET,http://localhost/artex/admin896np0lun/index.php/sell/catalog/products?_token=NKMZF4Ro3siSSOw43A6mF-juKtVvBGFWjRFoRWAExdg,1561726476,,200
