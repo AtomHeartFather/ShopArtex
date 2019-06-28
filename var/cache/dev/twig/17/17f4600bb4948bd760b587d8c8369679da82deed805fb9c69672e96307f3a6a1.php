@@ -10,7 +10,7 @@ class __TwigTemplate_80d233dc062b34f2aa7a1dec3d93c01627433efbf5c67110920db8e7370
         $this->parent = false;
 
         $this->blocks = array(
-            '__internal_b570ea529467cfaaa654b5d0f32adc8b459e5dd4baffa833870512af276def8f' => array($this, 'block___internal_b570ea529467cfaaa654b5d0f32adc8b459e5dd4baffa833870512af276def8f'),
+            '__internal_322295f2e425141e6a6aa864c30f7801d3c0955b4f6603614209d003f27934a1' => array($this, 'block___internal_322295f2e425141e6a6aa864c30f7801d3c0955b4f6603614209d003f27934a1'),
         );
     }
 
@@ -214,7 +214,7 @@ class __TwigTemplate_80d233dc062b34f2aa7a1dec3d93c01627433efbf5c67110920db8e7370
                   class=\"feature-collection nostyle\"
                   data-prototype=\"";
         // line 117
-        echo twig_escape_filter($this->env,         $this->renderBlock("__internal_b570ea529467cfaaa654b5d0f32adc8b459e5dd4baffa833870512af276def8f", $context, $blocks));
+        echo twig_escape_filter($this->env,         $this->renderBlock("__internal_322295f2e425141e6a6aa864c30f7801d3c0955b4f6603614209d003f27934a1", $context, $blocks));
         // line 119
         echo "\"
                 >
@@ -295,30 +295,30 @@ class __TwigTemplate_80d233dc062b34f2aa7a1dec3d93c01627433efbf5c67110920db8e7370
                 <div class=\"col-md-12\">
                   
                     <div class=\"form-group mb-4\">
-                    <h2>
-                      ";
+                        <h2>
+                            ";
         // line 153
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("Enable 3d-constructor", array(), "Admin.Catalog.Feature"), "html", null, true);
         echo "
-                      <span class=\"help-box\" data-toggle=\"popover\"
-                        data-content=\"";
+                            <span class=\"help-box\" data-toggle=\"popover\"
+                                  data-content=\"";
         // line 155
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("Set product as 3d-constructor", array(), "Admin.Catalog.Help"), "html", null, true);
         echo "\" ></span>
-                    </h2>
-                    ";
+                        </h2>
+                        ";
         // line 157
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(($context["is_constructor"] ?? $this->getContext($context, "is_constructor")), 'errors');
         echo "
-                    <div class=\"row\">
-                      <div class=\"col-xl-12 col-lg-12\" id=\"product_reference_field\">
-                          ";
+                        <div class=\"row\">
+                            <div class=\"col-xl-12 col-lg-12\" id=\"product_reference_field\">
+                                ";
         // line 160
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(($context["is_constructor"] ?? $this->getContext($context, "is_constructor")), 'widget');
         echo "
-                      </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
                     
                    <div class=\"row\">
                         <div class=\"col-xl-6 col-lg-12\">
@@ -559,13 +559,13 @@ class __TwigTemplate_80d233dc062b34f2aa7a1dec3d93c01627433efbf5c67110920db8e7370
     }
 
     // line 117
-    public function block___internal_b570ea529467cfaaa654b5d0f32adc8b459e5dd4baffa833870512af276def8f($context, array $blocks = array())
+    public function block___internal_322295f2e425141e6a6aa864c30f7801d3c0955b4f6603614209d003f27934a1($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "__internal_b570ea529467cfaaa654b5d0f32adc8b459e5dd4baffa833870512af276def8f"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "__internal_322295f2e425141e6a6aa864c30f7801d3c0955b4f6603614209d003f27934a1"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "__internal_b570ea529467cfaaa654b5d0f32adc8b459e5dd4baffa833870512af276def8f"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "__internal_322295f2e425141e6a6aa864c30f7801d3c0955b4f6603614209d003f27934a1"));
 
         // line 118
         echo "                    ";
@@ -756,18 +756,18 @@ class __TwigTemplate_80d233dc062b34f2aa7a1dec3d93c01627433efbf5c67110920db8e7370
                 <div class=\"col-md-12\">
                   
                     <div class=\"form-group mb-4\">
-                    <h2>
-                      {{ \"Enable 3d-constructor\"|trans({}, 'Admin.Catalog.Feature') }}
-                      <span class=\"help-box\" data-toggle=\"popover\"
-                        data-content=\"{{ \"Set product as 3d-constructor\"|trans({}, 'Admin.Catalog.Help') }}\" ></span>
-                    </h2>
-                    {{ form_errors(is_constructor) }}
-                    <div class=\"row\">
-                      <div class=\"col-xl-12 col-lg-12\" id=\"product_reference_field\">
-                          {{ form_widget(is_constructor) }}
-                      </div>
+                        <h2>
+                            {{ \"Enable 3d-constructor\"|trans({}, 'Admin.Catalog.Feature') }}
+                            <span class=\"help-box\" data-toggle=\"popover\"
+                                  data-content=\"{{ \"Set product as 3d-constructor\"|trans({}, 'Admin.Catalog.Help') }}\" ></span>
+                        </h2>
+                        {{ form_errors(is_constructor) }}
+                        <div class=\"row\">
+                            <div class=\"col-xl-12 col-lg-12\" id=\"product_reference_field\">
+                                {{ form_widget(is_constructor) }}
+                            </div>
+                        </div>
                     </div>
-                  </div>
                     
                    <div class=\"row\">
                         <div class=\"col-xl-6 col-lg-12\">

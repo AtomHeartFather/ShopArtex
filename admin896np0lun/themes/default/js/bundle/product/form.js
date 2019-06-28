@@ -89,6 +89,20 @@ var displayFieldsManager = (function() {
   return {
     'init': function (virtualProduct) {
       managedVirtualProduct = virtualProduct;
+      
+     $('#form_step1_is_constructor_1').change(function () {
+        $('#show_variations_selector input[value="1"]').click();
+        showVariationsSelector.hide();
+        $('#product_type_combinations_shortcut').hide();
+      });
+      
+      if($('#form_step1_is_constructor_1').prop("checked")){
+          $('#form_step1_is_constructor_1').change();
+      }   
+      
+      $('#form_step1_is_constructor_0').change(function () {
+         displayFieldsManager.refresh();
+      });
 
       /** Type product fields display management */
       $('#form_step1_type_product').change(function () {
@@ -147,8 +161,8 @@ var displayFieldsManager = (function() {
       this.checkAccessVariations();
       $('#virtual_product').hide();
       $('#form-nav a[href="#step3"]').text(translate_javascripts['Quantities']);
-
-      /** product type switch */
+      
+         /** product type switch */
 
       if (typeProduct.val() === '1') {
         $('#pack_stock_type, #js_form_step1_inputPackItems').show();

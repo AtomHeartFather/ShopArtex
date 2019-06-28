@@ -54,3 +54,19 @@ mapStep1FromData()
 'is_constructor': form.step1.is_constructor, 
 in  {# PANEL ESSENTIALS #}
 
+6. /var/www/artex/admin896np0lun/themes/default/js/bundle/product/form.js
+Action on enable constructor
+
+     $('#form_step1_is_constructor_1').change(function () {
+        $('#show_variations_selector input[value="1"]').click();
+        showVariationsSelector.hide();
+        $('#product_type_combinations_shortcut').hide();
+      });
+      
+      if($('#form_step1_is_constructor_1').prop("checked")){
+          $('#form_step1_is_constructor_1').change();
+      }   
+      
+      $('#form_step1_is_constructor_0').change(function () {
+         displayFieldsManager.refresh();
+      });
