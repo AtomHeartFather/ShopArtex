@@ -90,9 +90,6 @@ theme_settings:
   layouts:
     category: layout-left-side-column
     best-sales: layout-left-side-column
-    
-dependencies:
-  modules: threejsviewport
   
 assets:
   css:

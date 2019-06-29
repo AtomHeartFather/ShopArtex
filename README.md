@@ -38,3 +38,5 @@ If you want reload your configuration :
 1.Modify your theme.yml
 2.Delete the file into ROOT_FOLDER/config/themes/your theme/shop*.json
 3.Refresh your page, prestashop going to regenerate the config json file for your theme
+
+# Соотношение сторон изображений для наполнения магазина использовать 1.5

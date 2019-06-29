@@ -46,7 +46,7 @@ function getQueryVariable(variable)
         autoWidth:true,
         adaptiveHeight:false,
         item:1.5,
-        slideMargin:900, // расстояние между слайдерами
+        slideMargin:500, // расстояние между слайдерами 500-720p 900-1080p
         pager: false,
         loop:true
     });
