@@ -38,7 +38,7 @@
   </div>
   *}
   <div class="no-gutters">
-	<ul id='lightSlider'>
+	<ul id='lightSlider2'>
                 {foreach from=$listing.products item="product" name="product_list"}
                         <li>
                         {*   <img src="{$image.medium.url}" alt="{$image.legend}" title="{$image.legend}" width="{$product.cover.bySize.medium_default.width}" itemprop="image"> 

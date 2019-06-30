@@ -43,12 +43,12 @@
       {/block}
     </header>
 
-    {block name='notifications'}
+{*    {block name='notifications'}
       {include file='_partials/notifications.tpl'}
-    {/block}
+    {/block}*}
 
     <div id="wrapper">
-      {hook h="displayWrapperTop"}
+      {*{hook h="displayWrapperTop"}*}
 
       {block name='breadcrumb'}
         {include file='_partials/breadcrumb.tpl'}

@@ -222,3 +222,19 @@ button {
   width: 100%;
   border: 0;
   }*/
+
+
+/*##  HEADER  ##*/
+
+a.login,
+.user-info,
+.language-selector,
+.header-nav,
+.header {
+    height: 32px;
+}
+
+.language-selector{
+    display: block;
+    padding: 0 0 0 0;
+}

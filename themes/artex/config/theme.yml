@@ -34,17 +34,18 @@ global_settings:
       - name: displayFooterBefore
         title: displayFooterBefore
         description: Add a widget area above the footer
-      - name: displayProductImagesSlider
-        title: displayProductImagesSlider
-        description: Add a slider for product page
+      - name: displayFooterBefore
+        title: displayFooterBefore
+        description: Add a widget area above the footer
+      - name: displayTopMenu
+        title: displayTopMenu
+        description: TopMenu hook for a top menu model
     modules_to_hook:
+      displayTopMenu:
+        - ps_mainmenu  
       displayNav:
         - ps_shoppingcart
-        - ps_languageselector
-        - ps_currencyselector
         - ps_customersignin
-      displayTop:
-        - ps_mainmenu
       displayHome:
         - ps_imageslider
         - ps_featuredproducts

@@ -492,11 +492,11 @@ a.logo {
 .header-nav {
   text-align: right;
   background-color: #666;
-  margin-bottom: 20px;
+/*  margin-bottom: 20px;*/
   font-size: 0;
 }
 .header-nav > * {
-  display: inline-block;
+/*  display: inline-block;*/
   font-size: 1rem;
 }
 .header-nav::after {

@@ -23,7 +23,7 @@
  * International Registered Trademark & Property of PrestaShop SA
  */
     
-function getQueryVariable(variable)
+function getQueryVariable(variable) /* забирает переменные с адресной get строки */
 {
        var query = window.location.search.substring(1);
        var vars = query.split("&");
@@ -34,11 +34,9 @@ function getQueryVariable(variable)
        return(false);
 }
     
-  
-    
-  $(document).ready(function() {
+$(document).ready(function() {  /* запускает слайдер, если только id продукта не 21 */
      
-     if ( getQueryVariable("id_product") == 21 ) {
+    if ( getQueryVariable("id_product") == 21 ) {
         return;
         } 
      
@@ -50,7 +48,33 @@ function getQueryVariable(variable)
         pager: false,
         loop:true
     });
-});
+});    
+//    $('.logo').click(
+//        function() {
+//            var msgo = "неа"
+//            console.log('збс');
+//            var elems = document.getElementsByClassName("menu row");
+//            for(var i=0; i<elems.length; i++) {
+//                elems.getElementsByClassName("menu-depth")
+//                if (!elems.firstChild) { msgo = "збс" }
+////                msgo = elems;
+////                if (!document.getElementsByClassName("menu-depth").Children.length) {
+////                    msgo = document.getElementsByClassName("menu-depth").parentElement.Children[1].label;
+////                }
+//            }
+//            
+////            document.body.children[1].children[2].children[2].children[1].children[1]
+////            msgo = 'ЗБС!';
+////            if (!document.getElementsByClassName("menu-depth").childNodes.length) {
+////                msgo = document.getElementsByClassName("menu-depth").parentElement.Choldren[1].label;
+////            }
+//            alert (msgo);
+//    });
+//    
+//});
+
+//for(var i=0; i<elems.length; i++)     правильный перебор элемендов DOM
+
 
 //  $(document).ready(function() {
 //    $('#lightSlider2').lightSlider({

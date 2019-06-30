@@ -29,22 +29,27 @@
 {/block}
 
 {block name='header_nav'}
-  <div class="header-nav">
-    {hook h='displayNav'}
+  <div class="d-flex flex-row justify-content-between no-gutters mr-2">
+          {block name='header_logo'}
+            <a class="logo" href="{$urls.base_url}" title="{$shop.name}">
+                <img src="{$shop.logo}" alt="{$shop.name}">
+            </a>
+    {/block}
+    <div class="row header-left-side no-gutters col-9">
+        {hook h='displayTopMenu'} 
+    </div>   
+    <div class="row justify-content-end header-right-side no-gutters col-2"> 
+        {hook h='displayNav'}
+    </div>
   </div>
 {/block}
 
-{block name='header_logo'}
-  <a class="logo" href="{$urls.base_url}" title="{$shop.name}">
-    <img src="{$shop.logo}" alt="{$shop.name}">
-  </a>
-{/block}
+
 
 {block name='header_top'}
-  <div class="header-top">
-    {hook h='displayTop'}
+{*  <div class="header-top">
   </div>
-
+*}
   {hook h='displayNavFullWidth'}
 
 {/block}
