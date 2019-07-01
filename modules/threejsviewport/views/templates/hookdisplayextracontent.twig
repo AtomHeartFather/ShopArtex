@@ -1,0 +1,34 @@
+   {# 3d #}
+              <div class="row mt-4">
+                  <div class="col-md-8">
+                      <h2>{{ 'Add 3D model files'|trans({}, 'Admin.Catalog.Feature') }}</h2>
+                      <p class="subtitle">{{ 'Add 3d models'|trans({}, 'Admin.Catalog.Feature') }}</p>
+                      {#{{ form_widget(optionsForm.attachments) }}#}
+                  </div>
+              </div>
+              <div class="row mt-3">
+                  <div class="col-md-8">
+                      <a
+                          class="btn btn-outline-secondary mb-3"
+                          href="#collapsedForm"
+                          data-toggle="collapse"
+                          aria-expanded="false"
+                          aria-controls="collapsedForm"
+                          >
+                          <i class="material-icons">add_circle</i>
+                          {{ 'Attach a new file'|trans({}, 'Admin.Catalog.Feature') }}
+                      </a>
+                      <fieldset class="form-group collapse" id="collapsedForm">
+                         {# {{ form_errors(optionsForm.attachment_product) }}#}
+{#                          <div id="form_step6_attachment_product" data-action="{{ optionsForm.attachment_product.vars.attr['data-action'] }}">
+#}                   {#           <div class="form-group">{{ form_widget(optionsForm.attachment_product.file) }}</div>
+                              <div class="form-group">{{ form_widget(optionsForm.attachment_product.name) }}</div>
+                              <div class="form-group">{{ form_widget(optionsForm.attachment_product.description) }}</div>#}
+                              <div class="form-group">
+                                  {#{{ form_widget(optionsForm.attachment_product.add) }}
+                                  {{ form_widget(optionsForm.attachment_product.cancel) }}#}
+                              </div>
+                          </div>
+                      </fieldset>
+                  </div>
+              </div>

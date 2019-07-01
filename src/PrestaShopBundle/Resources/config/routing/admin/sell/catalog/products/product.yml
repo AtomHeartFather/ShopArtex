@@ -49,6 +49,15 @@ admin_product_attachement_add_action:
         idProduct: 0
     requirements:
         idProduct: \d+
+        
+admin_product_attachement_del_action:
+    path:     /attachment/form/del/{idProduct}
+    methods:  [POST]
+    defaults:
+        _controller: PrestaShopBundle:Admin/AttachementProduct:del
+        idProduct: 0
+    requirements:
+        idProduct: \d+
 
 admin_product_image_upload:
     path:     /image/upload/{idProduct}

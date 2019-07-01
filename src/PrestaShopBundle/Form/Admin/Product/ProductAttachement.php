@@ -89,6 +89,10 @@ class ProductAttachement extends CommonAbstractType
                 'label' => $this->translator->trans('Add', [], 'Admin.Actions'),
                 'attr' => ['class' => 'btn-outline-primary pull-right'],
             ])
+            ->add('del', ButtonType::class, [
+                'label' => $this->translator->trans('Del', [], 'Admin.Actions'),
+                'attr' => ['class' => 'btn-outline-primary pull-right'],
+            ])
             ->add('cancel', ButtonType::class, [
                 'label' => $this->translator->trans('Cancel', [], 'Admin.Actions'),
                 'attr' => ['class' => 'btn-outline-secondary pull-right mr-2', 'data-toggle' => 'collapse', 'data-target' => '#collapsedForm'],

@@ -1150,15 +1150,63 @@ var attachmentProduct = (function() {
     'init': function() {
       var buttonSave = $('#form_step6_attachment_product_add');
       var buttonCancel = $('#form_step6_attachment_product_cancel');
+      var buttonDelete = $('#form_step6_attachment_product_del');
 
       /** check all attachments files */
       $('#product-attachment-files-check').change(function() {
         if ($(this).is(":checked")) {
-          $('#product-attachment-file input[type="checkbox"]').prop('checked', true);
+                    $.each($('#product-attachment-file input[type="checkbox"]'), function (i, val) {
+                        val.checked=true;
+                    });
         } else {
-          $('#product-attachment-file input[type="checkbox"]').prop('checked', false);
+                    $.each($('#product-attachment-file input[type="checkbox"]'), function (i, val) {
+                        val.checked=false;
+                    });
         }
       });
+      
+       $('#form_step6_attachment_product_del').click(function() {
+           var data = new FormData();
+           $.each($('#product-attachment-file input[type="checkbox"]'), function (i, val) {
+                       if(val.checked=true){
+                            data.append('product_attachment_id[]', val.value);
+                       }
+           });
+           
+          $.ajax({
+          type: 'POST',
+          url: replaceEndingIdFromUrl($('#form_step6_attachment_product_del_action').attr('data-action-del'), id_product),
+          data: data,
+          contentType: false,
+          processData: false,
+          beforeSend: function() {
+
+          },
+          success: function(response) {              
+              $.each($('#product-attachment-file input[type="checkbox"]'), function (i, val) {
+                       if(val.checked=true){
+                            val.remove();
+                       }
+           });
+          },
+          error: function(response) {
+            $.each(jQuery.parseJSON(response.responseText), function(key, errors) {
+              var html = '<ul class="list-unstyled text-danger">';
+              $.each(errors, function(key, error) {
+                html += '<li>' + error + '</li>';
+              });
+              html += '</ul>';
+
+              $('#form_step6_attachment_product_' + key).parent().append(html);
+              $('#form_step6_attachment_product_' + key).parent().addClass('has-danger');
+            });
+          },
+          complete: function() {
+            buttonSave.removeAttr('disabled');
+          }
+        });
+           
+       });
 
       buttonCancel.click(function (){
         resetAttachmentForm();
