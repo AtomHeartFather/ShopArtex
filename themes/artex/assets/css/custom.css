@@ -1,0 +1,240 @@
+/*
+ * Custom style goes here.
+ * A template should always ship with an empty custom.css
+ */
+@charset "UTF-8";
+
+@font-face {
+	font-family: acne;
+	src: url(../fonts/AcneStudiosCircleBook.eot);
+}
+
+body {
+    font-family: acne,helvetica neue,Helvetica,Arial,sans-serif !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    text-transform: none !important;
+    letter-spacing: normal !important;
+}
+
+.brdr {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border: 1px solid transparent;
+/*    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    background-image: url({$product.cover.medium.url});
+    background-size: cover;*/
+}
+
+.no-padding {
+    padding: 0 !important;
+}
+
+li {
+  list-style-type: none;
+  /* Убираем маркеры */
+}
+
+ul {
+  margin-top: 16px;
+    
+  margin-left: 0;
+  /* Отступ слева в браузере IE и Opera */
+  padding-left: 0;
+  /* Отступ слева в браузере Firefox, Safari, Chrome */
+}
+
+.radio-color {
+    margin-top: 0.1vw;
+}
+
+/*.product-add-to-cart {
+    margin-top: 10vw;
+}*/
+
+.product-minimal-quantity {
+    margin-top: 5vw;    
+}
+
+.hover-block {
+	position: absolute;
+	left: -2000%;
+	top: -3000px;
+}
+
+.hover-block p {
+    padding: 1vw;
+}
+
+.brdr:hover .hover-block {
+    	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.bottom-name {
+	position: absolute;
+	left: 0;
+	top: 90%;
+        font-size: 1vw;
+}
+
+.bottom-name p {
+        padding-left: 1vw;
+        padding-bottom: 1.8vw;
+        line-height: 1.1vw;
+}
+
+.brdr:hover .bottom-name {
+   	position: absolute;
+	left: -2000%;
+	top: -2000%;
+}
+
+.bottom-color {
+	position: absolute;
+	left: -2000%;
+	top: -2000%;
+        font-size: 1vw;
+}
+
+.bottom-color p {
+        padding-left: 1vw;
+        padding-bottom: 1.8vw;
+        line-height: 1.1vw;
+}
+
+.brdr:hover .bottom-color {
+    	position: absolute;
+	left: 0;
+	top: 90%;
+}
+
+
+
+
+.row {
+    margine-left: 0px !important;
+    margine-right: 0px !important;
+}	
+        
+#content {
+    background-color: white !important;
+    position: relative;
+}
+
+.product-cart {
+    width: 20vw;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    height:450px;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  min-height: 10em;
+  margin-bottom: 5em;
+}
+
+.p-name h1 {
+    line-height: 21px !important;
+    font-size: 17px !important;
+}
+
+.product-information {
+    background-color: blue;
+    height: 500px !important;
+/*    position: absolute;
+    left: 50%;
+    top: 0;
+    opacity: .3;*/
+}
+
+button {
+  background-color: black; /* Green */
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+  width: 100%;
+}
+
+.description p {
+    font-size: 12px !important;
+    line-height: 16px !important;
+}
+
+
+.product-actions {
+    background-color: red !important;
+/*    position: absolute;
+    left: 50%;
+    top: 50%;
+    opacity: .3;*/
+}
+
+.product-discounts {
+    background-color: green;
+}
+
+#wrapper {
+    padding-left: 1px !important;
+    padding-right: 1px !important;
+}
+
+/*
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  }
+
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+  }
+
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+  }
+
+.rslides img {
+  display: block;
+  height: auto;
+  float: left;
+  width: 100%;
+  border: 0;
+  }*/
+
+
+/*##  HEADER  ##*/
+
+a.login,
+.user-info,
+.language-selector,
+.header-nav,
+.header {
+    height: 32px;
+}
+
+.language-selector{
+    display: block;
+    padding: 0 0 0 0;
+}
