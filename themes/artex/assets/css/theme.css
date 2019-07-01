@@ -472,14 +472,14 @@ a.logo {
 /*  padding-left: 10px;
   padding-right: 10px;*/
 }
-@media (min-width: 1200px) {
+/*@media (min-width: 1200px) {
   #wrapper,
   .header-nav,
   .header-top,
   a.logo,
   aside#notifications {
-/*    padding-left: 100px;
-    padding-right: 100px;*/
+    padding-left: 100px;
+    padding-right: 100px;
   }
 }
 @media (min-width: 1800px) {
@@ -491,7 +491,7 @@ a.logo {
     padding-left: 350px;
     padding-right: 350px;
   }
-}
+}*/
 .header-banner {
   text-align: center;
   background-color: #000;

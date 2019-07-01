@@ -1,0 +1,7 @@
+app/config/parameters.php
+cache/smarty/compile/
+cache/smarty/
+var/cache/
+.gitignore
+var/logs/
+

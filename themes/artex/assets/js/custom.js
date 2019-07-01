@@ -42,7 +42,7 @@ $(document).ready(function() {  /* запускает слайдер, если �
      
     $('#lightSlider').lightSlider({
         autoWidth:true,
-        adaptiveHeight:false,
+        adaptiveHeight:true,
         item:1.5,
         slideMargin:700, // расстояние между слайдерами 500-720p 900-1080p
         pager: false,
