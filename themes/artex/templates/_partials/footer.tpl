@@ -22,15 +22,23 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-{block name='hook_footer_before'}
+ <div class="artex-footer">
+     <div class="gray-footer row">
+         
+     </div>
+     <div class="black-footer row">
+         
+     </div>
+ </div> 
+{*{block name='hook_footer_before'}
   {hook h='displayFooterBefore'}
 {/block}
 
 {block name='hook_footer'}
-  {hook h='displayFooter'}
-{/block}
+  {hook h='displayFooter'} //Контактная информация
+{/block}*}
 
-{block name='hook_footer_after'}
+{*{block name='hook_footer_after'}
   {hook h='displayFooterAfter'}
 {/block}
 
@@ -41,4 +49,4 @@
       sprintf=['%prestashop%' => 'PrestaShop™', '%year%' => 'Y'|date, '%copyright%' => '©'] d='Shop.Theme.Global'}
     </a>
   {/block}
-</p>
+</p>*}
