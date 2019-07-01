@@ -1,3 +1,0 @@
-*ERROR* 	v1.7.5.0	2019/06/29 - 15:57:18: [ThemeRepository] Theme configuration file not found for theme at `/var/www/artex/themes/artex/config/theme.yml`. at line 144 in file src/Core/Addon/Theme/ThemeRepository.php
-*ERROR* 	v1.7.5.0	2019/06/29 - 16:01:02: Link to database cannot be established: SQLSTATE[HY000] [1045] Access denied for user 'artex'@'localhost' (using password: YES) at line 127 in file classes/db/DbPDO.php
-*ERROR* 	v1.7.5.0	2019/06/29 - 16:01:34: [ThemeRepository] Theme configuration file not found for theme at `/var/www/artex/themes/artex/config/theme.yml`. at line 144 in file src/Core/Addon/Theme/ThemeRepository.php

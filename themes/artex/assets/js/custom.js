@@ -44,7 +44,7 @@ $(document).ready(function() {  /* запускает слайдер, если �
         autoWidth:true,
         adaptiveHeight:true,
         item:1.5,
-        slideMargin:700, // расстояние между слайдерами 500-720p 900-1080p
+        slideMargin:500, // расстояние между слайдерами 500-720p 900-1080p
         pager: false,
         loop:true
     });
