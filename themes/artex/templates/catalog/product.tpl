@@ -85,10 +85,12 @@
             <div class="sticky row no-gutters">  
             <div class="col-12">
               <div class="row no-gutters">
-                <div class='col-8 p-name'>
+                <div class='col-8 p-name px-2'>
                     <h1>{block name='page_title'}{$product.name}{/block}</h1>
                 </div>
-                <div class="col-1"></div>
+                <div class="col-1">
+                    
+                </div>
                 <div class="col-3">
                     {block name='product_prices'}
                         {include file='catalog/_partials/product-prices.tpl'}
@@ -103,10 +105,10 @@
                         {/block}
                     </summary>*}
                       <!-- полное описание -->
-                            <div class="description">{$product.description nofilter}</div>
+            <div class="description px-2">{$product.description nofilter}</div>
                     
                 {*</details>*}
-            </div>
+        </div>
             <div>
                 {block name='product_buy'}
                 <form action="{$urls.pages.cart}" method="post" id="add-to-cart-or-refresh">
@@ -164,7 +166,24 @@
 {*                {block name='product_additional_info'}
                   {include file='catalog/_partials/product-additional-info.tpl'}
                 {/block}*}
-
+                <div class="under-description row">
+                    <div class="col-6">
+                        <ul>
+                            <li>Доставка</li>
+                            <li>Похожие товары</li>
+                        </ul>
+                    </div>
+                    <div class="col-6">
+                        <ul>
+                            <li>Детали/размеры</li>
+                            <li>Правила доставки</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-description flex-row d-flex justify-content-between">
+                    <div class="px-2">Надпись</div>
+                    <div>Надпись</div>
+                </div>
                 {block name='product_refresh'}
                   <input class="product-refresh ps-hidden-by-js" name="refresh" type="submit" value="{l s='Refresh' d='Shop.Theme.Actions'}">
                 {/block}

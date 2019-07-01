@@ -45,7 +45,7 @@
 	<ul id='lightSlider'  style="{if ($product.id_product == 21)}display: none; {/if}height: 879px;">
                 {foreach from=$product.images item=image}
                         <li>
-                           <img src="{$image.medium.url}" alt="{$image.legend}" title="{$image.legend}" width="{$product.cover.bySize.medium_default.width}" itemprop="image"> 
+                           <img src="{$image.large.url}" alt="{$image.legend}" title="{$image.legend}" width="{$product.cover.bySize.medium_default.width}" itemprop="image"> 
                         <!--    <img src="{$image.large.url}" alt="{$image.legend}">  -->
                         </li>
                 {/foreach}	
