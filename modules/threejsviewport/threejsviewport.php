@@ -64,12 +64,12 @@ class Threejsviewport extends Module
     public function hookActionAdminProductsControllerSaveBefore($params)
 {
         
-   $productAdapter = $this->get('prestashop.adapter.data_provider.product');
-    $product = $productAdapter->getProduct($_REQUEST['form']['id_product']);
-    $models = new AttachmentModels();
-    $models->description = 'descript';
-    $models->attachProduct(22);
-    $models->getFields();
+//   $productAdapter = $this->get('prestashop.adapter.data_provider.product');
+//    $product = $productAdapter->getProduct($_REQUEST['form']['id_product']);
+//    $models = new AttachmentModels();
+//    $models->description = 'descript';
+//    $models->attachProduct(22);
+//    $models->getFields();
     //AttachmentModels::deleteProductAttachments($_REQUEST['form']['id_product']);
 //   $product->is_constructor = "qqq";
 //  
