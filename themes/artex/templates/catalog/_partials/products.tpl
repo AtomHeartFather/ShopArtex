@@ -36,9 +36,9 @@
   {/foreach}
   </div>
 
-  {block name='pagination'}
+{*  {block name='pagination'}
     {include file='_partials/pagination.tpl' pagination=$listing.pagination}
-  {/block}
+  {/block}*}
 
   {block name='back_to_top'}
     <div><a href="#header">{l s='Back to top' d='Shop.Theme.Actions'}</a></div>

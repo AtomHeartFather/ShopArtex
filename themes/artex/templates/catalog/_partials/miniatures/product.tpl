@@ -1,13 +1,15 @@
 {block name='product_miniature_item'}
     
     <div class="kartinko" style="background-image: url({$product.cover.medium.url}); background-size: contain;">
+      <a href="{$product.url}" >
         <img
           src = "{$product.cover.medium.url}"
           alt = "{$product.cover.legend}"
           data-full-size-image-url = "{$product.cover.large.url}"
           alt="{$product.name}"
           style="width: 100%; height:auto; opacity: 0.5;"
-          >        
+          >
+      </a>  
     </div>
     <div class="hover-block">
         <p>Верхний блок</p>
