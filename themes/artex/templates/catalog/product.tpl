@@ -180,7 +180,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="footer-description flex-row d-flex justify-content-between">
+                <div class="footer-description flex-row d-flex justify-content-between mb-3">
                     <div class="px-2">Надпись</div>
                     <div>Надпись</div>
                 </div>
