@@ -69,13 +69,13 @@
     {block name='page_content_container'}
       <section id="content" class="page-content">
         {block name='page_content'}
-          {block name='product_flags'}
+{*          {block name='product_flags'}
             <ul class="product-flags">
               {foreach from=$product.flags item=flag}
                 <li>{$flag.label}</li>
               {/foreach}
             </ul>
-          {/block}
+          {/block}*}
           
           <!-- слайдер картинок -->
           {block name='product_cover_thumbnails'} 
