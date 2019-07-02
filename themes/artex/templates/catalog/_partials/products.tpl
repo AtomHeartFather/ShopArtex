@@ -40,7 +40,7 @@
     {include file='_partials/pagination.tpl' pagination=$listing.pagination}
   {/block}*}
 
-  {block name='back_to_top'}
+{*  {block name='back_to_top'}
     <div><a href="#header">{l s='Back to top' d='Shop.Theme.Actions'}</a></div>
-  {/block}
+  {/block}*}
 </div>

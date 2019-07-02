@@ -207,8 +207,8 @@ button {
 }
 
 #wrapper {
-    padding-left: 1px !important;
-    padding-right: 1px !important;
+/*    padding-left: 1px !important;
+    padding-right: 1px !important;*/
 }
 
 /*
@@ -258,4 +258,29 @@ a.login,
 .language-selector{
     display: block;
     padding: 0 0 0 0;
+}
+
+.footer-4 {
+    border-left: 1px solid;
+    border-left-color: RGB(210, 210, 210);
+}
+
+.container-fluid {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.gray-footer {
+   margin-left: 0px;
+   margin-right: 0px;
+}
+.footer-block {
+    padding: 20px 15px 40px 15px;
+    font-size: 12px;
+    line-height: 18px;
+}
+.footer-block li{
+    padding-top: 3px;
+}
+.footer-ul-label {
+    color: RGB(153, 153, 153);
 }

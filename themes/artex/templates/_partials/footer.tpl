@@ -22,12 +22,59 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
- <div class="artex-footer">
+ <div class="artex-footer container-fluid">
      <div class="gray-footer row">
-         
+         <div class="footer-4 col-3">
+             <div class="footer-block">
+                 <p class="footer-ul-label">Список футера</p>
+                 <ul>
+                     <li>Пункт списка</li>
+                     <li>Второй пунк</li>
+                     <li>Третий пункт списка</li>
+                     <li>Ну и послений 4ый пункт</li>
+                 </ul>
+             </div>
+         </div>
+         <div class="footer-4 col-3">
+             <div class="footer-block">
+                 <p class="footer-ul-label">Список футера</p>
+                 <ul>
+                     <li>Пункт списка</li>
+                     <li>Второй пунк</li>
+                     <li>Третий пункт списка</li>
+                     <li>Ну и послений 4ый пункт</li>
+                 </ul>
+             </div>
+         </div>
+         <div class="footer-4 col-3">
+             <div class="footer-block">
+                 <p class="footer-ul-label">Список футера</p>
+                 <ul>
+                     <li>Пункт списка</li>
+                     <li>Второй пунк</li>
+                     <li>Третий пункт списка</li>
+                     <li>Ну и послений 4ый пункт</li>
+                 </ul>
+             </div>
+         </div>
+         <div class="footer-4 col-3">
+             <div class="footer-block">
+                 <p class="footer-ul-label">Список футера</p>
+                 <ul>
+                     <li>Пункт списка</li>
+                     <li>Второй пунк</li>
+                     <li>Третий пункт списка</li>
+                     <li>Ну и послений 4ый пункт</li>
+                 </ul>
+             </div>
+         </div>
      </div>
-     <div class="black-footer row">
-         
+     <div class="black-footer row justify-content-center align-items-center">
+         <div class="black-logo">
+            <a href="#">
+                <img src="themes/artex/assets/img/Black_logo.png"
+            </a>
+         </div>    
      </div>
  </div> 
 {*{block name='hook_footer_before'}
