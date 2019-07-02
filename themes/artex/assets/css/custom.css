@@ -8,9 +8,25 @@
 	font-family: acne;
 	src: url(../fonts/AcneStudiosCircleBook.eot);
 }
+@font-face {
+	font-family: Raleway;
+	src: url(../fonts/Raleway-Regular.ttf);
+}
+@font-face {
+	font-family: Lato;
+	src: url(../fonts/Lato-Regular.ttf);
+}
+@font-face {
+	font-family: Roboto;
+	src: url(../fonts/Roboto-Regular.ttf);
+}
+@font-face {
+	font-family: OpenSans;
+	src: url(../fonts/OpenSans-Regular.ttf);
+}
 
 body {
-    font-family: acne,helvetica neue,Helvetica,Arial,sans-serif !important;
+    font-family: Raleway,acne,Lato,Roboto-Regular, sans-serif !important;
     font-style: normal !important;
     font-weight: 400 !important;
     text-transform: none !important;
