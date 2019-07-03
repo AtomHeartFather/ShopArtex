@@ -22,23 +22,25 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<div id="js-product-list container-fluid">
-  <div class="row no-gutters">  
+ <div class="container-fluid">
+  <div class="row no-gutters">
   {foreach from=$listing.products item="product" name="product_list"}
+    <div class="col-4 no-gutters img-product-list">  
     {block name='product_miniature'}
       {include file='catalog/_partials/miniatures/product.tpl' product=$product}
     {/block}
+    </div>
     {if $smarty.foreach.product_list.iteration is div by 3}
        <div class="w-100"></div> 
     {/if}
   {/foreach}
   </div>
 
-  {block name='pagination'}
+{*  {block name='pagination'}
     {include file='_partials/pagination.tpl' pagination=$listing.pagination}
-  {/block}
+  {/block}*}
 
-  {block name='back_to_top'}
+{*  {block name='back_to_top'}
     <div><a href="#header">{l s='Back to top' d='Shop.Theme.Actions'}</a></div>
-  {/block}
+  {/block}*}
 </div>

@@ -528,12 +528,12 @@ a.logo {
 #wrapper {
   clear: both;
 }
-#content-wrapper.left-column {
+/*#content-wrapper.left-column {
   margin-left: 25%;
 }
 #content-wrapper.right-column {
   margin-right: 25%;
-}
+}*/
 #left-column {
   float: left;
   width: 25%;
@@ -890,7 +890,7 @@ a.login:hover,
     font-weight: normal;
     font-size: 12px;
     height: 32px;
-    background-color: RGB(242, 242, 242);
+    background-color: RGB(230, 230, 230);
 }
 .top-breadcrumb nav ol {
     padding-inline-start: 12px;
@@ -921,10 +921,10 @@ a.login:hover,
     text-decoration: none;
 }
 .artex-footer{
-    
+/*    height: auto;*/
 }
 .gray-footer {
-    height:100px;
+    height: auto;
     background-color: RGB(230, 230, 230);
 }
 .black-footer {

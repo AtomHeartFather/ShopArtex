@@ -61,6 +61,15 @@
           {else}
             {hook h="displayLeftColumn"}
           {/if}
+          {if $listing.products|count}
+            {block name='product_list_top'}
+              {include file='catalog/_partials/products-top.tpl' listing=$listing}
+            {/block}
+
+            {block name='product_list_active_filters'}
+              {$listing.rendered_active_filters nofilter}
+            {/block}
+          {/if}
         </div>
       {/block}
 

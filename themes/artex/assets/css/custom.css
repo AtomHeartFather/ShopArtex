@@ -8,9 +8,25 @@
 	font-family: acne;
 	src: url(../fonts/AcneStudiosCircleBook.eot);
 }
+@font-face {
+	font-family: Raleway;
+	src: url(../fonts/Raleway-Regular.ttf);
+}
+@font-face {
+	font-family: Lato;
+	src: url(../fonts/Lato-Regular.ttf);
+}
+@font-face {
+	font-family: Roboto;
+	src: url(../fonts/Roboto-Regular.ttf);
+}
+@font-face {
+	font-family: OpenSans;
+	src: url(../fonts/OpenSans-Regular.ttf);
+}
 
 body {
-    font-family: acne,helvetica neue,Helvetica,Arial,sans-serif !important;
+    font-family: Raleway,acne,Lato,Roboto-Regular, sans-serif !important;
     font-style: normal !important;
     font-weight: 400 !important;
     text-transform: none !important;
@@ -63,13 +79,16 @@ ul {
 	position: absolute;
 	left: -2000%;
 	top: -3000px;
+        padding: 15px;
+        font-size: 10px;
+        line-height: 14px;
 }
 
 .hover-block p {
-    padding: 1vw;
+/*    padding: 1vw;*/
 }
 
-.brdr:hover .hover-block {
+.img-product-list:hover .hover-block {
     	position: absolute;
 	left: 0;
 	top: 0;
@@ -78,17 +97,19 @@ ul {
 .bottom-name {
 	position: absolute;
 	left: 0;
-	top: 90%;
-        font-size: 1vw;
+	top: 92%;
+        font-size: 10px;
+        line-height: 14px;
+        padding: 15px;
 }
 
 .bottom-name p {
-        padding-left: 1vw;
+/*        padding-left: 1vw;
         padding-bottom: 1.8vw;
-        line-height: 1.1vw;
+        line-height: 1.1vw;*/
 }
 
-.brdr:hover .bottom-name {
+.img-product-list:hover .bottom-name {
    	position: absolute;
 	left: -2000%;
 	top: -2000%;
@@ -98,19 +119,27 @@ ul {
 	position: absolute;
 	left: -2000%;
 	top: -2000%;
-        font-size: 1vw;
+        font-size: 10px;
+        line-height: 14px;
+        padding: 15px;
 }
 
 .bottom-color p {
-        padding-left: 1vw;
-        padding-bottom: 1.8vw;
-        line-height: 1.1vw;
+/*        padding-left: 1vw;
+        padding-bottom: 1.8vw;*/
+/*        line-height: 1.1vw;*/
 }
 
-.brdr:hover .bottom-color {
+.hover-block p,
+.bottom-color p,
+.bottom-name p {
+    margin-bottom: 0px !important;
+}
+
+.img-product-list:hover .bottom-color {
     	position: absolute;
 	left: 0;
-	top: 90%;
+	top: 92%;
 }
 
 .footer-description,
@@ -194,8 +223,8 @@ button {
 }
 
 #wrapper {
-    padding-left: 1px !important;
-    padding-right: 1px !important;
+/*    padding-left: 1px !important;
+    padding-right: 1px !important;*/
 }
 
 /*
@@ -245,4 +274,29 @@ a.login,
 .language-selector{
     display: block;
     padding: 0 0 0 0;
+}
+
+.footer-4 {
+    border-left: 1px solid;
+    border-left-color: RGB(210, 210, 210);
+}
+
+.container-fluid {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.gray-footer {
+   margin-left: 0px;
+   margin-right: 0px;
+}
+.footer-block {
+    padding: 20px 15px 40px 15px;
+    font-size: 12px;
+    line-height: 18px;
+}
+.footer-block li{
+    padding-top: 3px;
+}
+.footer-ul-label {
+    color: RGB(153, 153, 153);
 }
