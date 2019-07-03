@@ -878,7 +878,7 @@ a.login:hover,
     box-shadow: rgba(0, 0, 0, 0.12) 0px 7px 10px 0px;
     background-color: white !important;
 }
-.menu-depth > ul > li:hover > a {
+.menu> ul > li:hover > a, .menu-depth > ul > li:hover > a {
     background-color: RGB(230, 230, 230) !important;
 }
 .blockcart {

@@ -18,21 +18,25 @@ https://docs.google.com/document/d/18q8aRrUm42jBpnlUo82Smub7ioXKcB-6OU0cKNkElCM/
     'database_user' => 'artex',
     'database_password' => '123',
 
-# Настройки базы на хостинге
+# Миграция локального проекта на хостинг
+1. app/config/parameters.php ---------------------------------
     'database_host' => 'localhost',
     'database_port' => '',
     'database_name' => 'artex73_prsh1',
     'database_user' => 'artex73_prsh1',
     'database_password' => '9GbFnix*',
-    'database_prefix' => 'ps_',    
+    'database_prefix' => 'ps_',
+2. Отредактировать базу так:-----------------------------------
+    ps_shop_url
+    domain/domain_ssl = artex73.beget.tech 
+    physical_uri = /
+    ps_configuration:
+    PS_SHOP_DOMAIN artex73.beget.tech
+    PS_SHOP_DOMAIN_SSL artex73.beget.tech
+    PS_SHOP_SHOP_NAME artex
+3. При миграции на хостинг для модуля добавить столбец---------
+    is_construstor типа tinyint размером 1 в таблицу ps_product 
 
-# Поля в базе нужные при миграции    
-ps_shop_url  artex73.beget.tech 
-ps_configuration:
-PS_SHOP_DOMAIN artex73.beget.tech
-PS_SHOP_DOMAIN_SSL artex73.beget.tech
-PS_SHOP_SHOP_NAME artex
- 
 # Обновить theme.yml
 If you want reload your configuration :
 1.Modify your theme.yml

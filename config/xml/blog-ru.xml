@@ -6,6 +6,14 @@
     <language>en</language>
      <atom:link href="https://www.prestashop.com/en/blog/feed.xml" rel="self" type="application/rss+xml" />
       <item>
+    <title>How to reduce the size and weight of your eCommerce photos</title>
+    <link>https://www.prestashop.com/en/blog/reduce-size-weight-photos</link>
+    <description>Do you know the real importance of reducing the weight and size of photos on your PrestaShop store&#039;s website?</description>
+     <pubDate>Tue, 02 Jul 2019 16:39:16 +0200</pubDate>
+ <dc:creator>José Facchin 1</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/en/blog/reduce-size-weight-photos</guid>
+  </item>
+  <item>
     <title>The importance of social networks for your ecommerce</title>
     <link>https://www.prestashop.com/en/blog/social-netwoks-ecommerce</link>
     <description>The social networks</description>
@@ -76,14 +84,6 @@
      <pubDate>Fri, 24 May 2019 12:05:12 +0200</pubDate>
  <dc:creator>Amazon Pay</dc:creator>
  <guid isPermaLink="false">https://www.prestashop.com/en/blog/business-international-sell-multicurrency</guid>
-  </item>
-  <item>
-    <title>What is CPA and how can it improve my eCommerce’s online ads strategy</title>
-    <link>https://www.prestashop.com/en/blog/cpa-ecommerces-online-ads-strategy</link>
-    <description>For your campaigns to be effective, and to make sure your hard work promoting your products pays off, it is essential to define the structure your campaigns are going to take.</description>
-     <pubDate>Mon, 20 May 2019 11:07:51 +0200</pubDate>
- <dc:creator>SpaceBoost EN</dc:creator>
- <guid isPermaLink="false">https://www.prestashop.com/en/blog/cpa-ecommerces-online-ads-strategy</guid>
   </item>
   </channel>
 </rss>
