@@ -890,7 +890,6 @@ class FrontControllerCore extends Controller
                 }
             }
         }
-
         return false;
     }
 

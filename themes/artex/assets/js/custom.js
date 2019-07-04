@@ -48,6 +48,7 @@ $(document).ready(function() {  /* запускает слайдер, если �
         pager: false,
         loop:true
     });
+    
 });    
 //    $('.logo').click(
 //        function() {

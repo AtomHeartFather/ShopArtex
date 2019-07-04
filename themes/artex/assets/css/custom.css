@@ -300,3 +300,35 @@ a.login,
 .footer-ul-label {
     color: RGB(153, 153, 153);
 }
+
+/*#  Видео фон на главной старт  #*/
+.videotext {
+/*    position: absolute;*/
+/*    width: auto;*/
+/*    height: 50vh;*/
+    display: inline-block;
+    color: white;
+    background-color: black;
+    position: sticky;
+    top: 80%;
+    margin: 2em;
+    z-index: 100;
+}
+.videotext h1 {
+    margin: 0;
+    padding: 5px 20px 5px 15px;
+}
+.videotext a {
+    text-decoration: none;
+    color: white;
+}
+#videoBG {
+/*    position:absolute;
+    top: 0;*/
+    margin-top: -122px;
+    width: 100%;
+    height: auto;
+}
+.video-provider { 
+}
+/*#  Видео фон на главной конец  #*/
