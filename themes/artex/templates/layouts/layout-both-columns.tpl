@@ -53,8 +53,10 @@
       {block name='breadcrumb'}
         {include file='_partials/breadcrumb.tpl'}
       {/block}
-
-      {block name='left_column'}
+        {block name='homevideo'}
+            {include file='_partials/homevideo.tpl'}
+        {/block}
+{*      {block name='left_column'}
         <div id="left-column">
           {if $page.page_name == 'product'}
             {hook h='displayLeftColumnProduct'}
@@ -91,7 +93,7 @@
           {/block}
           {hook h="displayContentWrapperBottom"}
         </div>
-      {/block}
+      {/block}*}
 
     </div>
 
