@@ -79,6 +79,14 @@ class ProductCombination extends CommonAbstractType
                 'label' => $this->translator->trans('Reference', [], 'Admin.Global'),
                 'empty_data' => '',
             ])
+             ->add('model_3d', ChoiceType::class, [
+            'choices' => ['blue_color_dress' => 1, 'red_color_dress' => 2],
+            'required' => false,
+            'expanded' => false,
+            'multiple' => false,
+            'label' => $this->translator->trans('3d_model:', [], 'Admin.Catalog.Feature'),
+            'attr' => ['class' => '3d_model'],
+            ])
             ->add('attribute_ean13', TextType::class, [
                 'required' => false,
                 'error_bubbling' => true,

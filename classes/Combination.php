@@ -335,6 +335,37 @@ class CombinationCore extends ObjectModel
 
         return true;
     }
+    
+        /**
+     * @param $idsImage
+     *
+     * @return bool
+     */
+    public function setModels($idsModels)
+    {
+//        if (Db::getInstance()->execute('
+//			DELETE FROM `' . _DB_PREFIX_ . 'product_attribute_image`
+//			WHERE `id_product_attribute` = ' . (int) $this->id) === false) {
+//            return false;
+//        }
+//
+//        if (is_array($idsImage) && count($idsImage)) {
+//            $sqlValues = array();
+//
+//            foreach ($idsImage as $value) {
+//                $sqlValues[] = '(' . (int) $this->id . ', ' . (int) $value . ')';
+//            }
+//
+//            if (is_array($sqlValues) && count($sqlValues)) {
+//                Db::getInstance()->execute('
+//					INSERT INTO `' . _DB_PREFIX_ . 'product_attribute_image` (`id_product_attribute`, `id_image`)
+//					VALUES ' . implode(',', $sqlValues)
+//                );
+//            }
+//        }
+
+        return true;
+    }
 
     /**
      * @param $values

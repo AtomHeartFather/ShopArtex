@@ -1822,6 +1822,7 @@ class ProductCore extends ObjectModel
         $unit,
         $ecotax,
         $id_images,
+        $id_models,
         $reference,
         $ean13,
         $default,
@@ -1877,6 +1878,10 @@ class ProductCore extends ObjectModel
 
         if (is_array($id_images) && count($id_images)) {
             $combination->setImages($id_images);
+        }
+        
+        if (is_array($id_models) && count($id_models)) {
+            $combination->setModels($id_images);
         }
 
         $id_default_attribute = (int) Product::updateDefaultAttribute($this->id);
