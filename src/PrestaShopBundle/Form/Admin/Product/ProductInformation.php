@@ -42,6 +42,7 @@ use Symfony\Component\Form\FormError;
 use Symfony\Component\Form\FormEvent;
 use Symfony\Component\Form\FormEvents;
 use Symfony\Component\Validator\Constraints as Assert;
+use PrestaShopBundle\Form\Admin\Type\SwitchType;
 
 /**
  * This form class is responsible to generate the basic product information form.
@@ -226,6 +227,15 @@ class ProductInformation extends CommonAbstractType
                 'label' => $this->translator->trans('Brand', [], 'Admin.Catalog.Feature'),
             ])
             //RIGHT COL
+                ->add('is_constructor', SwitchType::class, [
+                    // Customized choices with ON/OFF instead of Yes/No
+                    'required' => false,
+                    'choices' => [
+                        'ON' => true,
+                        'OFF' => false,
+                    ],
+                    'label' => 'Set constructor',
+                ])
             ->add('active', FormType\CheckboxType::class, [
                 'label' => $this->translator->trans('Enabled', [], 'Admin.Global'),
                 'required' => false,

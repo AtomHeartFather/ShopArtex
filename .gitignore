@@ -1,6 +1,7 @@
 app/config/parameters.php
 cache/smarty/compile/
-cache/smarty/cache/
+cache/smarty/
 var/cache/
-#Исключим сам файл .gitignore:
 .gitignore
+var/logs/
+

@@ -165,12 +165,13 @@
             </div>
 
             <div class="row mt-4">
-              <div class="col-md-8">
+                <div class="col-md-8">
                 <h2>{{ 'Attached files'|trans({}, 'Admin.Catalog.Feature') }}</h2>
                 <p class="subtitle">{{ 'Add files that customers can download directly on the product page (instructions, manual, recipe, etc.).'|trans({}, 'Admin.Catalog.Feature') }}</p>
                 {{ form_widget(optionsForm.attachments) }}
               </div>
             </div>
+     
             <div class="row mt-3">
               <div class="col-md-8">
                 <a
@@ -190,11 +191,20 @@
                     <div class="form-group">{{ form_widget(optionsForm.attachment_product.name) }}</div>
                     <div class="form-group">{{ form_widget(optionsForm.attachment_product.description) }}</div>
                     <div class="form-group">
-                      {{ form_widget(optionsForm.attachment_product.add) }}
-                      {{ form_widget(optionsForm.attachment_product.cancel) }}
+                        {{ form_widget(optionsForm.attachment_product.add) }}
+                        {{ form_widget(optionsForm.attachment_product.cancel) }}
+                        <div id="form_step6_attachment_product_del_action" data-action-del="{{ optionsForm.attachment_product.vars.attr['data-action-del'] }}">
+                            {{ form_widget(optionsForm.attachment_product.del) }}
+                        </div> 
                     </div>
                   </div>
+
                 </fieldset>
+{#                    <ul>
+                        {% for post in blog_post %}
+                        <li>{{  }}</li>
+                        {% endfor %}
+                    </ul>   #} 
               </div>
             </div>
 

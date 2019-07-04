@@ -78,4 +78,15 @@ class AttachementProductController extends FrameworkBundleAdminController
 
         return $response;
     }
+    public function delAction($idProduct, Request $request){
+        $response = new JsonResponse();
+        $res = new \AttachmentCore();
+        $res->deleteSelection($request->get('product_attachment_id'));
+         if ($res) {
+             $response->setData($res);
+         } else {
+             $response->setStatusCode(400);
+         }
+         return $response;
+    }
 }
