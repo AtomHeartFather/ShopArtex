@@ -29,18 +29,21 @@
 {/block}
 
 {block name='header_nav'}
-  <div class="d-flex flex-row justify-content-between no-gutters mr-2">
+  <div class="d-flex nav-block flex-row justify-content-between no-gutters mr-2">
           {block name='header_logo'}
             <a class="logo" href="{$urls.base_url}" title="{$shop.name}">
                 <img src="{$shop.logo}" alt="{$shop.name}">
             </a>
     {/block}
-    <div class="row header-left-side no-gutters col-9">
+    <div class="row menu-left header-left-side no-gutters col-9">
         {hook h='displayTopMenu'} 
     </div>   
-    <div class="row justify-content-end header-right-side no-gutters col-2"> 
+    <div class="row menu-right justify-content-end header-right-side no-gutters col-2"> 
         {hook h='displayNav'}
     </div>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+    </a>
   </div>
 {/block}
 

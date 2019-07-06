@@ -819,6 +819,7 @@ a.login:hover,
   text-decoration: none;
   background-color: RGB(230, 230, 230);
 }
+/* Главное Меню */
 .menu {
   float: left;
 }
@@ -1512,3 +1513,31 @@ nav.pagination .current a {
 /*#lightSlider {
     height: 879px !important;
 }*/
+
+@media (max-width: 768px) {
+    .menu-left,
+    .menu-right {
+        display: none !important;
+    }
+    .nav-block a.icon {
+        display: block !important;
+    }
+}
+
+.nav-block a.icon {
+  background: black;
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 17px;
+  color: white;
+  padding: 3.5px 10px;
+}
+.nav-block a {
+/*  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;*/
+}
