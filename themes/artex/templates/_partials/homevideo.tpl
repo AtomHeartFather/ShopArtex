@@ -22,7 +22,7 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
- 
+
 {*<div class="embed-responsive embed-responsive-16by9">
     <iframe 
         class="embed-responsive-item" 
@@ -33,7 +33,7 @@
 
 <div class="front-video">
     <div class="videotext">
-        <a href="http://google.com"><h1>Магазин</h1></a>
+        <a href="http://localhost/artex/index.php?id_category=2&controller=category&id_lang=1"><h1>Магазин</h1></a>
     </div>
     <div class="video-provider">
         <video id="videoBG" poster="http://localhost/artex/themes/artex/assets/img/70931868.mp4" autoplay muted loop>
