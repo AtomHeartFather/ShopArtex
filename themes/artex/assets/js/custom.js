@@ -41,7 +41,6 @@ function mobileMenu() {
 //        });
 //document.getElementById("classRight").setAttribute("style","display:none;");
     
-    
 function getQueryVariable(variable) /* забирает переменные с адресной get строки */
 {
        var query = window.location.search.substring(1);
@@ -94,7 +93,6 @@ $(document).ready(function() {  /* запускает слайдер, если �
 //});
 
 //for(var i=0; i<elems.length; i++)     правильный перебор элемендов DOM
-
 
 //  $(document).ready(function() {
 //    $('#lightSlider2').lightSlider({

@@ -1513,12 +1513,32 @@ nav.pagination .current a {
 /*#lightSlider {
     height: 879px !important;
 }*/
+    .nav-block,
+    #mLeft {
+      z-index: 100;
+    }
 
 @media (max-width: 768px) {
 /*    .menu-left,
     .menu-right {
       display: none !important;
     }*/
+    .menu-right {
+        margin-right: 34px;
+    }
+    #menu-ul {
+        width: 150vw;
+    }
+    #mLeft {
+        display: none;
+        position: fixed;
+        top: 32px;
+        left: 10px;
+/*        position: absolute;
+        margin-left: -50px;*/
+/*      margin-top: 32px;*/
+/*      width: 200vw;*/
+    }
     .nav-block a.icon {
       display: block !important;
     }

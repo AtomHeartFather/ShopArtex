@@ -1,7 +1,7 @@
 {function name="menu" nodes=[] depth=0}
   {strip}
     {if $nodes|count}
-        <ul data-depth="{$depth}" >
+        <ul data-depth="{$depth}" id="menu-ul">
         {foreach from=$nodes item=node}
           <li class="{$node.type}{if $node.current} current{/if}">
             {*<p>{$node.children|count}</p>*}
