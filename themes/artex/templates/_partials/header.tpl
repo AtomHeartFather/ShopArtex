@@ -30,10 +30,10 @@
 
 {block name='header_nav'}
   <div class="d-flex nav-block flex-row justify-content-between no-gutters mr-2">
-          {block name='header_logo'}
-            <a class="logo" href="{$urls.base_url}" title="{$shop.name}">
-                <img src="{$shop.logo}" alt="{$shop.name}">
-            </a>
+    {block name='header_logo'}
+        <a class="logo" href="{$urls.base_url}" title="{$shop.name}">
+            <img src="{$shop.logo}" alt="{$shop.name}">
+        </a>
     {/block}
     <div class="row menu-left header-left-side no-gutters col-9">
         {hook h='displayTopMenu'} 
@@ -41,18 +41,14 @@
     <div class="row menu-right justify-content-end header-right-side no-gutters col-2"> 
         {hook h='displayNav'}
     </div>
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <a href="javascript:void(0);" class="icon" onclick="mobileMenu()">
         <i class="fa fa-bars"></i>
     </a>
   </div>
 {/block}
 
-
-
 {block name='header_top'}
 {*  <div class="header-top">
-  </div>
-*}
+  </div>*}
   {hook h='displayNavFullWidth'}
-
 {/block}

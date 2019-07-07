@@ -24,7 +24,7 @@
   {/strip}
 {/function}
 
-<div class="menu row">
+<div id="mLeft" class="menu row">
   {menu nodes=$menu.children}
 </div>
 

@@ -23,14 +23,24 @@
  * International Registered Trademark & Property of PrestaShop SA
  */
 
-function mobilMenu() {
-  var x = document.getElementById("myLinks");
-  if (x.style.display === "block") {
-    x.style.display = "none";
+function mobileMenu() {
+  var x1 = document.getElementById("mLeft");
+    if (x1.style.display === "block") {
+    x1.style.display = "none";
   } else {
-    x.style.display = "block";
+    x1.style.display = "block";
   }
 }
+
+//    $('.logo').click(
+//        function() {
+//            var div = document.getElementsByClassName("menu-left");
+//            if (div[0].attributes[1].nodeValue === "block") {
+//            alert("div[0].attributes[1].nodeValue");
+//            }
+//        });
+//document.getElementById("classRight").setAttribute("style","display:none;");
+    
     
 function getQueryVariable(variable) /* забирает переменные с адресной get строки */
 {

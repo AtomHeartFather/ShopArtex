@@ -45,6 +45,5 @@ If you want reload your configuration :
 
 # Соотношение сторон изображений для наполнения магазина использовать 1.5
 
-
 ssh artex73@artex73.beget.tech
 WRhEnnHv
