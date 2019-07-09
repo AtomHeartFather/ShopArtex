@@ -162,11 +162,16 @@ ul {
     background-color: white !important;
     position: relative;
 }
-
+.lslide {
+/*    margin-right: 30vw !important;*/
+}
+#slider-img {
+    width: 50vw;
+}
 .product-cart {
-    width: 24.5vw;
+    width: 30vw;
     position: absolute;
-    left: 53%;
+    left: 50%;
     top: 0;
     height: 100%;
 }

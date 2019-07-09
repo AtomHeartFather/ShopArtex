@@ -34,11 +34,10 @@ function mobileMenu() {
 
 //    $('.logo').click(
 //        function() {
-//            var div = document.getElementsByClassName("menu-left");
-//            if (div[0].attributes[1].nodeValue === "block") {
-//            alert("div[0].attributes[1].nodeValue");
+//        var bbq = document.documentElement.clientWidth;
+//        alert (bbq);
 //            }
-//        });
+//        );
 //document.getElementById("classRight").setAttribute("style","display:none;");
     
 function getQueryVariable(variable) /* забирает переменные с адресной get строки */
@@ -51,20 +50,40 @@ function getQueryVariable(variable) /* забирает переменные с 
        }
        return(false);
 }
-    
+
+
+
 $(document).ready(function() {  /* запускает слайдер, если только id продукта не 21 */
      
     if ( getQueryVariable("id_product") == 21 ) {
         return;
         } 
-     
+    
+    var slidermargin = ( document.documentElement.clientWidth / 100 ) * 30 ;
+    var zooba = Math.trunc(slidermargin); 
+//    alert (zooba);
+//    window.addEventListener("orientationchange", function() {}   событие смены ориентации
+    window.onresize = function(event) {
+        location.reload()
+    }   //событие изменнения разрешения экрана
+//    location.reload()   перезагрузка страницы
+    
     $('#lightSlider').lightSlider({
         autoWidth:true,
-        adaptiveHeight:true,
-        item:1.5,
-        slideMargin:500, // расстояние между слайдерами 500-720p 900-1080p
+        adaptiveHeight:false,
+//        item:1.5,
+        slideMargin:zooba, // расстояние между слайдерами 500-720p 900-1080p
         pager: false,
-        loop:true
+        loop:true,
+//        responsive: [
+//            {
+//                breakpoint:1280,
+//                settings: {
+//                    item:1,
+//                    sliderMargin:1
+//                  }
+//            }
+//        ]
     });
     
 });    
