@@ -36,8 +36,8 @@
         <a href="http://localhost/artex/index.php?id_category=2&controller=category&id_lang=1"><h1>Магазин</h1></a>
     </div>
     <div class="video-provider">
-        <video id="videoBG" poster="http://localhost/artex/themes/artex/assets/img/HomeBackground.png" autoplay muted loop>
-            <source src="http://localhost/artex/themes/artex/assets/video/70931868.mp4" type="video/mp4">
+        <video id="videoBG" poster="http://localhost/artex/themes/artex/assets/img/video-cover.png" autoplay muted loop>
+            <source src="http://localhost/artex/themes/artex/assets/video/video-back.mp4" type="video/mp4">
         </video>
     </div>
 </div>

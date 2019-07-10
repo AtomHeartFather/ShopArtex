@@ -301,13 +301,15 @@ a.login,
 /*    width: auto;*/
 /*    height: 50vh;*/
     display: inline-block;
-    color: white;
-    background-color: black;
+/*    color: black;*/
+    background-color: white;
+    opacity: 0.5;
     position: sticky;
     left: 30%;
     top: 50%;
     margin: 2em;
     z-index: 100;
+    
 }
 .videotext h1 {
     font-size: 22px;
@@ -316,7 +318,7 @@ a.login,
 }
 .videotext a {
     text-decoration: none;
-    color: white;
+    color: black;
 }
 #videoBG {
 /*    position:absolute;
@@ -325,6 +327,6 @@ a.login,
     width: 100%;
     height: auto;
 }
-.video-provider { 
+.video-provider {
 }
 /*#  Видео фон на главной конец  #*/

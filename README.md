@@ -47,3 +47,8 @@ If you want reload your configuration :
 
 ssh artex73@artex73.beget.tech
 WRhEnnHv
+
+height 100vh
+max-width 100%
+object-fit cover
+
