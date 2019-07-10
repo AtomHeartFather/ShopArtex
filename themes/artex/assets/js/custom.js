@@ -55,18 +55,25 @@ function getQueryVariable(variable) /* забирает переменные с 
 
 $(document).ready(function() {  /* запускает слайдер, если только id продукта не 21 */
      
-    if ( getQueryVariable("id_product") == 21 ) {
+    if ( getQueryVariable("id_product") === 21 ) {
         return;
-        } 
+        }
     
-    var slidermargin = ( document.documentElement.clientWidth / 100 ) * 30 ;
-    var zooba = Math.trunc(slidermargin); 
-//    alert (zooba);
-//    window.addEventListener("orientationchange", function() {}   событие смены ориентации
-    window.onresize = function(event) {
-        location.reload()
-    }   //событие изменнения разрешения экрана
-//    location.reload()   перезагрузка страницы
+    var vwprcnt;
+    var brwsrvw = document.documentElement.clientWidth;
+    if (brwsrvw < 768) { zooba = 0 } 
+    else if (brwsrvw < 1000) {
+        var slidermargin = ( brwsrvw / 100 ) * 50 ; // выражает 50vw в пикселях
+        var zooba = Math.trunc(slidermargin); // число пикселей делает целочисленным, без дробей
+    }
+    else {
+        var slidermargin = ( brwsrvw / 100 ) * 30 ; // выражает 30vw в пикселях
+        var zooba = Math.trunc(slidermargin); // число пикселей делает целочисленным, без дробей
+    }
+
+    window.onresize = function(event) {  // событие ресайза экрана браузера
+        location.reload()               // перезагрузить страницу , чтобы задааптивить параметр slideMargin 
+    }  
     
     $('#lightSlider').lightSlider({
         autoWidth:true,

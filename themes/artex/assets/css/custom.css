@@ -148,16 +148,13 @@ ul {
     font-size: 12px;
     line-height: 16px;
 }
-
 .under-description ul {
     padding: 0px 0px 0px 10px;
 }
-
 .row {
     margine-left: 0px !important;
     margine-right: 0px !important;
 }	
-        
 #content {
     background-color: white !important;
     position: relative;
@@ -168,6 +165,9 @@ ul {
 #slider-img {
     width: 50vw;
 }
+@media (max-width: 768px) {
+    #slider-img {width: 100vw;}
+}
 .product-cart {
     width: 30vw;
     position: absolute;
@@ -175,19 +175,16 @@ ul {
     top: 0;
     height: 100%;
 }
-
 .sticky {
   position: sticky;
   top: 40%;
 /*  min-height: 2em;
   margin-bottom: 2em;*/
 }
-
 .p-name h1 {
     line-height: 21px !important;
     font-size: 17px !important;
 }
-
 .product-information {
     background-color: blue;
     height: 500px !important;
@@ -196,7 +193,6 @@ ul {
     top: 0;
     opacity: .3;*/
 }
-
 button {
   background-color: black; /* Green */
   border: none;
@@ -208,13 +204,10 @@ button {
   font-size: 13px;
   width: 100%;
 }
-
 .description p {
     font-size: 12px !important;
     line-height: 16px !important;
 }
-
-
 .product-actions {
     background-color: red !important;
 /*    position: absolute;
@@ -222,16 +215,13 @@ button {
     top: 50%;
     opacity: .3;*/
 }
-
 .product-discounts {
     background-color: green;
 }
-
 #wrapper {
 /*    padding-left: 1px !important;
     padding-right: 1px !important;*/
 }
-
 /*
 .rslides {
   position: relative;
@@ -241,7 +231,6 @@ button {
   padding: 0;
   margin: 0;
   }
-
 .rslides li {
   -webkit-backface-visibility: hidden;
   position: absolute;
