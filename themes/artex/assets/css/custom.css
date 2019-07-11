@@ -72,7 +72,7 @@ ul {
 }*/
 
 .product-minimal-quantity {
-    margin-top: 5vw;    
+    margin-top: 10vw;    
 }
 
 .hover-block {
@@ -149,7 +149,7 @@ ul {
     line-height: 16px;
 }
 .under-description ul {
-    padding: 0px 0px 0px 10px;
+/*    padding: 0px 0px 0px 10px;*/
 }
 .row {
     margine-left: 0px !important;
@@ -175,9 +175,20 @@ ul {
     top: 0;
     height: 100%;
 }
+@media (min-width: 768px) and (max-width: 1000px) {
+    .product-cart {width: 50vw;}
+}
+@media (max-width: 768px) {
+    .product-cart {
+        width: 100vw;
+        left: 0;
+        position: relative;
+    }
+}
 .sticky {
   position: sticky;
   top: 40%;
+  padding: 0.8vw;
 /*  min-height: 2em;
   margin-bottom: 2em;*/
 }

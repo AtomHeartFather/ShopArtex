@@ -81,20 +81,22 @@
           {block name='product_cover_thumbnails'} 
             {include file='catalog/_partials/product-cover-light-slider.tpl'}
           {/block}
-        <div class="product-cart no-gutters">
+        <div class="product-cart">
             <div class="sticky row no-gutters">  
             <div class="col-12">
               <div class="row no-gutters">
-                <div class='col-8 p-name px-2'>
+                <div class='col-8 p-name'>
                     <h1>{block name='page_title'}{$product.name}{/block}</h1>
                 </div>
                 <div class="col-1">
                     
                 </div>
-                <div class="col-3">
-                    {block name='product_prices'}
-                        {include file='catalog/_partials/product-prices.tpl'}
-                    {/block}
+                <div class="col-3 row no-gutters justify-content-end">
+                    <div class="">
+                        {block name='product_prices'}
+                            {include file='catalog/_partials/product-prices.tpl'}
+                        {/block}
+                    </div>
                 </div>
               </div>
             <div>
@@ -105,7 +107,7 @@
                         {/block}
                     </summary>*}
                       <!-- полное описание -->
-            <div class="description px-2">{$product.description nofilter}</div>
+            <div class="description">{$product.description nofilter}</div>
                     
                 {*</details>*}
         </div>
@@ -180,8 +182,8 @@
                         </ul>
                     </div>
                 </div>
-                <div class="footer-description flex-row d-flex justify-content-between mb-3">
-                    <div class="px-2">Надпись</div>
+                <div class="footer-description flex-row d-flex justify-content-between">
+                    <div>Надпись</div>
                     <div>Надпись</div>
                 </div>
                 {block name='product_refresh'}
