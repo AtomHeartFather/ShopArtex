@@ -31,14 +31,24 @@
     </iframe>
 </div>*}
 
-<div class="front-video" style="margin-top: -8px;">
-    <div class="videotext">
-        <a href="http://localhost/artex/index.php?id_category=2&controller=category&id_lang=1"><h1>Магазин</h1></a>
-    </div>
-    <div class="video-provider">
-        <video id="videoBG" poster="http://localhost/artex/themes/artex/assets/img/video-cover.png" autoplay muted loop>
-            <source src="http://localhost/artex/themes/artex/assets/video/video-back.mp4" type="video/mp4">
-        </video>
+{*<div class="front-video">
+    <div class="video-provider">*}
+        
+<div class="one-video no-gutters">
+    <div class="two-video col-12">
+        <a href="http://localhost/artex/index.php?id_category=2&controller=category&id_lang=1">
+            <video id="back-video" poster="http://localhost/artex/themes/artex/assets/img/video-cover.png" autoplay muted loop>
+                <source src="http://localhost/artex/themes/artex/assets/video/video-back.mp4" type="video/mp4">
+            </video>
+
+            <div class="text-video row align-items-center no-gutters">
+                <div class="main-button col">
+                    <div class="row justify-content-center no-gutters">
+                        <h1 class="main-page-button">Verno</h1>
+                    </div>
+                </div>
+            </div>
+        </a>
     </div>
 </div>
 

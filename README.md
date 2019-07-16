@@ -18,7 +18,7 @@ https://docs.google.com/document/d/18q8aRrUm42jBpnlUo82Smub7ioXKcB-6OU0cKNkElCM/
     'database_user' => 'artex',
     'database_password' => '123',
 
-# Миграция локального проекта на хостинг
+# Миграция локального проекта на хостингr
 1. app/config/parameters.php ---------------------------------
     'database_host' => 'localhost',
     'database_port' => '',
@@ -51,4 +51,3 @@ WRhEnnHv
 height 100vh
 max-width 100%
 object-fit cover
-

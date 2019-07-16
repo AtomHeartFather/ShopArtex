@@ -1464,7 +1464,10 @@ nav.pagination .current a {
   background-color: #fff;
 }
 .products-sort-order {
+  font-size: 13px;
   margin-bottom: 5px;
+  margin-top: 5px;
+  margin-left: 12px;
 }
 .products-sort-order .current {
   font-weight: bold;
@@ -1651,4 +1654,87 @@ nav.pagination .current a {
   display: block;*/
 }
 
-
+.filters-block {
+    height: 32px;
+}
+.filters-block p {
+    padding: 5px 12px 5px 12px;
+    margin-bottom: 0;
+    margin-left: 12px;
+    text-decoration: none;
+    color: black;
+/*    background-color: blue;*/
+}
+.filters-block a:hover,
+.filters-block a:active,
+.filters-block a:after,
+.filters-block a:visited {
+    text-decoration: none;
+    color: black;
+}
+#js-product-list-top {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background-color: white;
+    opacity: 0.8;
+    z-index: 100;
+}
+.kartinko-h-layer-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+.kartinko-h-layer-2 {
+    position: absolute;
+    top: 0;
+    left: -4000px;
+    height: 100%;
+}
+.kartinko-h-1,
+.kartinko-h-2 {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 12px;
+}
+.kartinko-h-1 p,
+.kartinko-h-2 p {
+    font-size: 12px;
+    line-height: 14px;
+    margin: 0;
+    padding: 0;
+}
+.kartinko:hover .kartinko-h-layer-1 {
+    left: -4000px;
+}
+.kartinko:hover .kartinko-h-layer-2 {
+    left: 0;
+}
+.kartinko-price-768 {
+    margin: 12px;
+    font-size: 12px;
+    line-height: 14px;
+    display: none;
+}
+.kartinko-price-768 p {
+    margin-bottom: 0;
+}
+@media (max-width: 768px) {
+    .kartinko-price-768 {
+        display: block;
+    }
+    .kartinko-h-layer-1,
+    .kartinko-h-layer-2 {
+        display: none;
+    }
+}
+/*для механизма яваскриптового показывать/скрывать кнопку сортировки*/
+#filters-block {
+    display: none;
+}

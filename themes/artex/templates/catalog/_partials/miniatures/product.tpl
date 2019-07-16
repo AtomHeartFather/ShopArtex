@@ -1,27 +1,62 @@
 {block name='product_miniature_item'}
     
-    <div class="kartinko" style="background-image: url({$product.cover.medium.url}); background-size: contain;">
+    <div class="kartinko" {*style="background-image: url({$product.cover.medium.url}); background-size: contain;"*}>
       <a href="{$product.url}" >
         <img
           src = "{$product.cover.medium.url}"
           alt = "{$product.cover.legend}"
           data-full-size-image-url = "{$product.cover.large.url}"
           alt="{$product.name}"
-          style="width: 100%; height:auto; opacity: 0.5;"
+          style="width: 100%; height:auto; {*opacity: 0.5;*}"
           >
-      </a>  
+      </a>
+          
+      <div class="kartinko-h-layer-1">
+          <div class="container kartinko-h-1">
+            <div class="row align-items-start">
+            </div>
+            <div class="row align-items-end">
+              <div class="col">
+                <p>{$product.name}<br>
+                   {$product.price}</p>
+              </div>
+            </div>
+          </div>
+      </div>
+              
+      <div class="kartinko-h-layer-2">
+          <div class="container kartinko-h-2">
+            <div class="row align-items-start">
+                <div class="col">
+                <p>Доступные цвета</p>
+              </div>
+            </div>
+            <div class="row align-items-end">
+              <div class="col">
+                <p>Текущий цвет<br>
+                   Доступные размеры</p>
+              </div>
+            </div>
+          </div>
+      </div>
+      
+              <div class="kartinko-price-768">
+                <p>{$product.name}<br>
+                   {$product.price}</p>
+              </div>
+              
     </div>
-    <div class="hover-block">
+{*    <div class="hover-block">
         <p>Верхний блок</p>
-    </div>
-    <div class="bottom-name">
+    </div>*}
+{*    <div class="bottom-name">
         <p>{$product.name}<br>
         {$product.price}</p>
-    </div>
-    <div class="bottom-color">
+    </div>*}
+{*    <div class="bottom-color">
         <p>Такой-то цвет<br>
         Такие-то размеры</p>
-    </div>
+    </div>*}
     
 {*    <div class="col">
     {block name='product_thumbnail'}

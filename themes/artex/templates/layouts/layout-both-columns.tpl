@@ -53,6 +53,14 @@
       {block name='breadcrumb'}
         {include file='_partials/breadcrumb.tpl'}
       {/block}
+      
+      {* фильтрация *}
+{*      {if $page.page_name == 'product'}
+            {hook h='displayLeftColumnProduct'}
+          {else}
+            {hook h="displayLeftColumn"}
+      {/if}*}
+      
       {if $page.page_name == 'index'}
         {block name='homevideo'}
             {include file='_partials/homevideo.tpl'}
@@ -60,19 +68,19 @@
       {/if} 
       {block name='left_column'}
         <div id="left-column">
-          {if $page.page_name == 'product'}
+{*          {if $page.page_name == 'product'}
             {hook h='displayLeftColumnProduct'}
           {else}
             {hook h="displayLeftColumn"}
-          {/if}
+          {/if}*}
           {if $listing.products|count}
             {block name='product_list_top'}
               {include file='catalog/_partials/products-top.tpl' listing=$listing}
             {/block}
 
-            {block name='product_list_active_filters'}
+{*            {block name='product_list_active_filters'}
               {$listing.rendered_active_filters nofilter}
-            {/block}
+            {/block}*}
           {/if}
         </div>
       {/block}

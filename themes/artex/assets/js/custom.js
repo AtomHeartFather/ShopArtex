@@ -23,12 +23,25 @@
  * International Registered Trademark & Property of PrestaShop SA
  */
 
-function mobileMenu() {
+// скрывает/показывает мобильное меню
+function mobileMenu() { 
   var x1 = document.getElementById("mLeft");
     if (x1.style.display === "block") {
     x1.style.display = "none";
   } else {
     x1.style.display = "block";
+  }
+}
+
+// скрывает/показывает блок сортироваки товаров
+function sortMenu() {
+  var x2 = document.getElementById("js-product-list-top");
+    if (x2.style.display === "block") {
+    x2.style.display = "none";
+    document.getElementById("filters-button").style.backgroundColor = "RGB(230,230,230)";
+  } else {
+    x2.style.display = "block";
+    document.getElementById("filters-button").style.backgroundColor = "white";
   }
 }
 
@@ -57,6 +70,12 @@ $(document).ready(function() {  /* запускает слайдер, если �
      
     if ( getQueryVariable("id_product") === 21 ) {
         return;
+        }
+        
+        //если в гете есть категории - значит это страница категории - значит надо показывать кнопку сортировки
+        var boooo = getQueryVariable("id_category");
+        if (boooo) {
+        document.getElementById("filters-block").style.display = "block";
         }
     
     var vwprcnt;

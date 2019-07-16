@@ -25,14 +25,14 @@
  <div class="container-fluid">
   <div class="row no-gutters">
   {foreach from=$listing.products item="product" name="product_list"}
-    <div class="col-4 no-gutters img-product-list">  
-    {block name='product_miniature'}
-      {include file='catalog/_partials/miniatures/product.tpl' product=$product}
-    {/block}
+    <div class="col-6 col-sm-3 col-md-3 col-lg-3 col-xl-3 no-gutters img-product-list">
+        {block name='product_miniature'}
+          {include file='catalog/_partials/miniatures/product.tpl' product=$product}
+        {/block}
     </div>
-    {if $smarty.foreach.product_list.iteration is div by 3}
+{*    {if $smarty.foreach.product_list.iteration is div by 4}
        <div class="w-100"></div> 
-    {/if}
+    {/if}*}
   {/foreach}
   </div>
 

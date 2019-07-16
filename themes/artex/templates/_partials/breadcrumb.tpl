@@ -23,18 +23,23 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 <div class="top-breadcrumb no-gutters row align-items-center"> 
-<nav data-depth="{$breadcrumb.count}" style="height: 32px;">
-  <ol itemscope itemtype="http://schema.org/BreadcrumbList">
-    {foreach from=$breadcrumb.links item=path name=breadcrumb}
-      {block name='breadcrumb_item'}
-        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-          <a itemprop="item" class="bread-link" href="{$path.url}">
-            <span itemprop="name">{$path.title}</span>
+    <nav data-depth="{$breadcrumb.count}" style="height: 32px;">
+      <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+        {foreach from=$breadcrumb.links item=path name=breadcrumb}
+          {block name='breadcrumb_item'}
+            <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+              <a itemprop="item" class="bread-link" href="{$path.url}">
+                <span itemprop="name">{$path.title}</span>
+              </a>
+              <meta itemprop="position" content="{$smarty.foreach.breadcrumb.iteration}">
+            </li>
+          {/block}
+        {/foreach}
+      </ol>
+    </nav>
+      <div class="filters-block row align-items-center" id="filters-block">
+          <a href="javascript:void(0);" onclick="sortMenu()"> 
+            <p id="filters-button">Сортировать</p>
           </a>
-          <meta itemprop="position" content="{$smarty.foreach.breadcrumb.iteration}">
-        </li>
-      {/block}
-    {/foreach}
-  </ol>
-</nav>
+      </div>
 </div>

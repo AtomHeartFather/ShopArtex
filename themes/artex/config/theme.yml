@@ -54,6 +54,8 @@ global_settings:
         - ps_contactinfo
       displayProductImagesSlider:
         - ps_imageslider
+      displayBreadcrumbLine:
+        - ps_facetedsearch
 
   image_types:
     cart_default:
