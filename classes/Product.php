@@ -1740,6 +1740,7 @@ class ProductCore extends ObjectModel
             $unit,
             $ecotax,
             $id_images,
+            $id_model = null,
             $reference,
             $ean13,
             $default,
@@ -1822,7 +1823,7 @@ class ProductCore extends ObjectModel
         $unit,
         $ecotax,
         $id_images,
-        $id_models,
+        $id_model,
         $reference,
         $ean13,
         $default,
@@ -1869,6 +1870,7 @@ class ProductCore extends ObjectModel
         $combination->low_stock_threshold = empty($low_stock_threshold) && '0' != $low_stock_threshold ? null : (int) $low_stock_threshold;
         $combination->low_stock_alert = !empty($low_stock_alert);
         $combination->available_date = $available_date ? pSQL($available_date) : '0000-00-00';
+        $combination->model_3d = pSQL($id_model);
 
         if (count($id_shop_list)) {
             $combination->id_shop_list = $id_shop_list;
@@ -1880,10 +1882,6 @@ class ProductCore extends ObjectModel
             $combination->setImages($id_images);
         }
         
-        if (is_array($id_models) && count($id_models)) {
-            $combination->setModels($id_images);
-        }
-
         $id_default_attribute = (int) Product::updateDefaultAttribute($this->id);
         if ($id_default_attribute) {
             $this->cache_default_attribute = $id_default_attribute;

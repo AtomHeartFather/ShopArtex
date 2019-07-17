@@ -68,6 +68,8 @@ class CombinationCore extends ObjectModel
     public $default_on;
 
     public $available_date = '0000-00-00';
+    
+    public $model_3d;
 
     /**
      * @see ObjectModel::$definition
@@ -96,6 +98,7 @@ class CombinationCore extends ObjectModel
             'low_stock_alert' => array('type' => self::TYPE_BOOL, 'shop' => true, 'allow_null' => true, 'validate' => 'isBool'),
             'default_on' => array('type' => self::TYPE_BOOL, 'allow_null' => true, 'shop' => true, 'validate' => 'isBool'),
             'available_date' => array('type' => self::TYPE_DATE, 'shop' => true, 'validate' => 'isDateFormat'),
+            'model_3d' => array('type' => self::TYPE_INT, 'shop' => true, 'validate' => 'isUnsignedId', 'required' => false),
         ),
     );
 
@@ -336,37 +339,6 @@ class CombinationCore extends ObjectModel
         return true;
     }
     
-        /**
-     * @param $idsImage
-     *
-     * @return bool
-     */
-    public function setModels($idsModels)
-    {
-//        if (Db::getInstance()->execute('
-//			DELETE FROM `' . _DB_PREFIX_ . 'product_attribute_image`
-//			WHERE `id_product_attribute` = ' . (int) $this->id) === false) {
-//            return false;
-//        }
-//
-//        if (is_array($idsImage) && count($idsImage)) {
-//            $sqlValues = array();
-//
-//            foreach ($idsImage as $value) {
-//                $sqlValues[] = '(' . (int) $this->id . ', ' . (int) $value . ')';
-//            }
-//
-//            if (is_array($sqlValues) && count($sqlValues)) {
-//                Db::getInstance()->execute('
-//					INSERT INTO `' . _DB_PREFIX_ . 'product_attribute_image` (`id_product_attribute`, `id_image`)
-//					VALUES ' . implode(',', $sqlValues)
-//                );
-//            }
-//        }
-
-        return true;
-    }
-
     /**
      * @param $values
      *

@@ -38,6 +38,7 @@ use Symfony\Component\Form\Extension\Core\Type\MoneyType;
 use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use PrestaShopBundle\Form\Admin\Type\DatePickerType;
+use CombinationCore;
 
 /**
  * This form class is responsible to generate the product combination form.
@@ -47,6 +48,10 @@ class ProductCombination extends CommonAbstractType
     private $translator;
     private $contextLegacy;
     private $configuration;
+    private $currency;
+    private $fullAttachmentList;
+    private $attachmentList;
+    private $product;
 
     /**
      * Constructor.
@@ -54,12 +59,33 @@ class ProductCombination extends CommonAbstractType
      * @param object $translator
      * @param object $legacyContext
      */
-    public function __construct($translator, $legacyContext)
+    public function __construct($translator, $legacyContext, $productDataProvider, $requestStac)
     {
         $this->translator = $translator;
         $this->contextLegacy = $legacyContext->getContext();
         $this->configuration = $this->getConfiguration();
         $this->currency = $this->contextLegacy->currency;
+        $prod_id = $requestStac->getCurrentRequest()->get('id');
+        $combination_id = $requestStac->getCurrentRequest()->get('combinationIds');
+        if (isset($prod_id)) {
+            $this->product = $productDataProvider->getProduct($prod_id);
+            $this->fullAttachmentList = $this->product->getAttachments($legacyContext->getLanguage()->id);
+            $this->attachmentList = $this->formatDataChoicesList(
+                    $this->fullAttachmentList,
+                    'id_attachment',
+                    'name'
+            );
+        }
+        else if (isset($combination_id)) {
+            $combination = new CombinationCore($combination_id);
+            $this->product = $productDataProvider->getProduct($combination->id_product);
+            $this->fullAttachmentList = $this->product->getAttachments($legacyContext->getLanguage()->id);
+            $this->attachmentList = $this->formatDataChoicesList(
+                    $this->fullAttachmentList,
+                    'id_attachment',
+                    'name'
+            );
+        }
     }
 
     /**
@@ -80,7 +106,7 @@ class ProductCombination extends CommonAbstractType
                 'empty_data' => '',
             ])
              ->add('model_3d', ChoiceType::class, [
-            'choices' => ['blue_color_dress' => 1, 'red_color_dress' => 2],
+            'choices' => $this->attachmentList,
             'required' => false,
             'expanded' => false,
             'multiple' => false,
@@ -235,6 +261,24 @@ class ProductCombination extends CommonAbstractType
                 'expanded' => true,
                 'multiple' => true,
             ]);
+        });
+          $builder->addEventListener(FormEvents::PRE_SET_DATA, function (FormEvent $event) {
+            $form = $event->getForm();
+            $data = $event->getData();
+
+            $choices = [];
+            if (!empty($data['id_image_attr'])) {
+                foreach ($data['id_image_attr'] as $id) {
+                    $choices[$id] = $id;
+                }
+            }
+
+//            $form->add('id_image_attr', ChoiceType::class, [
+//                'choices' => $choices,
+//                'required' => false,
+//                'expanded' => true,
+//                'multiple' => true,
+//            ]);
         });
     }
 

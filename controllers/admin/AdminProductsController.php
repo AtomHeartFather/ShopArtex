@@ -772,6 +772,7 @@ class AdminProductsControllerCore extends AdminController
                                 $this->isProductFieldUpdated('attribute_unit_impact') ? Tools::getValue('attribute_unity') * Tools::getValue('attribute_unit_impact') : null,
                                 $this->isProductFieldUpdated('attribute_ecotax') ? Tools::getValue('attribute_ecotax') : null,
                                 Tools::getValue('id_image_attr'),
+                                Tools::getValue('id_model_attr'),
                                 Tools::getValue('attribute_reference'),
                                 Tools::getValue('attribute_ean13'),
                                 $this->isProductFieldUpdated('attribute_default') ? Tools::getValue('attribute_default') : null,

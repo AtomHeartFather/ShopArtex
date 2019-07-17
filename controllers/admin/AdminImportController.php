@@ -2654,6 +2654,7 @@ class AdminImportControllerCore extends AdminController
                                         0,
                                         (Configuration::get('PS_USE_ECOTAX') ? (float) $info['ecotax'] : 0),
                                         $id_image,
+                                        $id_model = null,
                                         (string) $info['reference'],
                                         (string) $info['ean13'],
                                         ((int) $info['default_on'] ? (int) $info['default_on'] : null),

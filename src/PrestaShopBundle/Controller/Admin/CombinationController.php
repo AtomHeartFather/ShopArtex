@@ -60,7 +60,7 @@ class CombinationController extends FrameworkBundleAdminController
             )
         ));
     }
-
+    
     /**
      * get All Combinations for a product.
      *
