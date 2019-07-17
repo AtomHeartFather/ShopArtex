@@ -5,5 +5,5 @@ var/cache/
 .gitignore
 var/logs/
 download/
-config/
+#config/
 
