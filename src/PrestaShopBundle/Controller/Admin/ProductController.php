@@ -703,7 +703,7 @@ class ProductController extends FrameworkBundleAdminController
 
         return $formBuilder->getForm();
     }
-
+    
     /**
      * Do bulk action on a list of Products. Used with the 'selection action' dropdown menu on the Catalog page.
      *
