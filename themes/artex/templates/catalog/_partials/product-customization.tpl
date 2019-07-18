@@ -25,14 +25,14 @@
 {if $product.is_customizable}
   <section class="product-customization">
     {if !$configuration.is_catalog}
-      <h3>{l s='Product customization' d='Shop.Theme.Catalog'}</h3>
+      {*<h3>{l s='Product customization' d='Shop.Theme.Catalog'}</h3>*}
 
       {block name='product_customization_form'}
         <form method="post" action="{$urls.current_url}" enctype="multipart/form-data">
           <ul>
             {foreach from=$customizations.fields item="field"}
               <li>
-                <label>{$field.label}</label>
+                  <label>{$field.label}</label></br>
                 {if $field.type == 'text'}
                   <textarea {if $field.required} required {/if} name="{$field.input_name}">{$field.text}</textarea>
                   <small>{l s='250 char. max' d='Shop.Forms.Help'}</small>

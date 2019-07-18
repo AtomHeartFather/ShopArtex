@@ -442,11 +442,11 @@ th {
 }
 h1,
 .h1 {
-  font-size: 2em;
+  font-size: 1.5em;
 }
 h2,
 .h2 {
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 h3,
 .h3 {
@@ -1001,7 +1001,8 @@ a.add-to-cart:hover {
 }
 .regular-price {
   text-decoration: line-through;
-  color: #ccc;
+  color: #aaa;
+  
 }
 .discount-percentage {
   display: inline-block;
@@ -1235,9 +1236,9 @@ body#checkout {
 #product #product-reference,
 #product #product-condition {
   display: block;
-  text-align: right;
+  text-align: left;
   margin: 0;
-  margin-right: 20px;
+/*  margin-right: 20px;*/
 }
 #product #product-reference label,
 #product #product-condition label {
@@ -1303,6 +1304,9 @@ body#checkout {
   padding: 5px;
   border-bottom: 1px solid #808080;
 }
+p.product-discount {
+  margin-bottom: 0;
+}
 #product #product-quantities,
 #product #product-availability {
   font-weight: bold;
@@ -1315,7 +1319,12 @@ body#checkout {
   padding: 5px;
 }
 #product .product-customization textarea {
-  width: calc(100% - 200px - 10px);
+  padding: 5px;
+/*  width: calc(100% - 200px - 10px);*/
+  width: 100%;
+/*  margin: 0.5vw;
+  margin-left: 1vw;
+  margin-right: 2vw;*/
 }
 #product .product-customization ul {
   margin: 0;
@@ -1329,7 +1338,7 @@ body#checkout {
   border: 1px solid #808080;
 }
 #product .product-customization ul label {
-  font-weight: bold;
+/*  font-weight: bold;*/
   width: 200px;
   display: inline-block;
   vertical-align: top;
@@ -1518,7 +1527,6 @@ nav.pagination .current a {
     #mLeft {
       z-index: 100;
     }
-
 @media (max-width: 768px) {
 /*    .menu-left,
     .menu-right {
@@ -1633,7 +1641,6 @@ nav.pagination .current a {
         font-size: 13px;
     }
 }
-
 .nav-block a.icon {
   background: black;
   display: none;
@@ -1651,7 +1658,6 @@ nav.pagination .current a {
   font-size: 17px;
   display: block;*/
 }
-
 .filters-block {
     height: 32px;
 }
@@ -1732,7 +1738,7 @@ nav.pagination .current a {
         display: none;
     }
 }
-/*для механизма яваскриптового показывать/скрывать кнопку сортировки*/
+/* для механизма яваскриптового показывать/скрывать кнопку сортировки */
 #filters-block {
     display: none;
 }

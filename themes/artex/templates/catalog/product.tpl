@@ -45,7 +45,6 @@
   {/if}
 {/block}
 
-
 {block name='content'}
 
   <section id="main" itemscope itemtype="https://schema.org/Product">
@@ -70,6 +69,53 @@
               <div class="row no-gutters">
                 <div class='col-8 p-name'>
                     <h1>{block name='page_title'}{$product.name}{/block}</h1>
+                    
+                    {block name='product_reference'}
+                      {if $product.reference}
+                        <p id="product-reference">
+                          <label>{l s='Reference' d='Shop.Theme.Catalog'}</label>
+                          <span itemprop="sku">{$product.reference}</span>
+                        </p>
+                      {/if}
+                    {/block}
+
+                    {block name='product_condition'}
+                      {if $product.condition}
+                        <p id="product-condition">
+                          <label>{l s='Condition' d='Shop.Theme.Catalog'}</label>
+                          <link itemprop="itemCondition" href="{$product.condition.schema_url}"/>
+                          <span>{$product.condition.label}</span>
+                        </p>
+                      {/if}
+                    {/block}
+                    
+                      {block name='product_quantities'}
+                        {if $product.show_quantities}
+                          <p id="product-quantities">{$product.quantity} {$product.quantity_label}</p>
+                        {/if}
+                      {/block}
+
+                      {block name='product_availability'}
+                        {if $product.show_availability}
+                          <p id="product-availability">{$product.availability_message}</p>
+                        {/if}
+                      {/block}
+
+                      {block name='product_availability_date'}
+                        {if $product.availability_date}
+                          <p id="product-availability-date">
+                            <label>{l s='Availability date:' d='Shop.Theme.Catalog'} </label>
+                            <span>{$product.availability_date}</span>
+                          </p>
+                        {/if}
+                      {/block}
+
+                      {block name='product_out_of_stock'}
+                        <div class="product-out-of-stock">
+                          {hook h='actionProductOutOfStock' product=$product}
+                        </div>
+                      {/block}
+                    
                 </div>
                 <div class="col-1">
                     
@@ -84,9 +130,14 @@
               </div>
             <div>
         <!-- полное описание -->
-            <div class="description">{$product.description nofilter}</div>
+            {block name='product_description_short'}
+              <div id="product-description-short" itemprop="description">{$product.description_short nofilter}</div>
+            {/block}
 
-            
+            {block name='product_description'}
+              <div id="product-description">{$product.description nofilter}</div>
+            {/block}
+
         </div>
             <div class="product-actions col-12">
                 {block name='product_buy'}
@@ -94,7 +145,6 @@
                 <input type="hidden" name="token" value="{$static_token}">
                 <input type="hidden" name="id_product" value="{$product.id}" id="product_page_product_id">
                 <input type="hidden" name="id_customization" value="{$product.id_customization}" id="product_customization_id">
-
                 
                 <div class="col-12 no-padding">
                 {block name='product_variants'}
@@ -138,6 +188,20 @@
                 {/block}
                 </form>
                 {/block}
+                
+              {block name='product_discounts'}
+                {include file='catalog/_partials/product-discounts.tpl'}
+              {/block}
+
+              {if $product.is_customizable && count($product.customizations.fields)}
+                <details>
+                    <summary>{l s='Product customization' d='Shop.Theme.Catalog'}</summary>
+                    {block name='product_customization'}
+                      {include file='catalog/_partials/product-customization.tpl' customizations=$product.customizations}
+                    {/block}
+                </details>
+              {/if}
+                
             </div>
             </div>
             </div>
@@ -147,7 +211,7 @@
         
         {hook h="displayWrapperBottom"}
           <!-- описание товара -->
-{*          <div class="product-information col-12">
+          <div class="product-information col-12">
             {block name='product_reference'}
               {if $product.reference}
                 <p id="product-reference">
@@ -203,7 +267,6 @@
             {/block}
           </div>
           
-{*       
           {block name='product_discounts'}
             {include file='catalog/_partials/product-discounts.tpl'}
           {/block}
@@ -213,9 +276,9 @@
               {include file='catalog/_partials/product-customization.tpl' customizations=$product.customizations}
             {/block}
           {/if}
-        </div>*}          
+        </div>          
         {*материал и другие свойства продукта*}
-{*        {block name='product_features'}  материал и другие свойства продукта
+        {block name='product_features'}
             {if $product.features}
               <section class="product-features">
                 <h3>{l s='Data sheet' d='Shop.Theme.Catalog'}</h3>
@@ -226,8 +289,8 @@
                 </ul>
               </section>
             {/if}
-          {/block}*}
-{*
+          {/block}
+
           {block name='product_pack'}
             {if $packItems}
               <section class="product-pack">
@@ -282,7 +345,7 @@
             <div class="{$extra.attr.class}" id="extra-{$extraKey}">
               {$extra.content nofilter}
             </div>
-          {/foreach}*}
+          {/foreach}
         {/block}
       </section>
     {/block}
