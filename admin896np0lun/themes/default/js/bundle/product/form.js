@@ -1168,7 +1168,7 @@ var attachmentProduct = (function() {
        $('#form_step6_attachment_product_del').click(function() {
            var data = new FormData();
            $.each($('#product-attachment-file input[type="checkbox"]'), function (i, val) {
-                       if(val.checked=true){
+                       if(val.checked===true){
                             data.append('product_attachment_id[]', val.value);
                        }
            });
@@ -1184,8 +1184,8 @@ var attachmentProduct = (function() {
           },
           success: function(response) {              
               $.each($('#product-attachment-file input[type="checkbox"]'), function (i, val) {
-                       if(val.checked=true){
-                            val.remove();
+                       if(val.checked===true){
+                            val.closest("tr").remove();
                        }
            });
           },

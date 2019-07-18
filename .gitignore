@@ -4,4 +4,6 @@ cache/smarty/
 var/cache/
 .gitignore
 var/logs/
+download/
+config/
 

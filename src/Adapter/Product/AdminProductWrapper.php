@@ -107,7 +107,6 @@ class AdminProductWrapper
     {
         $id_product_attribute = (int) $combinationValues['id_product_attribute'];
         $images = array();
-        $models = array();
 
         if (!Combination::isFeatureActive() || $id_product_attribute == 0) {
             return;
@@ -135,11 +134,11 @@ class AdminProductWrapper
             $combination->setImages(array());
         }
         if (!empty($combinationValues['model_3d'])) {
-            $models = $combinationValues['model_3d'];
+            $model = $combinationValues['model_3d'];
         } else {
-            $combination = new Combination($id_product_attribute);
-            $combination->setModels(array());
+            $model = 0;
         }
+        
         if (!isset($combinationValues['attribute_low_stock_threshold'])) {
             $combinationValues['attribute_low_stock_threshold'] = null;
         }
@@ -155,7 +154,7 @@ class AdminProductWrapper
             $combinationValues['attribute_unity'] * $combinationValues['attribute_unit_impact'],
             $combinationValues['attribute_ecotax'],
             $images,
-            $models,
+            $model,
             $combinationValues['attribute_reference'],
             $combinationValues['attribute_ean13'],
             (isset($combinationValues['attribute_default']) && $combinationValues['attribute_default'] == 1),

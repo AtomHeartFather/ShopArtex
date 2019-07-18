@@ -173,6 +173,7 @@ class CombinationDataProvider
             'attribute_quantity' => $this->productAdapter->getQuantity($product->id, $combination['id_product_attribute']),
             'name' => $this->getCombinationName($attributesCombinations),
             'id_product' => $product->id,
+            'model_3d' => $combination['model_3d'],
         );
     }
 
