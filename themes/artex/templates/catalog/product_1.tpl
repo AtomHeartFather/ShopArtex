@@ -54,17 +54,34 @@
     {block name='product_activation'}
       {include file='catalog/_partials/product-activation.tpl'}
     {/block}
+
+{*    {block name='page_header_container'}
+      <header class="page-header">
+        {block name='page_header'}
+          <h1 itemprop="name">{block name='page_title'}{$product.name}{/block}</h1>
+        {/block}
+      </header>
+    {/block}*}
+    
+   
     
         <!-- основной блок -->
     {block name='page_content_container'}
       <section id="content" class="page-content">
         {block name='page_content'}
+{*          {block name='product_flags'}
+            <ul class="product-flags">
+              {foreach from=$product.flags item=flag}
+                <li>{$flag.label}</li>
+              {/foreach}
+            </ul>
+          {/block}*}
           
           <!-- слайдер картинок -->
           {block name='product_cover_thumbnails'} 
             {include file='catalog/_partials/product-cover-light-slider.tpl'}
           {/block}
-          <div class="product-cart">
+        <div class="product-cart">
             <div class="sticky row no-gutters">  
             <div class="col-12">
               <div class="row no-gutters">
@@ -83,10 +100,16 @@
                 </div>
               </div>
             <div>
-        <!-- полное описание -->
+                {*<details>*}
+                    {*<summary>  <!-- короткое описание -->
+                        {block name='product_description_short'}
+                            <div id="product-description-short no-gutters" itemprop="description">{$product.description_short nofilter}</div>
+                        {/block}
+                    </summary>*}
+                      <!-- полное описание -->
             <div class="description">{$product.description nofilter}</div>
-
-            
+                    
+                {*</details>*}
         </div>
             <div class="product-actions col-12">
                 {block name='product_buy'}
@@ -101,20 +124,50 @@
                   {include file='catalog/_partials/product-variants.tpl'}
                 {/block}
                 </div>
-
+{*                {if ($product.id_product == 21)} 
+                <div>
+                    <ul id="group_3">
+              <li class="input-container">
+              <input
+                id="clowhite"
+                class="input-color"
+                type="radio"
+                data-product-attribute="2"
+                name="group[2]"
+                value="7"                              >
+              <span
+                 style="background-color: #fff"                               >
+                <span>Белый</span>
+              </span>
+            </li>
+                      <li class="input-container">
+              <input
+                id="clored"
+                class="input-color"
+                type="radio"
+                data-product-attribute="2"
+                name="group[2]"
+                value="13"       checked="checked"       >
+              <span
+                 style="background-color: #FF0000"                               >
+                <span>Красный</span>
+              </span>
+            </li>
+                  </ul>
+                </div>
+                {/if}*}
                 <div class="col-12 no-padding">
                 {block name='product_add_to_cart'}
                   {include file='catalog/_partials/product-add-to-cart.tpl'}
                 {/block}
                 </div>
-{*                {block name='hook_product_buttons'}
+                {block name='hook_product_buttons'}
                   {hook h='displayProductButtons' product=$product}
                 {/block}
 
-               {block name='product_additional_info'}
+                {block name='product_additional_info'}
                   {include file='catalog/_partials/product-additional-info.tpl'}
-                {/block} *}
-                
+                {/block}
 {*                <div class="under-description row">
                     <div class="col-6">
                         <ul>
@@ -139,6 +192,13 @@
                 </form>
                 {/block}
             </div>
+{*            <div>
+                <ul>
+                  {foreach from=$product.features item=feature}
+                    <li>{$feature.name} - {$feature.value}</li>
+                  {/foreach}
+                </ul>
+            </div>*}
             </div>
             </div>
         </div>
@@ -201,7 +261,38 @@
                 {hook h='actionProductOutOfStock' product=$product}
               </div>
             {/block}
-          </div>
+          </div>*}
+
+           <!-- кнопка "В корзину" -->
+{*          <div class="product-actions col-12" style="display: block;">
+            {block name='product_buy'}
+              <form action="{$urls.pages.cart}" method="post" id="add-to-cart-or-refresh">
+                <input type="hidden" name="token" value="{$static_token}">
+                <input type="hidden" name="id_product" value="{$product.id}" id="product_page_product_id">
+                <input type="hidden" name="id_customization" value="{$product.id_customization}" id="product_customization_id">
+
+                {block name='product_variants'}
+                  {include file='catalog/_partials/product-variants.tpl'}
+                {/block}*}
+{*
+                {block name='product_add_to_cart'}
+                  {include file='catalog/_partials/product-add-to-cart.tpl'}
+                {/block}*}
+
+{*                {block name='hook_product_buttons'}
+                  {hook h='displayProductButtons' product=$product}
+                {/block}
+
+                {block name='product_additional_info'}
+                  {include file='catalog/_partials/product-additional-info.tpl'}
+                {/block}
+*}
+{*                {block name='product_refresh'}
+                  <input class="product-refresh ps-hidden-by-js" name="refresh" type="submit" value="{l s='Refresh' d='Shop.Theme.Actions'}">
+                {/block}
+              </form>
+            {/block}
+          </div>*}
           
 {*       
           {block name='product_discounts'}

@@ -15,7 +15,7 @@ document.getElementById("content").insertBefore(div, document.getElementsByClass
 
 //document.getElementByClass("lSSlideOuter"),
 //$('.lSSlideOuter').hide();
-$('#lightslider').hide();
+//$('#lightslider').hide();
 
 var modelpath = "modules/threejsviewport/views/models_3d/4.gltf";
 

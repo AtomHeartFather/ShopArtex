@@ -91,25 +91,17 @@ $(document).ready(function() {  /* запускает слайдер, если �
     }
 
     window.onresize = function(event) {  // событие ресайза экрана браузера
+//        var slider = $('#lightSlider').lightSlider();
+//        slider.refresh();
         location.reload()               // перезагрузить страницу , чтобы задааптивить параметр slideMargin 
     }  
     
     $('#lightSlider').lightSlider({
         autoWidth:true,
         adaptiveHeight:false,
-//        item:1.5,
         slideMargin:zooba, // расстояние между слайдерами 500-720p 900-1080p
         pager: false,
         loop:true,
-//        responsive: [
-//            {
-//                breakpoint:1280,
-//                settings: {
-//                    item:1,
-//                    sliderMargin:1
-//                  }
-//            }
-//        ]
     });
     
 });    
