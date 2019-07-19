@@ -129,16 +129,38 @@
                 </div>
               </div>
             <div>
-        <!-- полное описание -->
-            {block name='product_description_short'}
-              <div id="product-description-short" itemprop="description">{$product.description_short nofilter}</div>
-            {/block}
+                <!-- короткое описание -->
+                {block name='product_description_short'}
+                  <div id="product-description-short" itemprop="description">{$product.description_short nofilter}</div>
+                {/block}
+                <!-- полное описание -->
+                {block name='product_description'}
+                  <div id="product-description">{$product.description nofilter}</div>
+                {/block}
 
-            {block name='product_description'}
-              <div id="product-description">{$product.description nofilter}</div>
-            {/block}
-
-        </div>
+                {block name='product_features'}
+                    {if $product.features}
+                      <section class="product-features">
+                        {*<p>{l s='Data sheet' d='Shop.Theme.Catalog'}</p>*}
+                        <ul>
+                          {foreach from=$product.features item=feature}
+                            <li>{$feature.name} - {$feature.value}</li>
+                          {/foreach}
+                        </ul>
+                      </section>
+                    {/if}
+                {/block}
+                
+                {if $product.is_customizable && count($product.customizations.fields)}
+                    <details>
+                        <summary>{l s='Product customization' d='Shop.Theme.Catalog'}</summary>
+                        {block name='product_customization'}
+                          {include file='catalog/_partials/product-customization.tpl' customizations=$product.customizations}
+                        {/block}
+                    </details>
+                {/if}
+                
+            </div>
             <div class="product-actions col-12">
                 {block name='product_buy'}
                 <form action="{$urls.pages.cart}" method="post" id="add-to-cart-or-refresh">
@@ -157,32 +179,7 @@
                   {include file='catalog/_partials/product-add-to-cart.tpl'}
                 {/block}
                 </div>
-{*                {block name='hook_product_buttons'}
-                  {hook h='displayProductButtons' product=$product}
-                {/block}
-
-               {block name='product_additional_info'}
-                  {include file='catalog/_partials/product-additional-info.tpl'}
-                {/block} *}
                 
-{*                <div class="under-description row">
-                    <div class="col-6">
-                        <ul>
-                            <li>Доставка</li>
-                            <li>Похожие товары</li>
-                        </ul>
-                    </div>
-                    <div class="col-6">
-                        <ul>
-                            <li>Детали/размеры</li>
-                            <li>Правила доставки</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="footer-description flex-row d-flex justify-content-between">
-                    <div>Надпись</div>
-                    <div>Надпись</div>
-                </div>*}
                 {block name='product_refresh'}
                   <input class="product-refresh ps-hidden-by-js" name="refresh" type="submit" value="{l s='Refresh' d='Shop.Theme.Actions'}">
                 {/block}
@@ -193,105 +190,28 @@
                 {include file='catalog/_partials/product-discounts.tpl'}
               {/block}
 
-              {if $product.is_customizable && count($product.customizations.fields)}
-                <details>
-                    <summary>{l s='Product customization' d='Shop.Theme.Catalog'}</summary>
-                    {block name='product_customization'}
-                      {include file='catalog/_partials/product-customization.tpl' customizations=$product.customizations}
-                    {/block}
-                </details>
-              {/if}
-                
-            </div>
-            </div>
-            </div>
-        </div>
-        </div>
-        </div>
-        
-        {hook h="displayWrapperBottom"}
-          <!-- описание товара -->
-          <div class="product-information col-12">
-            {block name='product_reference'}
-              {if $product.reference}
-                <p id="product-reference">
-                  <label>{l s='Reference' d='Shop.Theme.Catalog'}</label>
-                  <span itemprop="sku">{$product.reference}</span>
-                </p>
-              {/if}
-            {/block}
-
-            {block name='product_condition'}
-              {if $product.condition}
-                <p id="product-condition">
-                  <label>{l s='Condition' d='Shop.Theme.Catalog'}</label>
-                  <link itemprop="itemCondition" href="{$product.condition.schema_url}"/>
-                  <span>{$product.condition.label}</span>
-                </p>
-              {/if}
-            {/block}
-
-            {block name='product_description_short'}
-              <div id="product-description-short" itemprop="description">{$product.description_short nofilter}</div>
-            {/block}
-
-            {block name='product_description'}
-              <div id="product-description">{$product.description nofilter}</div>
-            {/block}
-
-            {block name='product_quantities'}
-              {if $product.show_quantities}
-                <p id="product-quantities">{$product.quantity} {$product.quantity_label}</p>
-              {/if}
-            {/block}
-
-            {block name='product_availability'}
-              {if $product.show_availability}
-                <p id="product-availability">{$product.availability_message}</p>
-              {/if}
-            {/block}
-
-            {block name='product_availability_date'}
-              {if $product.availability_date}
-                <p id="product-availability-date">
-                  <label>{l s='Availability date:' d='Shop.Theme.Catalog'} </label>
-                  <span>{$product.availability_date}</span>
-                </p>
-              {/if}
-            {/block}
-
-            {block name='product_out_of_stock'}
-              <div class="product-out-of-stock">
-                {hook h='actionProductOutOfStock' product=$product}
-              </div>
-            {/block}
-          </div>
-          
-          {block name='product_discounts'}
-            {include file='catalog/_partials/product-discounts.tpl'}
-          {/block}
-
-          {if $product.is_customizable && count($product.customizations.fields)}
-            {block name='product_customization'}
-              {include file='catalog/_partials/product-customization.tpl' customizations=$product.customizations}
-            {/block}
-          {/if}
-        </div>          
-        {*материал и другие свойства продукта*}
-        {block name='product_features'}
-            {if $product.features}
-              <section class="product-features">
-                <h3>{l s='Data sheet' d='Shop.Theme.Catalog'}</h3>
-                <ul>
-                  {foreach from=$product.features item=feature}
-                    <li>{$feature.name} - {$feature.value}</li>
-                  {/foreach}
-                </ul>
-              </section>
-            {/if}
-          {/block}
-
-          {block name='product_pack'}
+             {block name='product_attachments'}
+                {if $product.attachments}
+                  <section class="product-attachments" align="center">
+                    {*<h4>{l s='Download' d='Shop.Theme.Actions'}</h4>*}
+                    <h6>Прикрепленные файлы:</h6>
+                    {foreach from=$product.attachments item=attachment}
+                      <div class="attachment">
+                        <h4>
+                          {*<a href="{url entity='attachment' params=['id_attachment' => $attachment.id_attachment]}">
+                            {$attachment.name}
+                          </a>*}
+                        {$attachment.description}</h4>
+                        <a href="{url entity='attachment' params=['id_attachment' => $attachment.id_attachment]}">
+                          {l s='Download' d='Shop.Theme.Actions'} ({$attachment.file_size_formatted})
+                        </a>
+                      </div>
+                    {/foreach}
+                  </section>
+                {/if}
+              {/block}
+              
+              {block name='product_pack'}
             {if $packItems}
               <section class="product-pack">
                 <h3>{l s='Pack content' d='Shop.Theme.Catalog'}</h3>
@@ -303,8 +223,9 @@
               </section>
             {/if}
           {/block}
-
-          {block name='product_accessories'}
+              
+              {* сопутствующие товары *}
+{*              {block name='product_accessories'}
             {if $accessories}
               <section class="product-accessories">
                 <h3>{l s='Accessories' d='Shop.Theme.Catalog'}</h3>
@@ -315,37 +236,38 @@
                 {/foreach}
               </section>
             {/if}
-          {/block}
-
-          {block name='product_footer'}
+          {/block}*}
+              
+              {foreach from=$product.extraContent item=extra key=extraKey}
+                <div class="{$extra.attr.class}" id="extra-{$extraKey}">
+                  {$extra.content nofilter}
+                </div>
+              {/foreach}
+              
+              <details id="social-share">
+                  <summary>Поделиться</summary>
+                {block name='hook_product_buttons'}
+                  {hook h='displayProductButtons' product=$product}
+                {/block}
+              </details>
+              
+              {block name='product_footer'}
             {hook h='displayFooterProduct' product=$product category=$category}
           {/block}
-
-          {block name='product_attachments'}
-            {if $product.attachments}
-              <section class="product-attachments">
-                <h3>{l s='Download' d='Shop.Theme.Actions'}</h3>
-                {foreach from=$product.attachments item=attachment}
-                  <div class="attachment">
-                    <h4>
-                      <a href="{url entity='attachment' params=['id_attachment' => $attachment.id_attachment]}">
-                        {$attachment.name}
-                      </a>
-                    </h4>
-                    <p>{$attachment.description}</p>
-                    <a href="{url entity='attachment' params=['id_attachment' => $attachment.id_attachment]}">
-                      {l s='Download' d='Shop.Theme.Actions'} ({$attachment.file_size_formatted})
-                    </a>
-                  </div>
-                {/foreach}
-              </section>
-            {/if}
-          {/block}
-          {foreach from=$product.extraContent item=extra key=extraKey}
-            <div class="{$extra.attr.class}" id="extra-{$extraKey}">
-              {$extra.content nofilter}
+                
+{*               {block name='product_additional_info'}
+                  {include file='catalog/_partials/product-additional-info.tpl'}
+                {/block}*}
+              
             </div>
-          {/foreach}
+            </div>
+            </div>
+        </div>
+        </div>
+        </div>
+        
+        {hook h="displayWrapperBottom"}
+
         {/block}
       </section>
     {/block}
