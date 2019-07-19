@@ -13,6 +13,7 @@ div.style.width = '50vw';
 div.style.display = 'flex';
 document.getElementById("content").insertBefore(div, document.getElementsByClassName("product-flags")[0]);
 
+//$('#lightslider').hide();
 
 $(document).ready(function(){
           modelpath = document.getElementById("model_link").value;

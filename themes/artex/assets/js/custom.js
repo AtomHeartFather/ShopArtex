@@ -66,7 +66,7 @@ function getQueryVariable(variable) /* забирает переменные с 
 
 var is_constructor;
 
-$(document).ready(function() {  /* запускает слайдер, если только id продукта не 21 */
+$(document).ready(function() {  
     
     is_constructor = document.getElementById("product_is_constructor").value;
     if(is_constructor === "1"){

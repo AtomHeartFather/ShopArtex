@@ -61,7 +61,7 @@
           
           <!-- слайдер картинок -->
           {block name='product_cover_thumbnails'} 
-            {include file='catalog/_partials/product-cover-light-slider.tpl'}
+            {include file='catalog/_partials/product-cover-thumbnails.tpl'}
           {/block}
           <div class="product-cart">
             <div class="sticky row no-gutters">  
@@ -190,27 +190,25 @@
               {block name='product_discounts'}
                 {include file='catalog/_partials/product-discounts.tpl'}
               {/block}
-
-             {block name='product_attachments'}
-                {if $product.attachments}
-                  <section class="product-attachments" align="center">
-                    {*<h4>{l s='Download' d='Shop.Theme.Actions'}</h4>*}
-                    <h6>Прикрепленные файлы:</h6>
-                    {foreach from=$product.attachments item=attachment}
-                      <div class="attachment">
-                        <h4>
-                          {*<a href="{url entity='attachment' params=['id_attachment' => $attachment.id_attachment]}">
-                            {$attachment.name}
-                          </a>*}
-                        {$attachment.description}</h4>
-                        <a href="{url entity='attachment' params=['id_attachment' => $attachment.id_attachment]}">
-                          {l s='Download' d='Shop.Theme.Actions'} ({$attachment.file_size_formatted})
-                        </a>
-                      </div>
-                    {/foreach}
-                  </section>
-                {/if}
-              {/block}
+              
+              {if $product.is_constructor==0}
+                {block name='product_attachments'}
+                   {if $product.attachments}
+                     <section class="product-attachments" align="center">
+                       {*<h4>{l s='Download' d='Shop.Theme.Actions'}</h4>*}
+                       <h6>Прикрепленные файлы:</h6>
+                       {foreach from=$product.attachments item=attachment}
+                         <div class="attachment">
+                           <h4>{$attachment.name} {$attachment.description}</h4>
+                           <a href="{url entity='attachment' params=['id_attachment' => $attachment.id_attachment]}">
+                             {l s='Download' d='Shop.Theme.Actions'} ({$attachment.file_size_formatted})
+                           </a>
+                         </div>
+                       {/foreach}
+                     </section>
+                   {/if}
+                 {/block}
+               {/if}  
               
               {block name='product_pack'}
             {if $packItems}
@@ -245,22 +243,25 @@
                 </div>
               {/foreach}
               
-              <details id="social-share">
-                  <summary>Поделиться</summary>
-                {block name='hook_product_buttons'}
-                  {hook h='displayProductButtons' product=$product}
-                {/block}
-              </details>
+{*          <details id="social-share">
+                <summary>Поделиться</summary>
+                    {block name='hook_product_buttons'}
+                        {hook h='displayProductButtons' product=$product}
+                    {/block}
+            </details>*}
               
-              {block name='product_footer'}
+            {block name='product_footer'}
                 {hook h='displayFooterProduct' product=$product category=$category}
-                {/block}
-               
-            <div id ='additional_info'>
-               {block name='product_additional_info'}
-                  {include file='catalog/_partials/product-additional-info.tpl'}
-               {/block}
-            </div>
+            {/block}
+            
+            <details id="social-share">
+                <summary>Поделиться</summary>
+                    <div id ='additional_info'>
+                       {block name='product_additional_info'}
+                            {include file='catalog/_partials/product-additional-info.tpl'}
+                       {/block}
+                    </div>
+            </details>
                
             </div>
             </div>

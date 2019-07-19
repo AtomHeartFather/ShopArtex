@@ -28,8 +28,8 @@
           <div class="container kartinko-h-2">
             <div class="row align-items-start">
                 <div class="col">
-                <p>Доступные цвета</p>
-              </div>
+                    <p>Доступные цвета</p>
+                </div>
             </div>
             <div class="row align-items-end">
               <div class="col">

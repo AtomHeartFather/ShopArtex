@@ -79,7 +79,7 @@
 
                     <!-- слайдер картинок -->
                     {block name='product_cover_thumbnails'} 
-                        {include file='catalog/_partials/product-cover-light-slider.tpl'}
+                        {include file='catalog/_partials/product-cover-thumbnails.tpl'}
                     {/block}
                     <div class="product-cart">
                         <div class="sticky row no-gutters">  
