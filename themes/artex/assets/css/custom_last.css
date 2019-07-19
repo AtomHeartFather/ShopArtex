@@ -1,0 +1,330 @@
+/*
+ * Custom style goes here.
+ * A template should always ship with an empty custom.css
+ */
+@charset "UTF-8";
+
+@font-face {
+	font-family: acne;
+	src: url(../fonts/AcneStudiosCircleBook.eot);
+}
+@font-face {
+	font-family: Raleway;
+	src: url(../fonts/Raleway-Regular.ttf);
+}
+@font-face {
+	font-family: Lato;
+	src: url(../fonts/Lato-Regular.ttf);
+}
+@font-face {
+	font-family: Roboto;
+	src: url(../fonts/Roboto-Regular.ttf);
+}
+@font-face {
+	font-family: OpenSans;
+	src: url(../fonts/OpenSans-Regular.ttf);
+}
+
+body {
+    font-family: Raleway,acne,Lato,Roboto-Regular, sans-serif !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    text-transform: none !important;
+    letter-spacing: normal !important;
+}
+
+.brdr {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border: 1px solid transparent;
+/*    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    background-image: url({$product.cover.medium.url});
+    background-size: cover;*/
+}
+
+.no-padding {
+    padding: 0 !important;
+}
+
+li {
+  list-style-type: none;
+  /* Убираем маркеры */
+}
+
+ul {
+  margin-top: 16px;
+    
+  margin-left: 0;
+  /* Отступ слева в браузере IE и Opera */
+  padding-left: 0;
+  /* Отступ слева в браузере Firefox, Safari, Chrome */
+}
+
+.radio-color {
+    margin-top: 0.1vw;
+}
+
+/*.product-add-to-cart {
+    margin-top: 10vw;
+}*/
+
+.product-minimal-quantity {
+    margin-top: 10vw;    
+}
+
+.hover-block {
+	position: absolute;
+	left: -2000%;
+	top: -3000px;
+        padding: 15px;
+        font-size: 10px;
+        line-height: 14px;
+}
+
+.hover-block p {
+/*    padding: 1vw;*/
+}
+
+.img-product-list:hover .hover-block {
+    	position: absolute;
+	left: 0;
+	top: 0;
+}
+@media (min-width: 768px) {
+    .bottom-name {
+        position: absolute;
+        left: 0;
+        top: 92%;
+    }
+}
+.bottom-name {
+        font-size: 10px;
+        line-height: 14px;
+        padding: 10px 10px 10px 10px;
+}
+.bottom-name p {
+/*        padding-left: 1vw;
+        padding-bottom: 1.8vw;
+        line-height: 1.1vw;*/
+}
+.img-product-list:hover .bottom-name {
+   	position: absolute;
+	left: -2000%;
+	top: -2000%;
+}
+.bottom-color {
+	position: absolute;
+	left: -2000%;
+	top: -2000%;
+        font-size: 10px;
+        line-height: 14px;
+        padding: 15px;
+}
+.bottom-color p {
+/*        padding-left: 1vw;
+        padding-bottom: 1.8vw;*/
+/*        line-height: 1.1vw;*/
+}
+.hover-block p,
+.bottom-color p,
+.bottom-name p {
+    margin-bottom: 0px !important;
+}
+
+.img-product-list:hover .bottom-color {
+    	position: absolute;
+	left: 0;
+	top: 92%;
+}
+
+.footer-description,
+.under-description {
+    margin-top: 30px;
+    font-size: 12px;
+    line-height: 16px;
+}
+.under-description ul {
+/*    padding: 0px 0px 0px 10px;*/
+}
+.row {
+    margine-left: 0px !important;
+    margine-right: 0px !important;
+}	
+#content {
+    background-color: white !important;
+    position: relative;
+}
+.lslide {
+/*    margin-right: 30vw !important;*/
+}
+#slider-img {
+    width: 50vw;
+}
+@media (max-width: 768px) {
+    #slider-img {width: 100vw;}
+}
+.product-cart {
+    width: 30vw;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    height: 100%;
+}
+@media (min-width: 768px) and (max-width: 1000px) {
+    .product-cart {width: 50vw;}
+}
+@media (max-width: 768px) {
+    .product-cart {
+        width: 100vw;
+        left: 0;
+        position: relative;
+    }
+}
+.sticky {
+  position: sticky;
+  top: 40%;
+  padding: 0.8vw;
+/*  min-height: 2em;
+  margin-bottom: 2em;*/
+}
+.p-name h1 {
+    line-height: 21px !important;
+    font-size: 17px !important;
+}
+.product-information {
+    background-color: blue;
+    height: 500px !important;
+/*    position: absolute;
+    left: 50%;
+    top: 0;
+    opacity: .3;*/
+}
+button {
+  background-color: black; /* Green */
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+  width: 100%;
+}
+.description p {
+    font-size: 12px !important;
+    line-height: 16px !important;
+}
+.product-actions {
+    background-color: red !important;
+/*    position: absolute;
+    left: 50%;
+    top: 50%;
+    opacity: .3;*/
+}
+.product-discounts {
+    background-color: green;
+}
+#wrapper {
+/*    padding-left: 1px !important;
+    padding-right: 1px !important;*/
+}
+/*
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  }
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+  }
+
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+  }
+
+.rslides img {
+  display: block;
+  height: auto;
+  float: left;
+  width: 100%;
+  border: 0;
+  }*/
+
+
+/*##  HEADER  ##*/
+
+a.login,
+.user-info,
+.language-selector,
+.header-nav,
+.header {
+    height: 32px;
+}
+
+.language-selector{
+    display: block;
+    padding: 0 0 0 0;
+}
+
+.footer-4 {
+    border-left: 1px solid;
+    border-left-color: RGB(210, 210, 210);
+}
+
+.container-fluid {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.gray-footer {
+   margin-left: 0px;
+   margin-right: 0px;
+}
+.footer-block {
+    padding: 20px 15px 40px 15px;
+    font-size: 12px;
+    line-height: 18px;
+}
+.footer-block li{
+    padding-top: 3px;
+}
+.footer-ul-label {
+    color: RGB(153, 153, 153);
+}
+
+/*#  Видео фон на главной старт  #*/
+.one-video {
+    margin-bottom: -8px;
+}
+#back-video {
+    width: 100%;
+    height: auto;
+    opacity: 0.5;
+}
+.text-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+.main-page-button,
+.main-page-button:hover,
+.main-page-button:visited {
+    color: black;
+    text-decoration: none;
+    
+}
+/*#  Видео фон на главной конец  #*/

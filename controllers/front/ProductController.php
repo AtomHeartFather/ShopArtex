@@ -402,7 +402,8 @@ class ProductControllerCore extends ProductPresentingFrontControllerCore
         $product = $this->getTemplateVarProduct();
         $minimalProductQuantity = $this->getProductMinimalQuantity($product);
         $isPreview = ('1' === Tools::getValue('preview'));
-
+        $attr_link_params = ["entity"=>"attachment", "params"=>["id_attachment"=>$product['model_id']]];
+        $model_path = LinkCore::getUrlSmarty($attr_link_params);
         ob_end_clean();
         header('Content-Type: application/json');
         $this->ajaxRender(Tools::jsonEncode(array(
@@ -436,6 +437,7 @@ class ProductControllerCore extends ProductPresentingFrontControllerCore
             'product_minimal_quantity' => $minimalProductQuantity,
             'product_has_combinations' => !empty($this->combinations),
             'id_product_attribute' => $product['id_product_attribute'],
+            'model_path' => $model_path,
         )));
 
         return;
@@ -1080,7 +1082,7 @@ class ProductControllerCore extends ProductPresentingFrontControllerCore
         $product_full['customer_group_discount'] = $group_reduction;
 
         $presenter = $this->getProductPresenter();
-
+        
         return $presenter->present(
             $productSettings,
             $product_full,

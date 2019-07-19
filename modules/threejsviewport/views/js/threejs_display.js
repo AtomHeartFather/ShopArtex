@@ -13,26 +13,34 @@ div.style.width = '50vw';
 div.style.display = 'flex';
 document.getElementById("content").insertBefore(div, document.getElementsByClassName("product-flags")[0]);
 
-//document.getElementByClass("lSSlideOuter"),
-//$('.lSSlideOuter').hide();
-//$('#lightslider').hide();
 
-var modelpath = "modules/threejsviewport/views/models_3d/4.gltf";
+$(document).ready(function(){
+          modelpath = document.getElementById("model_link").value;
+        model_init(modelpath);
+        model_animate();
+});
 
-    document.getElementById("clored").addEventListener("click", function(){
-    modelpath = "modules/threejsviewport/views/models_3d/4.gltf";
-    init(modelpath);
-    animate();
+check_el = document.getElementById("additional_info");
+
+var MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
+
+var observer = new MutationObserver(function (mutations) {
+    mutations.forEach(function (mutation) {
+        modelpath = document.getElementById("model_link").value;
+        model_init(modelpath);
+        model_animate();
     });
-    document.getElementById("clowhite").addEventListener("click", function(){
-    modelpath = "modules/threejsviewport/views/models_3d/5.gltf";
-    init(modelpath);
-    animate();
-    });
+});
+
+observer.observe(check_el, {
+  attributes: true,
+  childList: true,
+  subtree: true,
+  characterData: true
+});
 
 
-
-function init(modelpath) {
+function model_init(modelpath) {
     //мягкий окружающий свет
     Light = new THREE.AmbientLight(0x888888); //цвет
     
@@ -144,9 +152,9 @@ function init(modelpath) {
 
 
 //функция финального рендера и для анимации
-function animate() {
+function model_animate() {
     resizeCanvasToDisplaySize();
-    requestAnimationFrame(animate);
+    requestAnimationFrame(model_animate);
     renderer.render(scene, camera);
 //    document.getElementsByClassName('images-container')[0].style.display = 'none';
 }
@@ -166,9 +174,3 @@ function resizeCanvasToDisplaySize() {
     // update any render target sizes here
   }
 }
-
-    init(modelpath);
-    animate();
-//clored.onclick = getreddress() {
-//    
-//  };
