@@ -217,13 +217,6 @@ button {
     font-size: 12px !important;
     line-height: 16px !important;
 }
-.product-actions {
-    background-color: red !important;
-/*    position: absolute;
-    left: 50%;
-    top: 50%;
-    opacity: .3;*/
-}
 .product-discounts {
     background-color: green;
 }
