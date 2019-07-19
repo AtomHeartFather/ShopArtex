@@ -1251,11 +1251,9 @@ body#checkout {
   padding-right: 20px;
 }
 #product .product-actions {
-  background-color: #fff;
-  padding: 10px;
-  border-bottom: 1px solid #808080;
-  float: right;
-  width: 20%;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
 }
 #product .product-actions ul {
   margin: 0;

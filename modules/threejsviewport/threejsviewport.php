@@ -1,17 +1,16 @@
 <?php
 
-include_once(dirname(__FILE__).'/classes/AttachmentModels.php');
+include_once(dirname(__FILE__) . '/classes/AttachmentModels.php');
 
 if (!defined('_PS_VERSION_')) {
     exit;
 }
 
-class Threejsviewport extends Module
-{
+class Threejsviewport extends Module {
+
     protected $config_form = false;
 
-    public function __construct()
-    {
+    public function __construct() {
         $this->name = 'threejsviewport';
         $this->tab = 'front_office_features';
         $this->version = '1.0.0';
@@ -37,69 +36,64 @@ class Threejsviewport extends Module
      * Don't forget to create update methods if needed:
      * http://doc.prestashop.com/display/PS16/Enabling+the+Auto-Update
      */
-    public function install()
-    {
+    public function install() {
         Configuration::updateValue('THREEJSVIEWPORT_IS_INSTALL', true);
         Configuration::updateValue('THREEJSVIEWPORT_LIVE_MODE', false);
 
-        include(dirname(__FILE__).'/sql/install.php');
+        include(dirname(__FILE__) . '/sql/install.php');
 
         return parent::install() &&
-            $this->registerHook('header') &&
-            $this->registerHook('backOfficeHeader') &&
-            $this->registerHook('displayHeader') &&
-            $this->registerHook('actionAdminProductsControllerSaveBefore');
+                $this->registerHook('header') &&
+                $this->registerHook('backOfficeHeader') &&
+                $this->registerHook('displayHeader') &&
+                $this->registerHook('actionAdminProductsControllerSaveBefore');
     }
 
-    public function uninstall()
-    {
+    public function uninstall() {
         Configuration::deleteByName('THREEJSVIEWPORT_IS_INSTALL');
         Configuration::deleteByName('THREEJSVIEWPORT_LIVE_MODE');
 
-        include(dirname(__FILE__).'/sql/uninstall.php');
+        include(dirname(__FILE__) . '/sql/uninstall.php');
 
         return parent::uninstall();
     }
 
-    public function hookActionAdminProductsControllerSaveBefore($params)
-{
-        
+    public function hookActionAdminProductsControllerSaveBefore($params) {
+
 //   $productAdapter = $this->get('prestashop.adapter.data_provider.product');
 //    $product = $productAdapter->getProduct($_REQUEST['form']['id_product']);
 //    $models = new AttachmentModels();
 //    $models->description = 'descript';
 //    $models->attachProduct(22);
 //    $models->getFields();
-    //AttachmentModels::deleteProductAttachments($_REQUEST['form']['id_product']);
+        //AttachmentModels::deleteProductAttachments($_REQUEST['form']['id_product']);
 //   $product->is_constructor = "qqq";
 //  
 //    $product->save();
-}
+    }
 
     /**
      * Load the configuration form
      */
-    public function getContent()
-    {
+    public function getContent() {
         /**
          * If values have been submitted in the form, process.
          */
-        if (((bool)Tools::isSubmit('submitThreejsviewportModule')) == true) {
+        if (((bool) Tools::isSubmit('submitThreejsviewportModule')) == true) {
             $this->postProcess();
         }
 
         $this->context->smarty->assign('module_dir', $this->_path);
 
-        $output = $this->context->smarty->fetch($this->local_path.'views/templates/admin/configure.tpl');
+        $output = $this->context->smarty->fetch($this->local_path . 'views/templates/admin/configure.tpl');
 
-        return $output.$this->renderForm();
+        return $output . $this->renderForm();
     }
 
     /**
      * Create the form that will be displayed in the configuration of your module.
      */
-    protected function renderForm()
-    {
+    protected function renderForm() {
         $helper = new HelperForm();
 
         $helper->show_toolbar = false;
@@ -111,7 +105,7 @@ class Threejsviewport extends Module
         $helper->identifier = $this->identifier;
         $helper->submit_action = 'submitThreejsviewportModule';
         $helper->currentIndex = $this->context->link->getAdminLink('AdminModules', false)
-            .'&configure='.$this->name.'&tab_module='.$this->tab.'&module_name='.$this->name;
+                . '&configure=' . $this->name . '&tab_module=' . $this->tab . '&module_name=' . $this->name;
         $helper->token = Tools::getAdminTokenLite('AdminModules');
 
         $helper->tpl_vars = array(
@@ -126,13 +120,12 @@ class Threejsviewport extends Module
     /**
      * Create the structure of your form.
      */
-    protected function getConfigForm()
-    {
+    protected function getConfigForm() {
         return array(
             'form' => array(
                 'legend' => array(
-                'title' => $this->l('Settings'),
-                'icon' => 'icon-cogs',
+                    'title' => $this->l('Settings'),
+                    'icon' => 'icon-cogs',
                 ),
                 'input' => array(
                     array(
@@ -178,8 +171,7 @@ class Threejsviewport extends Module
     /**
      * Set values for the inputs.
      */
-    protected function getConfigFormValues()
-    {
+    protected function getConfigFormValues() {
         return array(
             'THREEJSVIEWPORT_LIVE_MODE' => Configuration::get('THREEJSVIEWPORT_LIVE_MODE', true),
             'THREEJSVIEWPORT_ACCOUNT_EMAIL' => Configuration::get('THREEJSVIEWPORT_ACCOUNT_EMAIL', 'contact@prestashop.com'),
@@ -190,8 +182,7 @@ class Threejsviewport extends Module
     /**
      * Save form data.
      */
-    protected function postProcess()
-    {
+    protected function postProcess() {
         $form_values = $this->getConfigFormValues();
 
         foreach (array_keys($form_values) as $key) {
@@ -200,64 +191,62 @@ class Threejsviewport extends Module
     }
 
     /**
-    * Add the CSS & JavaScript files you want to be loaded in the BO.
-    */
-    public function hookBackOfficeHeader()
-    {
+     * Add the CSS & JavaScript files you want to be loaded in the BO.
+     */
+    public function hookBackOfficeHeader() {
         if (Tools::getValue('module_name') == $this->name) {
-            $this->context->controller->addJS($this->_path.'views/js/back.js');
-            $this->context->controller->addCSS($this->_path.'views/css/back.css');
+            $this->context->controller->addJS($this->_path . 'views/js/back.js');
+            $this->context->controller->addCSS($this->_path . 'views/css/back.css');
         }
     }
 
     /**
      * Add the CSS & JavaScript files you want to be added on the FO.
      */
-    public function hookHeader()
-    {
+    public function hookHeader() {
 //         $this->context->controller->addJS($this->_path.'/views/js/front.js');
 //         $this->context->controller->addCSS($this->_path.'/views/css/front.css');
-        
-        
     }
 
-    public function hookDisplayHeader()
-    {
+    public function hookDisplayHeader() {
         // Only on product page
-            if ('product' === $this->context->controller->php_self && '21' === Tools::getValue('id_product')) {
-                
-                $this->context->controller->registerJavascript(
-                    'threejs',
-                    'modules/'.$this->name.'/views/js/three.min.js',
-                    [
-                      'attribute' => 'async'
-                    ]
-                );
-               
-                $this->context->controller->registerJavascript(
-                    'orbitcontrols',
-                    'modules/'.$this->name.'/views/js/OrbitControls.js',
-                    [
-                      'attribute' => 'async'
-                    ]
-                );
-                
-                $this->context->controller->registerJavascript(
-                    'gltfloader',
-                    'modules/'.$this->name.'/views/js/GLTFLoader.js',
-                    [
-                      'attribute' => 'async'
-                    ]
-                );
-                
-                $this->context->controller->registerJavascript(
-                    'threejsdisplay',
-                    'modules/'.$this->name.'/views/js/threejs_display.js',
-                    [
-                      'priority' => 200,
-                      'attribute' => 'defer'
-                    ]
-                );
-            }
+        $product = new Product((int) Tools::getValue('id_product'));
+        if ($product->is_constructor == 0 && 'product' === $this->context->controller->php_self) {
+            return;
+        }
+
+        $this->context->controller->registerJavascript(
+                'threejs',
+                'modules/' . $this->name . '/views/js/three.min.js',
+                [
+                    'attribute' => 'async'
+                ]
+        );
+
+        $this->context->controller->registerJavascript(
+                'orbitcontrols',
+                'modules/' . $this->name . '/views/js/OrbitControls.js',
+                [
+                    'attribute' => 'async'
+                ]
+        );
+
+        $this->context->controller->registerJavascript(
+                'gltfloader',
+                'modules/' . $this->name . '/views/js/GLTFLoader.js',
+                [
+                    'attribute' => 'async'
+                ]
+        );
+
+        $this->context->controller->registerJavascript(
+                'threejsdisplay',
+                'modules/' . $this->name . '/views/js/threejs_display.js',
+                [
+                    'priority' => 200,
+                    'attribute' => 'defer'
+                ]
+        );
     }
+
 }

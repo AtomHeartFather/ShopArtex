@@ -4890,6 +4890,8 @@ class ProductCore extends ObjectModel
         }
 
         $row['unit_price'] = ($row['unit_price_ratio'] != 0 ? $row['price'] / $row['unit_price_ratio'] : 0);
+        
+        $row['model_id'] = $combination->model_3d;
 
         self::$productPropertiesCache[$cache_key] = $row;
 

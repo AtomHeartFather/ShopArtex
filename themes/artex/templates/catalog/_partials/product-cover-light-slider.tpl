@@ -41,8 +41,8 @@
     </ul>
   {/block}
 -->  
-  <div class="no-gutters">
-	<ul id='lightSlider'  style="{if ($product.id_product == 21)}display: none; {/if}height: 879px;">
+<div class="no-gutters">
+	<ul id='lightSlider'  style="{if ($product.is_constructor == '1')}display: none; {/if}height: 879px;">
                 {foreach from=$product.images item=image}
                         <li>
                            <img id="slider-img" src="{$image.medium.url}" alt="{$image.legend}" title="{$image.legend}" {*width="{$product.cover.bySize.medium_default.width}"*}{*style="width:50vw;" *}itemprop="image"> 

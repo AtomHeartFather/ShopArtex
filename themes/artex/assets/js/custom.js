@@ -64,11 +64,18 @@ function getQueryVariable(variable) /* забирает переменные с 
        return(false);
 }
 
-
+var is_constructor;
 
 $(document).ready(function() {  /* запускает слайдер, если только id продукта не 21 */
-     
-    if ( getQueryVariable("id_product") === 21 ) {
+    
+    is_constructor = document.getElementById("product_is_constructor").value;
+    if(is_constructor === "1"){
+        is_constructor = true;
+    }else {
+        is_constructor = false;
+    }
+
+    if ( is_constructor ) {
         return;
         }
         
