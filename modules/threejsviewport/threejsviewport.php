@@ -211,7 +211,7 @@ class Threejsviewport extends Module {
     public function hookDisplayHeader() {
         // Only on product page
         $product = new Product((int) Tools::getValue('id_product'));
-        if ($product->is_constructor == 0 && 'product' === $this->context->controller->php_self) {
+        if ($product->is_constructor == null || $product->is_constructor == 0 && 'product' === $this->context->controller->php_self) {
             return;
         }
 
