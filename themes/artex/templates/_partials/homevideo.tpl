@@ -24,12 +24,12 @@
  *}
 
 
-        
+
 <div class="one-video no-gutters row" style="margin-bottom: -8px">
     <div class="two-video col-12">
-        <a href="http://localhost/artex/index.php?id_category=2&controller=category&id_lang=1">
-            <video width="100%" style="opacity:0.5" id="back-video" poster="http://localhost/artex/themes/artex/assets/img/video-cover.png" autoplay muted loop>
-                <source src="http://localhost/artex/themes/artex/assets/video/video-back.mp4" type="video/mp4">
+        <a href="{url entity='category' id=2 id_lang=1}">
+            <video width="100%" style="opacity:0.5" id="back-video" poster="{$urls.base_url}themes/artex/assets/img/video-cover.png" autoplay muted loop>
+                <source src="{$urls.base_url}themes/artex/assets/video/video-back.mp4" type="video/mp4">
             </video>
             <div class="text-video row align-items-center no-gutters" style="position: absolute; top: 0; left: 0; height: 100%; width: 100%;">
                 <div class="main-button col">
