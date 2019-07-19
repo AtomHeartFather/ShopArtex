@@ -1768,3 +1768,6 @@ details {
 #products {
  background-color: #80808054;
 }
+.product-prices p {
+    font-size: 18px;
+}

@@ -167,6 +167,7 @@
                 <input type="hidden" name="token" value="{$static_token}">
                 <input type="hidden" name="id_product" value="{$product.id}" id="product_page_product_id">
                 <input type="hidden" name="id_customization" value="{$product.id_customization}" id="product_customization_id">
+                <input type="hidden" name="is_constructor" value="{$product.is_constructor}" id="product_is_constructor"> 
                 
                 <div class="col-12 no-padding">
                 {block name='product_variants'}
@@ -254,11 +255,13 @@
               {block name='product_footer'}
             {hook h='displayFooterProduct' product=$product category=$category}
           {/block}
-                
-{*               {block name='product_additional_info'}
+               
+            <div id ='additional_info'>
+               {block name='product_additional_info'}
                   {include file='catalog/_partials/product-additional-info.tpl'}
-                {/block}*}
-              
+               {/block}
+            </div>
+               
             </div>
             </div>
             </div>
