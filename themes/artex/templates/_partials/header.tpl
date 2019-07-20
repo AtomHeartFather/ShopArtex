@@ -39,7 +39,7 @@
         {hook h='displayTopMenu'} 
     </div>   
     <div class="row menu-right justify-content-end header-right-side no-gutters col-xl-3 col-lg-3 col-md-4 col-sm-10 col-10"> 
-        {*{hook h='displayNav'}*}
+        {hook h='displayNav'}
     </div>
     <a href="javascript:void(0);" class="icon" onclick="mobileMenu()">
         <i class="fa fa-bars"></i>

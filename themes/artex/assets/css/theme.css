@@ -1731,6 +1731,9 @@ nav.pagination .current a {
     line-height: 14px;
     display: none;
 }
+.img-product-list {
+    background-color: white;
+}
 .kartinko-price-768 p {
     margin-bottom: 0;
 }
