@@ -13,9 +13,9 @@
           
       <div class="kartinko-h-layer-1">
           <div class="container kartinko-h-1">
-            <div class="row align-items-start">
+            <div {*class="row align-items-start"*}>
             </div>
-            <div class="row align-items-end">
+            <div {*class="row align-items-end"*}>
               <div class="col">
                 <p>{$product.name}<br>
                    {$product.price}</p>
