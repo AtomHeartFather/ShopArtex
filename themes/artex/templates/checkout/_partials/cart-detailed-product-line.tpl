@@ -23,16 +23,128 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 {block name='cart_detailed_product_line'}
-  <span class="product-image"><img src="{$product.cover.small.url}"></span>
-  <span class="product-name"><a href="{$product.url}" data-id_customization="{$product.id_customization|intval}">{$product.name}</a></span>
-  {foreach from=$product.attributes key="attribute" item="value"}
+<div class="container no-gutters cart-list">
+<div class="row no-gutters">
+    <div class="col-8 cart-list-dropdown-text">
+                <div>
+                    <span class="product-name"><a href="{$product.url}" data-id_customization="{$product.id_customization|intval}">{$product.name}</a></span>
+                    <br>
+                    <span class="product-availability">{$product.availability}</span>
+                    <span class="product-price">{$product.price}</span>
+                    {if $product.unit_price_full}
+                      <small class="sub">{$product.unit_price_full}</small>
+                    {/if}
+                    <br>
+                    {if $product.down_quantity_url}
+                      <a href="{$product.down_quantity_url}" class="js-decrease-product-quantity" data-link-action="update-quantity">-</a>
+                    {/if}
+                    <span class="product-quantity">{$product.quantity}</span>
+                    {if $product.up_quantity_url}
+                      <a href="{$product.up_quantity_url}" class="js-increase-product-quantity" data-link-action="update-quantity">+</a>
+                    {/if}
+                    <br>
+                        {*<span class="product-price">
+                            {if isset($product.is_gift) && $product.is_gift}
+                              <span class="gift">{l s='Gift' d='Shop.Theme.Checkout'}</span>
+                            {else}
+                              {$product.total}
+                            {/if}
+                        </span>
+                    <br>*}
+                    
+                      {foreach from=$product.attributes key="attribute" item="value"}
+                        <span class="product-attributes">
+                          <span class="label">{$attribute}:</span>
+                          <span class="value">{$value}</span>
+                        </span><br>
+                      {/foreach}
+                      <br>
+                    {block name='cart_detailed_product_line_customization'}
+                        {if is_array($product.customizations) && $product.customizations|count}
+                          {foreach from=$product.customizations item="customization"}
+                            {foreach from=$customization.fields item="field"}
+                              <span class="product-line-info">
+                                <span class="label">{$field.label}:</span>
+                                <span class="value">
+                                  {if $field.type == 'text'}
+                                    {if $field.id_module}
+                                      {$field.text nofilter}
+                                    {else}
+                                     {$field.text}
+                                    {/if}
+                                  {elseif $field.type == 'image'}
+                                    <img src="{$field.image.small.url}">
+                                  {/if}
+                                </span>
+                              </span>
+                            {/foreach}
+                          {/foreach}
+                        {/if}
+                    {/block}
+                </div>
+                    
+                <div style="flex-grow: unset;">
+                    <a
+                        class="remove-from-cart"
+                        data-link-action="remove-from-cart"
+                        data-id-product="{$product.id_product|escape:'javascript'}"
+                        data-id-product-attribute="{$product.id_product_attribute|escape:'javascript'}"
+                        href="{$product.remove_from_cart_url}"
+                        rel="nofollow"
+                       >
+                        {l s='Remove' d='Shop.Theme.Actions'}
+                    </a>
+                  {block name='hook_cart_extra_product_actions'}
+                    {hook h='displayCartExtraProductActions' product=$product}
+                  {/block}
+                  
+                  
+                  
+                </div>      
+    </div>
+    <div class="col-4 d-flex justify-content-end">
+        <span class="product-image"><img src="{$product.cover.small.url}"></span>
+    </div>    
+</div>
+</div>
+{/block} 
+{*{if $product.customizations|count}
+    <div class="customizations">
+        <ul>
+            {foreach from=$product.customizations item="customization"}
+                <li>
+                    <span class="product-quantity">{$customization.quantity}</span>
+                    <a href="{$customization.remove_from_cart_url}" class="remove-from-cart" rel="nofollow">{l s='Remove' d="Shop.Theme.Actions"}</a>
+                    <ul>
+                        {foreach from=$customization.fields item="field"}
+                            <li>
+                                <label>{$field.label}</label>
+                                {if $field.type == 'text'}
+                                    <span>{$field.text}</span>
+                                {elseif $field.type == 'image'}
+                                    <img src="{$field.image.small.url}">
+                                {/if}
+                            </li>
+                        {/foreach}
+                    </ul>
+                </li>
+            {/foreach}
+        </ul>
+    </div>
+{/if}*}
+
+ 
+{*{block name='cart_detailed_product_line'}
++  <span class="product-image"><img src="{$product.cover.small.url}"></span>
++  <span class="product-name"><a href="{$product.url}" data-id_customization="{$product.id_customization|intval}">{$product.name}</a></span>
++  {foreach from=$product.attributes key="attribute" item="value"}
     <span class="product-attributes">
       <span class="label">{$attribute}:</span>
       <span class="value">{$value}</span>
     </span>
   {/foreach}
 
-  {block name='cart_detailed_product_line_customization'}
++  {block name='cart_detailed_product_line_customization'}
     {if is_array($product.customizations) && $product.customizations|count}
       {foreach from=$product.customizations item="customization"}
         {foreach from=$customization.fields item="field"}
@@ -55,20 +167,20 @@
     {/if}
   {/block}
 
-  <span class="product-availability">{$product.availability}</span>
-  <span class="product-price">{$product.price}</span>
-  {if $product.unit_price_full}
++  <span class="product-availability">{$product.availability}</span>
++  <span class="product-price">{$product.price}</span>
++  {if $product.unit_price_full}
     <small class="sub">{$product.unit_price_full}</small>
   {/if}
 
-  {if $product.down_quantity_url}
++  {if $product.down_quantity_url}
     <a href="{$product.down_quantity_url}" class="js-decrease-product-quantity" data-link-action="update-quantity">-</a>
   {/if}
-  <span class="product-quantity">{$product.quantity}</span>
-  {if $product.up_quantity_url}
++  <span class="product-quantity">{$product.quantity}</span>
++  {if $product.up_quantity_url}
     <a href="{$product.up_quantity_url}" class="js-increase-product-quantity" data-link-action="update-quantity">+</a>
   {/if}
-  <a
++  <a
     class="remove-from-cart"
     data-link-action="remove-from-cart"
     data-id-product="{$product.id_product|escape:'javascript'}"
@@ -79,7 +191,7 @@
     {l s='Remove' d='Shop.Theme.Actions'}
   </a>
 
-  {block name='hook_cart_extra_product_actions'}
++  {block name='hook_cart_extra_product_actions'}
     {hook h='displayCartExtraProductActions' product=$product}
   {/block}
 
@@ -90,4 +202,4 @@
       {$product.total}
     {/if}
   </span>
-{/block}
+{/block}*}

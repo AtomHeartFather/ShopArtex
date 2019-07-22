@@ -16,7 +16,7 @@
             <div {*class="row align-items-start"*}>
             </div>
             <div {*class="row align-items-end"*}>
-              <div class="col">
+              <div class="">
                 <p>{$product.name}<br>
                    {$product.price}</p>
               </div>

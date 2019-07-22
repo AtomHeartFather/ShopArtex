@@ -95,6 +95,7 @@ template {
 
 a {
   background-color: transparent;
+  color: black;
 }
 
 /**
@@ -987,7 +988,7 @@ a.add-to-cart:hover {
   align-items: stretch;
   justify-content: space-between;
 }
-@media (max-width: 1000px) {
+/*@media (max-width: 1000px) {
   .products,
   .subcategories > ul {
     justify-content: space-around;
@@ -995,7 +996,7 @@ a.add-to-cart:hover {
   .product-miniature {
     margin-left: 25px;
   }
-}
+}*/
 .product-miniature {
   max-width: 420px;
   text-align: center;
@@ -1800,4 +1801,79 @@ details {
 .cart-subtotals,
 .cart-total {
 /*    padding: 12px;*/
+}
+.cart-list {
+    max-width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+.cart-item {
+/*    background-color: rgb(230,230,230);*/
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px dashed gray;
+}
+.cart-main-block {
+/*    background-color: rgb(230,230,230);*/
+    background-color: white;
+    padding: 12px;
+}
+
+.cart-item .product-name {
+    font-size: 16px;
+}
+.cart-main-block h1 {
+    line-height: 21px !important;
+    font-size: 20px !important;
+/*    margin-block-end: 0 !important;*/
+}
+/*.cart-overview {
+    border-top: 1px solid gray;
+}*/
+
+.cart-container {
+    background-color: gray;
+}
+.cart-main-block {
+/*    max-width: 1000px; */
+    box-shadow: 0 7px 10px 0 rgba(0,0,0,.12);
+}
+.cart-main-block a,
+.cart-main-block a:active,
+.cart-main-block a:visited {    
+    text-decoration: none;
+    color: black
+}
+#items-subtotal {
+    padding-bottom: 12px;
+}
+.cart-subtotals .shipping {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+}
+.cart-buttons a {
+    widows: 100%;
+}
+.cart-buttons {
+    padding-top: 12px;
+}
+.cart-checkout-btn {
+    padding-left: 6px !important;
+}
+.cart-continue-btn {
+    padding-right: 6px !important;
+}
+@media (max-width: 768px) {
+    .cart-checkout-btn,
+    .cart-continue-btn {
+        padding-right: 12px !important;
+        padding-left: 12px !important;
+    }
+    .cart-continue-btn a button {
+        background-color: rgb(230,230,230);
+        color: black;
+/*        border: 1px solid black;*/
+    }
 }

@@ -26,17 +26,12 @@
 
 {block name='content'}
 
-  <section id="main">
+<div class="cart-container no-gutters d-flex justify-content-center">    
+  <section id="main" class="cart-main-block">
     <h1>{l s='Shopping Cart' d='Shop.Theme.Checkout'}</h1>
 
     {block name='cart_overview'}
       {include file='checkout/_partials/cart-detailed.tpl' cart=$cart}
-    {/block}
-
-    {block name='continue_shopping'}
-      <a href="{$urls.pages.index}">
-        {l s='Continue shopping' d='Shop.Theme.Actions'}
-      </a>
     {/block}
 
     {block name='hook_shopping_cart_footer'}
@@ -60,21 +55,30 @@
       {block name='cart_totals'}
         {include file='checkout/_partials/cart-detailed-totals.tpl' cart=$cart}
       {/block}
-
-      {block name='cart_actions'}
-        {if $cart.minimalPurchaseRequired}
-          <div class="notification notification-warning" role="alert" data-alert="warning">
-            {$cart.minimalPurchaseRequired}
+      <div class="row cart-buttons">
+          <div class="cart-continue-btn col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">  
+            {block name='continue_shopping'}
+              <a href="{$urls.pages.index}">
+                  <button>{l s='Continue shopping' d='Shop.Theme.Actions'}</button>
+              </a>
+            {/block}
           </div>
-          <button disabled>{l s='Checkout' d='Shop.Theme.Actions'}</button>
-        {elseif empty($cart.products)}
-          <button disabled>{l s='Checkout' d='Shop.Theme.Actions'}</button>
-        {else}
-          <a href="{$urls.pages.order}">{l s='Checkout' d='Shop.Theme.Actions'}</a>
-          {hook h='displayExpressCheckout'}
-        {/if}
-      {/block}
-
+          <div class="cart-checkout-btn col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            {block name='cart_actions'}
+              {if $cart.minimalPurchaseRequired}
+                <div class="notification notification-warning" role="alert" data-alert="warning">
+                  {$cart.minimalPurchaseRequired}
+                </div>
+                <button disabled>{l s='Checkout' d='Shop.Theme.Actions'}</button>
+              {elseif empty($cart.products)}
+                <button disabled>{l s='Checkout' d='Shop.Theme.Actions'}</button>
+              {else}
+                  <a href="{$urls.pages.order}"><button>{l s='Checkout' d='Shop.Theme.Actions'}</button></a>
+                {hook h='displayExpressCheckout'}
+              {/if}
+            {/block}
+          </div>  
+      </div>
     {/block}
 
     {block name='hook_reassurance'}
@@ -82,5 +86,5 @@
     {/block}
 
   </section>
-
+</div>
 {/block}
