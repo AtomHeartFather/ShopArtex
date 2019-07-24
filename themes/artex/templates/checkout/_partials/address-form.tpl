@@ -23,6 +23,7 @@
     <label>
       <input  name    = "use_same_address"
               type    = "checkbox"
+              id      = 'use_same_address'
               value   = "1"
               {if $use_same_address} checked {/if}
       >

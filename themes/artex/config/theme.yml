@@ -111,6 +111,11 @@ assets:
         path: assets/css/font-awesome.min.css
         media: all
         priority: 100
+        
+      - id: icono-css
+        path: assets/css/icono.min.css
+        media: all
+        priority: 100
   js:
     all:
       - id: bootstrap-4

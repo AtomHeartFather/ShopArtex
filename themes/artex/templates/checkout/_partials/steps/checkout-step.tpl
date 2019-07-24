@@ -32,7 +32,7 @@
       'js-current-step' => $step_is_current
     ]|classnames}"
   >
-    <h1><span class="step-number">{$position}</span>{$title}</h1>
+    <h1><span class="step-number">{$position}. </span>{$title}</h1>
     <div class="content">
       {block name='step_content'}DUMMY STEP CONTENT{/block}
     </div>

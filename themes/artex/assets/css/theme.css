@@ -1081,10 +1081,10 @@ ul.product-labels li {
   font-style: inherit;
   cursor: default;
 }
-body#checkout {
+/*body#checkout {
   max-width: 960px;
   margin: auto;
-}
+}*/
 .address-selector {
   display: flex;
   flex-wrap: wrap;
@@ -1100,7 +1100,7 @@ body#checkout {
   float: right;
   width: 30%;
 }
-.checkout-step {
+.checkout-step .content {
   width: 70%;
 }
 #conditions-to-approve {
@@ -1192,6 +1192,11 @@ body#checkout {
   background-color: #90ee90;
   border: 1px solid #000;
   color: #000;
+}
+.checkout-step h1 {
+    font-size: 24px;
+    border-bottom: 1px solid rgb(200,200,200);
+    padding-bottom: 8px;
 }
 .checkout-step .content {
   display: none;
@@ -1818,7 +1823,6 @@ details {
     background-color: white;
     padding: 12px;
 }
-
 .cart-item .product-name {
     font-size: 16px;
 }
@@ -1830,7 +1834,6 @@ details {
 /*.cart-overview {
     border-top: 1px solid gray;
 }*/
-
 .cart-container {
     background-color: gray;
 }
@@ -1876,4 +1879,86 @@ details {
         color: black;
 /*        border: 1px solid black;*/
     }
+}
+#header-checkout {
+    height: 32px;
+    background-color: white;
+}
+#header-checkout p {
+    font-size: 14px;
+    padding: 8px 12px 7px 12px;
+}
+.checkout-main {
+    background-color: rgb(230,230,230);
+}
+.checkout-main input {
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(187,187,187);  
+    background-color: rgb(230, 230, 230);
+    height: 30px;
+    padding: 6px;
+    width: 70%;
+}
+.checkout-column-1,
+.checkout-column-2,
+.checkout-column-3 {
+    padding: 12px !important;
+}
+.checkout-column-1 {
+    border-right: 1px solid rgb(200,200,200);
+}
+.checkout-column-3 {
+    border-left: 1px solid rgb(200,200,200);
+}
+.js-address-form {
+    padding-top: 12px;
+    padding-bottom: 6px;
+}
+#use_same_address {
+    width: 16px !important;
+    height: 16px !important;
+}
+.js-country {
+/*    border: 1px solid black;*/
+}
+select.js-country {
+        background-color: rgba(221, 221, 221, 0);
+    height: 30px;
+    padding: 6px;
+    width: 70%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url(http://localhost/artex/themes/artex/assets/ico/select-tag-arrow.svg) 98% / 2% no-repeat ;
+}
+/* CAUTION: IE hackery ahead */
+select::-ms-expand { 
+    display: none; /* remove default arrow in IE 10 and 11 */
+}
+/* target Internet Explorer 9 to undo the custom arrow */
+@media screen and (min-width:0\0) {
+    select {
+        background:none\9;
+        padding: 5px\9;
+    }
+}
+#cart-summary-product-list {
+    border-top:1px solid rgb(200,200,200);
+    border-bottom:1px solid rgb(200,200,200);
+}
+#cart-summary-product-list ul li{
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+#cart-summary-product-list ul li .product-price,
+.cart-summary-totals .shipping .value,
+.cart-summary-totals .value {
+    float: right;
+}
+.cart-summary-totals .products,
+.cart-summary-totals .shipping,
+.cart-summary-totals .cart-summary-totals {
+    padding-top: 6px;
+    padding-bottom: 6px;
 }

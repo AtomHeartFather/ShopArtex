@@ -23,7 +23,7 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 {block name='header'}
-  <header id="header">
-    Simplified header
+  <header id="header-checkout">
+      <p>Оформление заказа</p>
   </header>
 {/block}

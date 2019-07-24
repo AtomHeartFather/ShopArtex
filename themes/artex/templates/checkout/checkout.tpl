@@ -24,7 +24,7 @@
  *}
 <!doctype html>
 <html lang="{$language.iso_code}">
-
+    
   <head>
     {block name='head'}
       {include file='_partials/head.tpl'}
@@ -38,30 +38,47 @@
         {include file='checkout/_partials/header.tpl'}
       {/block}
     </header>
-
+    <style type="text/css">
+        #header { position: fixed; z-index: 100; width: 100%; }
+        #content { top: 32px; }
+        .checkout-column-3 { position: fixed; top: 32px; left: 75%; height:100%; }
+        @media (max-width: 1000px) {
+            .checkout-column-3 { left: 66% }
+        }
+        @media (max-width: 768px) {
+            .checkout-column-3 { position: inherit; top: 0; }
+            .checkout-main input { width: 100%;}
+        }
+    </style>  
     {block name='notifications'}
       {include file='_partials/notifications.tpl'}
     {/block}
-
+    
     {block name='content'}
       <section id="content">
-
-        {block name='cart_summary'}
-          {include file='checkout/_partials/cart-summary.tpl' cart=$cart}
-        {/block}
-
-        {block name='cart_summary'}
-          {render file='checkout/checkout-process.tpl' ui=$checkout_process}
-        {/block}
-
+      <div class="checkout-main row no-gutters">    
+        <div class='checkout-column-1 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12'>
+            <p></p>
+        </div>
+        <div class='checkout-column-2 col-xl-6 col-lg-6 col-md-8 col-sm-12 col-12'>
+            {block name='cart_summary'}
+              {render file='checkout/checkout-process.tpl' ui=$checkout_process}
+            {/block}
+        </div>
+        <div class='checkout-column-3 col-xl-3 col-lg-3 col-md-4 col-sm-12 col-12'>
+            {block name='cart_summary'}
+              {include file='checkout/_partials/cart-summary.tpl' cart=$cart}
+            {/block}
+        </div>
+      </div>  
       </section>
     {/block}
 
-    <footer id="footer">
+    {*<footer id="footer">*}
       {block name='footer'}
         {include file='checkout/_partials/footer.tpl'}
       {/block}
-    </footer>
+    {*</footer>*}
 
     {block name='javascript_bottom'}
       {include file="_partials/javascript.tpl" javascript=$javascript.bottom}
