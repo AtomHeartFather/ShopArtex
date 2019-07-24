@@ -34,7 +34,7 @@
   <div class="payment-options">
     {foreach from=$payment_options item="module_options"}
       {foreach from=$module_options item="option"}
-        <div>
+        <div width='100%'>
           <div id="{$option.id}-container" class="payment-option">
 
             {* This is the way an option should be selected when Javascript is enabled *}

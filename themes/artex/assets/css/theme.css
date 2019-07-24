@@ -1125,20 +1125,20 @@ ul.product-labels li {
   padding: 5px;
   margin: 5px;
 }
-.payment-options,
+/*.payment-options,
 .delivery-options,
 .order-options {
   max-width: 50%;
-}
+}*/
 .order-options label {
   margin-top: 10px;
 }
 .payment-option,
 .delivery-option {
-  border-bottom: 1px solid #808080;
+/*  border-bottom: 1px solid #808080;*/
   padding-left: 10px;
-  margin-top: 5px;
-  background-color: #fff;
+/*  margin-top: 5px;*/
+  background-color: rgb(230,230,230);
 }
 .payment-option label,
 .delivery-option label {
@@ -1178,7 +1178,7 @@ ul.product-labels li {
 }
 #payment-confirmation button:disabled,
 #payment-confirmation label:disabled {
-  background-color: #f00;
+  background-color: gray;
   cursor: default;
 }
 .payment-options .warning {
@@ -1890,6 +1890,8 @@ details {
 }
 .checkout-main {
     background-color: rgb(230,230,230);
+    height: 100%;
+    
 }
 .checkout-main input {
     border-width: 1px;
@@ -1900,6 +1902,27 @@ details {
     padding: 6px;
     width: 70%;
 }
+.delivery-options {
+    background-color: rgb(230, 230, 230);
+    border: 1px solid rgb(187,187,187);
+}
+#payment-option-1-container input,
+#conditions-to-approve ul li input,
+.delivery-option input,
+.radio-block input {
+    height: auto;
+    width: auto;
+}
+#conditions-to-approve ul li {
+    width: 100%;
+}
+#js-delivery {
+    padding-bottom: 16px;
+}
+.address-selector {
+    padding-bottom: 16px;
+}
+.adress-item footer 
 .checkout-column-1,
 .checkout-column-2,
 .checkout-column-3 {
@@ -1910,6 +1933,10 @@ details {
 }
 .checkout-column-3 {
     border-left: 1px solid rgb(200,200,200);
+}
+.checkout-column-2 {
+    padding-top: 32px;
+    height: -webkit-fill-available;
 }
 .js-address-form {
     padding-top: 12px;
@@ -1961,4 +1988,7 @@ select::-ms-expand {
 .cart-summary-totals .cart-summary-totals {
     padding-top: 6px;
     padding-bottom: 6px;
+}
+.ps-shown-by-js button {
+    
 }
