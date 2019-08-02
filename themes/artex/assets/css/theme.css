@@ -1884,7 +1884,15 @@ details {
     height: 32px;
     background-color: white;
 }
+#header-checkout p:active,
+#header-checkout p:hover,
+#header-checkout p:visited{
+    text-decoration: none;
+    color: black;
+}
 #header-checkout p {
+    text-decoration: none;
+    color: black;
     font-size: 14px;
     padding: 8px 12px 7px 12px;
 }

@@ -1,19 +1,21 @@
 <div class="container cart-list-dropdown-body">
 <div class="row no-gutters">
     <div class="col-8 cart-list-dropdown-text">
-                <div>
-                    <span class="product-name">{$product.name}</span>
-                    <br>
-                    <span class="product-quantity">{$product.quantity}</span><span class="product-price">{$product.price}</span>
-                    <br>
-                    <br>
-                      {foreach from=$product.attributes key="attribute" item="value"}
-                        <span class="product-attributes">
-                          <span class="label">{$attribute}:</span>
-                          <span class="value">{$value}</span>
-                        </span><br>
-                      {/foreach}
-                </div>      
+                <a rel="nofollow" href="{$cart_url}">
+                    <div>
+                        <span class="product-name">{$product.name}</span>
+                        <br>
+                        <span class="product-quantity">{$product.quantity}</span><span class="product-price">{$product.price}</span>
+                        <br>
+                        <br>
+                          {foreach from=$product.attributes key="attribute" item="value"}
+                            <span class="product-attributes">
+                              <span class="label">{$attribute}:</span>
+                              <span class="value">{$value}</span>
+                            </span><br>
+                          {/foreach}
+                    </div>     
+                </a>    
                 <div style="flex-grow: unset;">
                     <a  class="remove-from-cart-"
                         rel="nofollow"
@@ -24,9 +26,11 @@
                     </a>
                 </div>      
     </div>
-    <div class="col-4 d-flex justify-content-end">
-        <span class="product-image"><img src="{$product.cover.small.url}"></span>
-    </div>    
+        <div class="col-4 d-flex justify-content-end">
+            <a rel="nofollow" href="{$cart_url}">
+                <span class="product-image"><img src="{$product.cover.small.url}"></span>
+            </a>
+        </div>
 </div>
         
 {if $product.customizations|count}

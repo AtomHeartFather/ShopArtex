@@ -24,6 +24,9 @@
  *}
 {block name='header'}
   <header id="header-checkout">
-      <p>Оформление заказа</p>
+      <div class="row justify-content-between no-gutter">
+          <div class="col no-gutter"><p>Оформление заказа</p></div>
+          <div class="col no-gutter"><a href="{$urls.pages.index}"><p align="right">Продолжить покупки</p></a></div>
+      </div>
   </header>
 {/block}
