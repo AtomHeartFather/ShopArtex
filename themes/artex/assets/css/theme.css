@@ -706,9 +706,12 @@ a.login:hover,
 .cart-totals .label {
   font-weight: bold;
 }
+#blockcart-modal h1 {
+    font-size: 20px;
+}
 #blockcart-modal {
   position: fixed;
-  background-color: rgba(255,255,255,0.1);
+  background-color: rgba(255,255,255,0.4);
   top: 0;
   left: 0;
   bottom: 0;
@@ -718,8 +721,8 @@ a.login:hover,
 #blockcart-modal > div {
   padding: 20px;
   display: inline-block;
-  min-width: 50%;
-  min-height: 400px;
+  min-width: 30%;
+/*  min-height: 50%;*/
   margin-top: 200px;
   text-align: left;
   background-color: #fff;
