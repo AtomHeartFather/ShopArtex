@@ -1709,6 +1709,10 @@ nav.pagination .current a {
     opacity: 0.8;
     z-index: 100;
 }
+.kartinko a,
+.kartinko-h-layer-2 {
+    color: black;
+}
 .kartinko-h-layer-1 {
     position: absolute;
     top: 0;

@@ -9,7 +9,7 @@
           alt="{$product.name}"
           style="width: 100%; height:auto; {*opacity: 0.5;*}"
           >
-      </a>
+      
           
       <div class="kartinko-h-layer-1">
           <div class="container kartinko-h-1">
@@ -44,7 +44,7 @@
                 <p>{$product.name}<br>
                    {$product.price}</p>
               </div>
-              
+      </a>
     </div>
 {*    <div class="hover-block">
         <p>Верхний блок</p>
