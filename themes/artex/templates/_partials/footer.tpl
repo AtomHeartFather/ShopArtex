@@ -23,7 +23,7 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
  <div class="artex-footer container-fluid">
-     <div class="gray-footer row">
+     {*<div class="gray-footer row">
          <div class="footer-4 col-6 col-sm-3 col-md-3 col-lg-3 col-xl-3">
              <div class="footer-block">
                  <p class="footer-ul-label">Список футера</p>
@@ -68,7 +68,7 @@
                  </ul>
              </div>
          </div>
-     </div>
+     </div>*}
      <div class="black-footer row justify-content-center align-items-center">
          <div class="black-logo">
             <a href="#">
