@@ -107,6 +107,16 @@ assets:
         media: all
         priority: 100
         
+      - id: icons-css
+        path: assets/css/font-awesome.min.css
+        media: all
+        priority: 100
+        
+      - id: icono-css
+        path: assets/css/icono.min.css
+        media: all
+        priority: 100
+        
   js:
     all:
       - id: bootstrap-4
@@ -118,8 +128,3 @@ assets:
         path: assets/js/lightslider.js
         priority: 33
         position: bottom
-        
-      - id: fontawesome
-        path: assets/js/515710780a.js
-        priority: 3
-        position: head

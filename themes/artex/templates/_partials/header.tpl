@@ -42,7 +42,7 @@
         {hook h='displayNav'}
     </div>
     <a href="javascript:void(0);" class="icon" onclick="mobileMenu()">
-        <i class="fas fa-bars"></i>
+        <i class="fa fa-bars"></i>
     </a>
   </div>
 {/block}
