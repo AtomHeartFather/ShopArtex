@@ -28,13 +28,15 @@
           <div class="container kartinko-h-2">
             <div class="row align-items-start">
                 <div class="col">
-                    <p>Доступные цвета</p>
+                    {*<p>Доступные цвета</p>*}
                 </div>
             </div>
             <div class="row align-items-end">
               <div class="col">
-                <p>Текущий цвет<br>
-                   Доступные размеры</p>
+                {*<p>Текущий цвет<br>
+                   Доступные размеры</p>*}
+                <p>{$product.name}<br>
+                   {$product.price}</p>   
               </div>
             </div>
           </div>
