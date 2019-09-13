@@ -32,7 +32,7 @@
                 <span itemprop="name">{$path.title}</span>
               </a>
               <meta itemprop="position" content="{$smarty.foreach.breadcrumb.iteration}">
-            </li>
+            </li>-
           {/block}
         {/foreach}
       </ol>
