@@ -1084,6 +1084,9 @@ ul.product-labels li {
   font-style: inherit;
   cursor: default;
 }
+#checkout {
+    background-color: rgb(230, 230, 230);
+}
 /*body#checkout {
   max-width: 960px;
   margin: auto;
@@ -1950,12 +1953,16 @@ details {
 .checkout-column-1 {
     border-right: 1px solid rgb(200,200,200);
 }
+@media (min-width: 991px) {
+    .checkout-column-1 {
+        height: 100vw;
+    }
+}
 .checkout-column-3 {
     border-left: 1px solid rgb(200,200,200);
 }
 .checkout-column-2 {
     padding-top: 32px;
-    height: -webkit-fill-available;
 }
 .js-address-form {
     padding-top: 12px;
