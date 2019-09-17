@@ -46,16 +46,19 @@
   
   <footer class="col-12 row no-gutters">
       {*<div >*}
-        <div class="col-6 pl-1 pr-1">
-            <a href="http://localhost/artex/index.php?controller=my-account" rel="nofollow">
-                <button>Назад</button>
-            </a>  
-        </div>
-        <div class="col-6 pl-1 pr-1">
+        
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 pl-1 pr-1 mb-sm-2">
             <a href="{$urls.pages.address}" data-link-action="add-address">
                 <button>{l s='Create new address' d='Shop.Theme.Actions'}</button>
             </a>
         </div>
+            
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 pl-1 pr-1 ">
+            <a href="http://localhost/artex/index.php?controller=my-account" rel="nofollow">
+                <button>Назад</button>
+            </a>  
+        </div>
+            
       {*</div>*}
   </footer>
   

@@ -23,7 +23,7 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 {block name='address_block_item'}
-  <article id="address-{$address.id}" class="address col-6 pl-1 pr-1 mt-2 mb-2" data-id-address="{$address.id}">
+  <article id="address-{$address.id}" class="address col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 pl-1 pr-1 mt-2 mb-2" data-id-address="{$address.id}">
     <header>
       <h1 class="h4">{$address.alias}</h1>
     </header>
