@@ -29,19 +29,31 @@
 {/block}
 
 {block name='page_content_container'}
-<section id="content" class="page-content page-addresses">
+<section id="content" class="page-content page-addresses row justify-content-center">
+    
+  <div class="col-7 row no-gutters mb-3 mt-3">
+      
+  
 
   {foreach $customer.addresses as $address}
     {block name='customer_address'}
       {include file='customer/_partials/block-address.tpl' address=$address}
     {/block}
   {/foreach}
-
+  
+  <div class="col-12 row justify-content-center mb-3 no-gutters">
+  <div class="col-6 add-address-btn">
+  
   <footer>
     <a href="{$urls.pages.address}" data-link-action="add-address">
-      {l s='Create new address' d='Shop.Theme.Actions'}
+        <button>{l s='Create new address' d='Shop.Theme.Actions'}</button>
     </a>
   </footer>
-
+  
+  </div>
+  </div>
+  
+  </div>
+    
 </section>
 {/block}
