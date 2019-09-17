@@ -41,13 +41,22 @@
     {/block}
   {/foreach}
   
-  <div class="col-12 row justify-content-center mb-3 no-gutters">
-  <div class="col-6 add-address-btn">
+  <div class="col-12 row mb-3 no-gutters add-address-btn">
   
-  <footer>
-    <a href="{$urls.pages.address}" data-link-action="add-address">
-        <button>{l s='Create new address' d='Shop.Theme.Actions'}</button>
-    </a>
+  
+  <footer class="col-12 row no-gutters">
+      {*<div >*}
+        <div class="col-6 pl-1 pr-1">
+            <a href="http://localhost/artex/index.php?controller=my-account" rel="nofollow">
+                <button>Назад</button>
+            </a>  
+        </div>
+        <div class="col-6 pl-1 pr-1">
+            <a href="{$urls.pages.address}" data-link-action="add-address">
+                <button>{l s='Create new address' d='Shop.Theme.Actions'}</button>
+            </a>
+        </div>
+      {*</div>*}
   </footer>
   
   </div>
