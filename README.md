@@ -44,10 +44,13 @@ If you want reload your configuration :
 3.Refresh your page, prestashop going to regenerate the config json file for your theme
 
 # Соотношение сторон изображений для наполнения магазина использовать 1.5
-
 ssh artex73@artex73.beget.tech
 WRhEnnHv
 
 height 100vh
 max-width 100%
 object-fit cover
+
+
+# GIT шпаргалка
+1.жестко откатить последний коммент git reset --hard bbbbbb

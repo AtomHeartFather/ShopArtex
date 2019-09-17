@@ -2015,6 +2015,14 @@ select::-ms-expand {
     padding-top: 6px;
     padding-bottom: 6px;
 }
-.ps-shown-by-js button {
-    
+.account-menu {
+    margin: 50px 0 50px 0;
+}
+.account-menu ul li a{
+    text-decoration: none;
+    color: #333;
+}
+.account-menu-title {
+    font-size: 1em;
+    margin-bottom: 30px;
 }
