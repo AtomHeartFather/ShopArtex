@@ -23,8 +23,12 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 {block name='my_account_links'}
-  <ul>
-    <li><a href="{$urls.pages.my_account}">{l s='Back to your account' d='Shop.Theme.Customeraccount'}</a></li>
-    <li><a href="{$urls.pages.index}">{l s='Home' d='Shop.Theme.Global'}</a></li>
-  </ul>
+    <div class="customer-personal-data-back-to-menu-button row justify-content-center">
+        <div class="col-10 col-sm-7 col-md-5 col-lg-4 col-xl-3">
+            <ul>
+              <li><a href="{$urls.pages.my_account}">{l s='Back to your account' d='Shop.Theme.Customeraccount'}</a></li>
+              <li><a href="{$urls.pages.index}">{l s='Home' d='Shop.Theme.Global'}</a></li>
+            </ul>
+        </div>
+    </div>
 {/block}

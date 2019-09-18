@@ -2031,3 +2031,8 @@ select::-ms-expand {
     color: #333;
     border: solid 1px #333;
 }
+.customer-personal-data-back-to-menu-button a,
+.customer-personal-data-back-to-menu-button a:hover
+{
+    color: #333;
+}
