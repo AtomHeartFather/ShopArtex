@@ -1913,7 +1913,6 @@ details {
 .checkout-main {
     background-color: rgb(230,230,230);
     height: 100%;
-    
 }
 .checkout-main input {
     border-width: 1px;
@@ -2036,3 +2035,8 @@ select::-ms-expand {
 {
     color: #333;
 }
+/*@media (max-width: 855px) {
+    .menu-left{
+        display: none !important;
+    }
+}*/

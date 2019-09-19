@@ -35,10 +35,10 @@
             <img src="{$shop.logo}" alt="{$shop.name}">
         </a>
     {/block}
-    <div class="row menu-left header-left-side no-gutters col-xl-8 col-lg-8 col-md-8 col-sm-1 col-1">
+    <div class="row menu-left header-left-side no-gutters col-xl-7 col-lg-7 col-md-7 col-sm-1 col-1">
         {hook h='displayTopMenu'} 
     </div>   
-    <div class="row menu-right justify-content-md-end justify-content-lg-end justify-content-lx-end justify-content-center justify-content-sm-center header-right-side no-gutters col-xl-3 col-lg-3 col-md-3 col-sm-10 col-10"> 
+    <div class="row menu-right justify-content-md-end justify-content-lg-end justify-content-lx-end justify-content-center justify-content-sm-center header-right-side no-gutters col-xl-4 col-lg-4 col-md-4 col-sm-10 col-10"> 
         {hook h='displayNav'}
     </div>
     <a href="javascript:void(0);" class="icon" onclick="mobileMenu()">
