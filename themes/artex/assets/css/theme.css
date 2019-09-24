@@ -2035,8 +2035,18 @@ select::-ms-expand {
 {
     color: #333;
 }
-/*@media (max-width: 855px) {
-    .menu-left{
-        display: none !important;
+.menu-cart-icon{
+        display:none;
     }
-}*/
+@media (max-width: 855px) {
+    .menu-cart-word{
+        display:none !important;
+    }
+    .menu-cart-icon{
+        display:inline !important;
+    }
+}
+
+
+        <span class="menu-cart-word">{l s='Cart' d='Shop.Theme.Actions'}</span>
+        <span class="menu-cart-icon"><i class="fa fa-shopping-bag" aria-hidden="true"></i></span>

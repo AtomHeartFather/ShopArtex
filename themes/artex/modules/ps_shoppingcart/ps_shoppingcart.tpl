@@ -2,7 +2,8 @@
   <div class="blockcart cart-preview" data-refresh-url="{$refresh_url}">
     <div class="header">
       <a rel="nofollow" href="{$cart_url}">
-        <span>{l s='Cart' d='Shop.Theme.Actions'}</span>
+        <span class="menu-cart-word">{l s='Cart' d='Shop.Theme.Actions'}</span>
+        <span class="menu-cart-icon"><i class="fa fa-shopping-bag" aria-hidden="true"></i></span>
         <span>{$cart.summary_string}</span>
       </a>
     </div>
