@@ -834,13 +834,13 @@ a.login:hover,
   text-decoration: none;
   color: #333;
   font-size: 1em;
-  padding: 7px 12px 7px 12px;
+  padding: 7px 7px 7px 7px;
   display: block;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .menu a,
   .menu a:visited {
-      padding: 7px 10px 7px 10px;
+      padding: 7px 7px 7px 7px;
   }
 }
 .menu a:hover,
@@ -2035,18 +2035,28 @@ select::-ms-expand {
 {
     color: #333;
 }
-.menu-cart-icon{
+.menu-login-icon,
+.menu-logout-icon,
+.menu-account-icon,
+.menu-cart-icon {
         display:none;
     }
 @media (max-width: 855px) {
-    .menu-cart-word{
+    .menu-login-word,
+    .menu-logout-word,
+    .menu-account-word,
+    .menu-cart-word {
         display:none !important;
     }
-    .menu-cart-icon{
+    .menu-login-icon,
+    .menu-logout-icon,
+    .menu-account-icon,
+    .menu-cart-icon {
         display:inline !important;
     }
 }
-
-
-        <span class="menu-cart-word">{l s='Cart' d='Shop.Theme.Actions'}</span>
-        <span class="menu-cart-icon"><i class="fa fa-shopping-bag" aria-hidden="true"></i></span>
+@media (max-width: 768px) {
+    .menu-left {
+        display: none !important;
+    }
+}
