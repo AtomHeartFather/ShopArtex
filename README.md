@@ -46,6 +46,9 @@ If you want reload your configuration :
 # Добавить переменную в смарти шаблон
 https://devdocs.prestashop.com/1.7/modules/concepts/controllers/front-controllers/#assign-variables-to-smarty
 
+# Показать объект/переменную в шаблоне smarty
+{$product|print_r}
+
 # Соотношение сторон изображений для наполнения магазина использовать 1.5
 ssh artex73@artex73.beget.tech
 WRhEnnHv
