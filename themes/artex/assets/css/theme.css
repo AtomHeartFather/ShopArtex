@@ -2064,12 +2064,12 @@ select::-ms-expand {
 }*/
 .cart-main-block {
 /*    position: relative !important;*/
-    height: calc(100vw-132px) !important;
+    height: calc(100%-132px) !important;
 /*    min-height: calc(~"100vw-132px") !important;*/
 /*    min-height: 100vw !important;*/
 /*    min-height: -webkit-calc(100vw-132px) !important;
     min-height: -moz-calc(100vw-132px) !important;*/
 }
-/*body {
-    height: 100vw !important;
-}*/
+body {
+    height: 100%;
+}
