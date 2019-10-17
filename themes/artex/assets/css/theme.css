@@ -2083,6 +2083,17 @@ body {
     padding-bottom: 2px;
     background-color: rgb(230,230,230);
 }
+.decrease-product-quantity:hover,
+.increase-product-quantity:hover {
+    animation: hover-blink 0.5s ease-in-out;
+}
+
+@keyframes hover-blink{
+    0%{ background-color: white; }
+    50%{ background-color: rgb(230,230,230); }
+    100%{ background-color: rgb(230,230,230); }
+}
+
 .decrease-increase-quantity {
     margin-top: 5px;
     display: flex;
@@ -2105,4 +2116,7 @@ body {
     width: 88px;
     border: black 1px solid;
     background-color: rgb(230,230,230);
+}
+.remove-from-cart-div:hover {
+    animation: hover-blink 0.5s ease-in-out;
 }
