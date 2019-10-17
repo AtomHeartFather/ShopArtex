@@ -35,13 +35,19 @@
                       <small class="sub">{$product.unit_price_full}</small>
                     {/if}
                     <br>
+                    <div class="decrease-increase-quantity no-gutters">
                     {if $product.down_quantity_url}
-                      <a href="{$product.down_quantity_url}" class="js-decrease-product-quantity" data-link-action="update-quantity">-</a>
+                    <div class="decrease-product-quantity">    
+                      <a href="{$product.down_quantity_url}" class="js-decrease-product-quantity no-gutters" data-link-action="update-quantity">-</a>
+                    </div>  
                     {/if}
                     <span class="product-quantity">{$product.quantity}</span>
                     {if $product.up_quantity_url}
-                      <a href="{$product.up_quantity_url}" class="js-increase-product-quantity" data-link-action="update-quantity">+</a>
+                    <div class="increase-product-quantity">    
+                      <a href="{$product.up_quantity_url}" class="js-increase-product-quantity no-gutters" data-link-action="update-quantity">+</a>
+                    </div>      
                     {/if}
+                    </div>
                     <br>
                         {*<span class="product-price">
                             {if isset($product.is_gift) && $product.is_gift}
@@ -83,7 +89,7 @@
                     {/block}
                 </div>
                     
-                <div style="flex-grow: unset;">
+                <div style="flex-grow: unset;" class="remove-from-cart-div">
                     <a
                         class="remove-from-cart"
                         data-link-action="remove-from-cart"
