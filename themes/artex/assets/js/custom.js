@@ -85,6 +85,8 @@ $(document).ready(function() {
         document.getElementById("filters-block").style.display = "block";
         }
     
+    //адаптивный ресайз слайдера
+   
     var vwprcnt;
     var brwsrvw = document.documentElement.clientWidth;
     if (brwsrvw < 768) { zooba = 0 } 
@@ -102,7 +104,7 @@ $(document).ready(function() {
 //        slider.refresh();
         location.reload()               // перезагрузить страницу , чтобы задааптивить параметр slideMargin 
     }  
-    
+
     $('#lightSlider').lightSlider({
         autoWidth:true,
         adaptiveHeight:false,
@@ -110,7 +112,7 @@ $(document).ready(function() {
         pager: false,
         loop:true,
     });
-    
+
 });    
 //    $('.logo').click(
 //        function() {
