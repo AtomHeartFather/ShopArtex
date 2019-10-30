@@ -8,6 +8,7 @@ https://docs.google.com/document/d/17yKn1qrYK-Qrl6YO5InOmvvPEW2hqdG-QfQx2AmBACw/
 https://docs.google.com/document/d/18q8aRrUm42jBpnlUo82Smub7ioXKcB-6OU0cKNkElCM/edit
 
 # Миграция проекта на локальный комп:
+предварительно скопировать себе в папку home/.ssh эсэсашные файлы с
 1. git clone ssh://git-codecommit.eu-west-1.amazonaws.com/v1/repos/artex artex
 2. появиться папка артекс с проектом, в корне есть дамп базы
 3. базу создать пустую artex - дамп туда
@@ -17,6 +18,14 @@ https://docs.google.com/document/d/18q8aRrUm42jBpnlUo82Smub7ioXKcB-6OU0cKNkElCM/
     'database_name' => 'artex',
     'database_user' => 'artex',
     'database_password' => '123',
+5. Отредактировать базу так:-----------------------------------
+    ps_shop_url
+    domain/domain_ssl = localhost
+    physical_uri = /artex/
+    ps_configuration:
+    PS_SHOP_DOMAIN artex
+    PS_SHOP_DOMAIN_SSL artex
+    PS_SHOP_SHOP_NAME artex
 
 # Миграция локального проекта на хостингr
 1. app/config/parameters.php ---------------------------------
@@ -60,3 +69,7 @@ object-fit cover
 
 # GIT шпаргалка
 1.жестко откатить последний коммент git reset --hard bbbbbb
+2.скачать ветку с репы
+    git pull origin branch-name
+    git checkout -b newlocalbranchname origin/branch-name
+    git checkout -t origin/branch-name
