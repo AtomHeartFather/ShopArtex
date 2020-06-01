@@ -1,12 +1,5 @@
 #### Артекс ####
 
-
-# Журнал проекта
-https://docs.google.com/document/d/17yKn1qrYK-Qrl6YO5InOmvvPEW2hqdG-QfQx2AmBACw/edit?usp=sharing
-
-# Доступ к хостингу, админка магазина
-https://docs.google.com/document/d/18q8aRrUm42jBpnlUo82Smub7ioXKcB-6OU0cKNkElCM/edit
-
 # Миграция проекта на локальный комп:
 предварительно скопировать себе в папку home/.ssh эсэсашные файлы с
 1. git clone ssh://git-codecommit.eu-west-1.amazonaws.com/v1/repos/artex artex
