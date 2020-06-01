@@ -1,5 +1,6 @@
 #### Артекс ####
 
+
 # Миграция проекта на локальный комп:
 предварительно скопировать себе в папку home/.ssh эсэсашные файлы с
 1. git clone ssh://git-codecommit.eu-west-1.amazonaws.com/v1/repos/artex artex
@@ -52,8 +53,6 @@ https://devdocs.prestashop.com/1.7/modules/concepts/controllers/front-controller
 {$product|print_r}
 
 # Соотношение сторон изображений для наполнения магазина использовать 1.5
-ssh artex73@artex73.beget.tech
-WRhEnnHv
 
 height 100vh
 max-width 100%
